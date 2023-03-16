@@ -1,7 +1,3 @@
-import { NextPage } from "next";
+import HomePage from "@/components/pages/HomePage";
 
-const Home: NextPage = () => {
-  return <div>hello world</div>;
-};
-
-export default Home;
+export default HomePage;
