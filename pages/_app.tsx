@@ -9,6 +9,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       withNormalizeCSS
       theme={{
         colorScheme: "light",
+        fontFamily: "Open Sans",
       }}
     >
       <Component {...pageProps} />
