@@ -11,26 +11,44 @@ export type SkillGroup = {
   skills: Skill[];
 };
 
-export const Skills = {
-  go: {
-    name: "Go",
-    url: "https://golang.org/",
-    icon: "go",
-  },
-  typescript: {
-    name: "TypeScript",
-    url: "https://www.typescriptlang.org/",
-    icon: "typescript",
-  },
-  javascript: {
-    name: "JavaScript",
-    url: "https://developer.mozilla.org/docs/Web/JavaScript",
-    icon: "javascript",
-  },
-} as const;
+export const go: Skill = {
+  name: "Go",
+  url: "https://golang.org/",
+  icon: "go",
+};
 
-export type SkillName = keyof typeof Skills;
+export const typescript: Skill = {
+  name: "TypeScript",
+  url: "https://www.typescriptlang.org/",
+  icon: "typescript",
+};
 
-export const getSkill = (name: SkillName): Skill => {
-  return Skills[name];
+export const javascript: Skill = {
+  name: "JavaScript",
+  url: "https://developer.mozilla.org/docs/Web/JavaScript",
+  icon: "javascript",
+};
+
+export const gin: Skill = {
+  name: "Gin",
+  url: "https://gin-gonic.com/",
+  icon: "gin",
+};
+
+export const express: Skill = {
+  name: "Express",
+  url: "https://expressjs.com/",
+  icon: "express",
+};
+
+export const react: Skill = {
+  name: "React",
+  url: "https://reactjs.org/",
+  icon: "react",
+};
+
+export const nextjs: Skill = {
+  name: "Next.js",
+  url: "https://nextjs.org/",
+  icon: "nextjs",
 };
