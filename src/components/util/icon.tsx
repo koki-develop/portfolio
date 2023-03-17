@@ -1,7 +1,7 @@
-import React, { memo } from "react";
 import GitHubIcon from "@/../public/images/icons/github.svg";
 import TwitterIcon from "@/../public/images/icons/twitter.svg";
 import ZennIcon from "@/../public/images/icons/zenn.svg";
+import React, { memo } from "react";
 
 const icons = {
   github: GitHubIcon,
