@@ -26,6 +26,7 @@
     "typescript": "5.0.2"
   },
   "devDependencies": {
+    "@svgr/webpack": "^6.5.1",
     "prettier": "^2.8.4"
   }
 }
