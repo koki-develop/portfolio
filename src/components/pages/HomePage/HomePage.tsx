@@ -106,6 +106,7 @@ const HomePage: NextPage = () => {
         <Container>
           {/* about */}
           <Tabs.Panel value="about">
+            {/* skill groups */}
             {config.skillGroups.map((skillGroup) => (
               <Box key={skillGroup.name}>
                 <Box>
@@ -118,6 +119,7 @@ const HomePage: NextPage = () => {
                 </Box>
                 <Box>
                   <Grid sx={{ marginBottom: 16 }}>
+                    {/* skills */}
                     {skillGroup.skills.map((skill) => (
                       <Grid.Col span={6} sm={4} md={3} key={skill.name}>
                         <Anchor
