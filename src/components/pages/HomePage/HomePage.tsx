@@ -1,12 +1,12 @@
 import { config } from "@/../config";
 import Icon from "@/components/util/Icon";
+import IconCard from "@/components/util/IconCard";
 import {
   Anchor,
   Box,
   Container,
   Grid,
   Image,
-  Paper,
   Tabs,
   Text,
   Title,
@@ -127,22 +127,16 @@ const HomePage: NextPage = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <Paper
-                            shadow="sm"
-                            p="md"
+                          <IconCard
+                            name={skill.name}
+                            icon={skill.icon}
                             sx={{
-                              display: "flex",
-                              flexDirection: "column",
-                              alignItems: "center",
                               transition: "0.15s",
                               "&:hover": {
                                 backgroundColor: "ButtonShadow",
                               },
                             }}
-                          >
-                            <Icon icon={skill.icon} />
-                            {skill.name}
-                          </Paper>
+                          />
                         </Anchor>
                       </Grid.Col>
                     ))}
