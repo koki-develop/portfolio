@@ -1,4 +1,4 @@
-import { IconName } from "@/components/util/icon";
+import { IconName } from "@/components/util/Icon";
 
 export type Skill = {
   name: string;

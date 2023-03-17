@@ -1,5 +1,5 @@
 import { config } from "@/../config";
-import Icon from "@/components/util/icon";
+import Icon from "@/components/util/Icon";
 import {
   Anchor,
   Box,
@@ -140,10 +140,7 @@ const HomePage: NextPage = () => {
                               },
                             }}
                           >
-                            <Icon
-                              icon={skill.icon}
-                              style={{ height: 80, maxWidth: "50%" }}
-                            />
+                            <Icon icon={skill.icon} />
                             {skill.name}
                           </Paper>
                         </Anchor>
