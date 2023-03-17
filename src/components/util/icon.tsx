@@ -1,5 +1,9 @@
+import ExpressIcon from "@/../public/icons/skill/express.svg";
+import GinIcon from "@/../public/icons/skill/gin.svg";
 import GoIcon from "@/../public/icons/skill/go.svg";
 import JavaScriptIcon from "@/../public/icons/skill/javascript.svg";
+import NextJSIcon from "@/../public/icons/skill/nextjs.svg";
+import ReactIcon from "@/../public/icons/skill/react.svg";
 import TypeScriptIcon from "@/../public/icons/skill/typescript.svg";
 import GitHubIcon from "@/../public/icons/social/github.svg";
 import TwitterIcon from "@/../public/icons/social/twitter.svg";
@@ -15,6 +19,11 @@ const Icons = {
   go: GoIcon,
   javascript: JavaScriptIcon,
   typescript: TypeScriptIcon,
+  // framework/library
+  gin: GinIcon,
+  express: ExpressIcon,
+  react: ReactIcon,
+  nextjs: NextJSIcon,
 } as const;
 
 export type IconName = keyof typeof Icons;
