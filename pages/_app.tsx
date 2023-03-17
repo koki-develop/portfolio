@@ -1,5 +1,5 @@
 import "@fontsource/open-sans";
-import { MantineProvider } from "@mantine/core";
+import { AnchorProps, MantineProvider } from "@mantine/core";
 import type { AppProps } from "next/app";
 
 const App = ({ Component, pageProps }: AppProps) => {
@@ -10,6 +10,18 @@ const App = ({ Component, pageProps }: AppProps) => {
       theme={{
         colorScheme: "light",
         fontFamily: "Open Sans",
+        globalStyles: () => ({
+          body: {
+            backgroundColor: "#f9fafb",
+          },
+        }),
+        components: {
+          Anchor: {
+            defaultProps: {
+              underline: false,
+            } as AnchorProps,
+          },
+        },
       }}
     >
       <Component {...pageProps} />
