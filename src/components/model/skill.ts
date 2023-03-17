@@ -52,3 +52,39 @@ export const nextjs: Skill = {
   url: "https://nextjs.org/",
   icon: "nextjs",
 };
+
+export const aws: Skill = {
+  name: "AWS",
+  url: "https://aws.amazon.com/",
+  icon: "aws",
+};
+
+export const googleCloud: Skill = {
+  name: "Google Cloud",
+  url: "https://console.cloud.google.com/",
+  icon: "googlecloud",
+};
+
+export const githubActions: Skill = {
+  name: "GitHub Actions",
+  url: "https://github.co.jp/features/actions",
+  icon: "githubactions",
+};
+
+export const circleci: Skill = {
+  name: "CircleCI",
+  url: "https://circleci.com/",
+  icon: "circleci",
+};
+
+export const terraform: Skill = {
+  name: "Terraform",
+  url: "https://www.terraform.io/",
+  icon: "terraform",
+};
+
+export const docker: Skill = {
+  name: "Docker",
+  url: "https://www.docker.com/",
+  icon: "docker",
+};

@@ -1,9 +1,15 @@
+import AWSIcon from "@/../public/icons/skill/aws.svg";
+import CircleCIIcon from "@/../public/icons/skill/circleci.svg";
+import DockerIcon from "@/../public/icons/skill/docker.svg";
 import ExpressIcon from "@/../public/icons/skill/express.svg";
 import GinIcon from "@/../public/icons/skill/gin.svg";
+import GitHubActionsIcon from "@/../public/icons/skill/githubactions.svg";
 import GoIcon from "@/../public/icons/skill/go.svg";
+import GoogleCloudIcon from "@/../public/icons/skill/googlecloud.svg";
 import JavaScriptIcon from "@/../public/icons/skill/javascript.svg";
 import NextJSIcon from "@/../public/icons/skill/nextjs.svg";
 import ReactIcon from "@/../public/icons/skill/react.svg";
+import TerraformIcon from "@/../public/icons/skill/terraform.svg";
 import TypeScriptIcon from "@/../public/icons/skill/typescript.svg";
 import GitHubIcon from "@/../public/icons/social/github.svg";
 import TwitterIcon from "@/../public/icons/social/twitter.svg";
@@ -24,6 +30,15 @@ const Icons = {
   express: ExpressIcon,
   react: ReactIcon,
   nextjs: NextJSIcon,
+  // cloud
+  aws: AWSIcon,
+  googlecloud: GoogleCloudIcon,
+  // ci/cd
+  githubactions: GitHubActionsIcon,
+  circleci: CircleCIIcon,
+  // other
+  terraform: TerraformIcon,
+  docker: DockerIcon,
 } as const;
 
 export type IconName = keyof typeof Icons;
