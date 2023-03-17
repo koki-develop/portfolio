@@ -19,6 +19,10 @@ const HomePage: NextPage = () => {
   const router = useRouter();
 
   const activeTab = useMemo(() => {
+    if (!router.isReady) {
+      return null;
+    }
+
     const tab = router.query.tab;
     switch (tab) {
       case "about":
@@ -28,7 +32,7 @@ const HomePage: NextPage = () => {
       default:
         return "about";
     }
-  }, [router.query.tab]);
+  }, [router.isReady, router.query.tab]);
 
   const handleChangeTab = useCallback(
     (tab: string) => {
@@ -36,10 +40,6 @@ const HomePage: NextPage = () => {
     },
     [router]
   );
-
-  if (!router.isReady) {
-    return null;
-  }
 
   return (
     <Box>
