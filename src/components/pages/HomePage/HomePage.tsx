@@ -1,9 +1,19 @@
 import { config } from "@/../config";
 import Icon from "@/components/util/icon";
-import { Anchor, Box, Image, Tabs, Text, Title } from "@mantine/core";
+import {
+  Anchor,
+  Box,
+  Container,
+  Grid,
+  Image,
+  Paper,
+  Tabs,
+  Text,
+  Title,
+} from "@mantine/core";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo } from "react";
 
 const HomePage: NextPage = () => {
   const router = useRouter();
@@ -87,11 +97,62 @@ const HomePage: NextPage = () => {
 
       {/* tabs */}
       <Tabs value={activeTab} onTabChange={handleChangeTab}>
-        <Tabs.List position="center">
+        <Tabs.List position="center" sx={{ marginBottom: 8 }}>
           <Tabs.Tab value="about">About</Tabs.Tab>
           <Tabs.Tab value="works">Works</Tabs.Tab>
           <Tabs.Tab value="notes">Notes</Tabs.Tab>
         </Tabs.List>
+
+        <Container>
+          {/* about */}
+          <Tabs.Panel value="about">
+            {config.skillGroups.map((skillGroup) => (
+              <Box key={skillGroup.name}>
+                <Box>
+                  <Title
+                    order={2}
+                    sx={{ textAlign: "center", marginBottom: 16 }}
+                  >
+                    {skillGroup.name}
+                  </Title>
+                </Box>
+                <Box>
+                  <Grid sx={{ marginBottom: 16 }}>
+                    {skillGroup.skills.map((skill) => (
+                      <Grid.Col span={6} sm={4} md={3} key={skill.name}>
+                        <Anchor
+                          href={skill.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Paper
+                            shadow="sm"
+                            p="md"
+                            sx={{
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "center",
+                              transition: "0.15s",
+                              "&:hover": {
+                                backgroundColor: "ButtonShadow",
+                              },
+                            }}
+                          >
+                            <Icon
+                              icon={skill.icon}
+                              style={{ height: 80, maxWidth: "50%" }}
+                            />
+                            {skill.name}
+                          </Paper>
+                        </Anchor>
+                      </Grid.Col>
+                    ))}
+                  </Grid>
+                </Box>
+              </Box>
+            ))}
+          </Tabs.Panel>
+        </Container>
       </Tabs>
     </Box>
   );
