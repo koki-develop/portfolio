@@ -1,5 +1,6 @@
+import Link from "@/components/util/Link";
 import Section from "@/components/util/Section";
-import { Anchor, Box, Text } from "@mantine/core";
+import { Box, Text } from "@mantine/core";
 import { NextPage } from "next";
 import { NextSeo } from "next-seo";
 import React from "react";
@@ -28,15 +29,14 @@ const items: Item[] = [
         を使用しています。このトラフィックデータは匿名で収集されており、個人を特定するものではありません。この機能は
         Cookie
         を無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。この規約に関して、詳しくは{" "}
-        <Anchor
+        <Link
           href="https://marketingplatform.google.com/about/analytics/terms/jp/"
-          target="_blank"
-          rel="noopener noreferrer"
+          external
           underline
           c="blue"
         >
           Google アナリティクス利用規約
-        </Anchor>
+        </Link>
         を参照してください。
       </Text>
     ),

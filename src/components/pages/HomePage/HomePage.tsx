@@ -2,11 +2,11 @@ import { config } from "@/../config";
 import EmailButton from "@/components/util/EmailButton";
 import Icon from "@/components/util/Icon";
 import ImageCard from "@/components/util/ImageCard";
+import Link from "@/components/util/Link";
 import Section from "@/components/util/Section";
 import Socials from "@/components/util/Socials";
 import { repositoryUrl } from "@/model/work";
 import {
-  Anchor,
   Box,
   Card,
   Divider,
@@ -216,26 +216,18 @@ const HomePage: NextPage = () => {
                             display: "flex",
                           }}
                         >
-                          <Anchor
-                            href={work.url ?? repositoryUrl(work)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
+                          <Link href={work.url ?? repositoryUrl(work)} external>
                             <Title order={4} size="h3">
                               {work.name}
                             </Title>
-                          </Anchor>
+                          </Link>
                         </Box>
 
                         <Text sx={{ flexGrow: 1 }}>{work.description}</Text>
 
-                        <Anchor
-                          href={repositoryUrl(work)}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
+                        <Link href={repositoryUrl(work)} external>
                           <Text size="sm">View on GitHub</Text>
-                        </Anchor>
+                        </Link>
                       </Card>
                     </Grid.Col>
                   ))}
@@ -243,10 +235,9 @@ const HomePage: NextPage = () => {
               </Box>
             ))}
             <Box sx={{ display: "flex", justifyContent: "center" }}>
-              <Anchor
+              <Link
                 href={`${config.user.socials.github.url}?tab=repositories&type=source`}
-                target="_blank"
-                rel="noopener noreferrer"
+                external
               >
                 <Paper
                   px="md"
@@ -264,7 +255,7 @@ const HomePage: NextPage = () => {
                     <ChevronRightIcon />
                   </Box>
                 </Paper>
-              </Anchor>
+              </Link>
             </Box>
           </Section>
         </Tabs.Panel>
@@ -274,11 +265,7 @@ const HomePage: NextPage = () => {
             <Grid sx={(theme) => ({ marginBottom: theme.spacing.sm })}>
               {config.notes.map((note) => (
                 <Grid.Col key={note.url} span={12} sm={6}>
-                  <Anchor
-                    href={note.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <Link href={note.url} external>
                     <Card
                       shadow="sm"
                       sx={(theme) => ({
@@ -310,17 +297,13 @@ const HomePage: NextPage = () => {
                         {dayjs(note.publishedAt).fromNow()}
                       </Text>
                     </Card>
-                  </Anchor>
+                  </Link>
                 </Grid.Col>
               ))}
             </Grid>
 
             <Box sx={{ display: "flex", justifyContent: "center" }}>
-              <Anchor
-                href={config.user.socials.zenn.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href={config.user.socials.zenn.url} external>
                 <Paper
                   px="md"
                   py="xs"
@@ -338,7 +321,7 @@ const HomePage: NextPage = () => {
                     <ChevronRightIcon />
                   </Box>
                 </Paper>
-              </Anchor>
+              </Link>
             </Box>
           </Section>
         </Tabs.Panel>

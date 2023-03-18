@@ -1,5 +1,5 @@
+import Link from "@/components/util/Link";
 import {
-  Anchor,
   Box,
   CopyButton,
   Paper,
@@ -31,11 +31,7 @@ const EmailButton: React.FC<EmailButtonProps> = memo((props) => {
         gap: theme.spacing.sm,
       })}
     >
-      <Anchor
-        href={`mailto:${email}`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <Link href={`mailto:${email}`} external>
         <Paper
           px="sm"
           py="xs"
@@ -59,7 +55,7 @@ const EmailButton: React.FC<EmailButtonProps> = memo((props) => {
             {email}
           </Text>
         </Paper>
-      </Anchor>
+      </Link>
 
       <CopyButton value={email}>
         {({ copied, copy }) => (

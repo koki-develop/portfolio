@@ -1,6 +1,6 @@
+import Link from "../util/Link";
 import Section from "@/components/util/Section";
 import {
-  Anchor,
   Box,
   Container,
   Divider,
@@ -9,7 +9,6 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import Link from "next/link";
 import React, { memo } from "react";
 
 export type LayoutProps = {
@@ -51,16 +50,15 @@ const Layout: React.FC<LayoutProps> = memo((props) => {
           })}
         >
           <Text size="sm">&copy; 2023</Text>
-          <Link href="/privacy" passHref>
+          <Link href="/privacy">
             <Text size="sm">プライバシーポリシー</Text>
           </Link>
-          <Anchor
+          <Link
             href="https://github.com/koki-develop/koki-develop.github.io"
-            target="_blank"
-            rel="noopener noreferrer"
+            external
           >
             <Text size="sm">View on GitHub</Text>
-          </Anchor>
+          </Link>
         </Section>
       </Box>
     </Box>

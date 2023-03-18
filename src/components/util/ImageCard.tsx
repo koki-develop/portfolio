@@ -1,6 +1,6 @@
 import Icon, { IconName } from "./Icon";
+import Link from "@/components/util/Link";
 import {
-  Anchor,
   createStyles,
   CSSObject,
   Image,
@@ -103,9 +103,9 @@ const ImageCard: React.FC<ImageCard> = memo((props) => {
   }
 
   return (
-    <Anchor href={href} target="_blank" rel="noopener noreferrer">
+    <Link href={href} external>
       {component}
-    </Anchor>
+    </Link>
   );
 });
 

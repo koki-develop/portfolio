@@ -1,6 +1,7 @@
 import Icon from "./Icon";
+import Link from "@/components/util/Link";
 import { Socials as SocialsModel } from "@/model/social";
-import { Anchor, Box } from "@mantine/core";
+import { Box } from "@mantine/core";
 import React, { memo } from "react";
 
 export type SocialsProps = {
@@ -17,25 +18,17 @@ const Socials: React.FC<SocialsProps> = memo((props) => {
       })}
     >
       {/* github */}
-      <Anchor
-        href={socials.github.url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <Link href={socials.github.url} external>
         <Icon icon="github" width={40} height={40} />
-      </Anchor>
+      </Link>
       {/* twitter */}
-      <Anchor
-        href={socials.twitter.url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <Link href={socials.twitter.url} external>
         <Icon icon="twitter" width={40} height={40} />
-      </Anchor>
+      </Link>
       {/* zenn */}
-      <Anchor href={socials.zenn.url} target="_blank" rel="noopener noreferrer">
+      <Link href={socials.zenn.url} external>
         <Icon icon="zenn" width={40} height={40} />
-      </Anchor>
+      </Link>
     </Box>
   );
 });
