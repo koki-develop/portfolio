@@ -12,6 +12,7 @@ import {
   Divider,
   Grid,
   Image,
+  Paper,
   Tabs,
   Text,
   Timeline,
@@ -247,12 +248,22 @@ const HomePage: NextPage = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Card shadow="sm" sx={{ display: "inline-block" }}>
+                <Paper
+                  px="md"
+                  py="xs"
+                  shadow="sm"
+                  sx={(theme) => ({
+                    transition: "0.15s",
+                    "&:hover": {
+                      backgroundColor: theme.colors.gray[2],
+                    },
+                  })}
+                >
                   <Box sx={{ display: "flex", alignItems: "center", gap: 4 }}>
                     <Text>More</Text>
                     <ChevronRightIcon />
                   </Box>
-                </Card>
+                </Paper>
               </Anchor>
             </Box>
           </Section>
@@ -270,11 +281,15 @@ const HomePage: NextPage = () => {
                   >
                     <Card
                       shadow="sm"
-                      sx={{
+                      sx={(theme) => ({
                         height: "100%",
                         display: "flex",
                         flexDirection: "column",
-                      }}
+                        transition: "0.15s",
+                        "&:hover": {
+                          backgroundColor: theme.colors.gray[2],
+                        },
+                      })}
                     >
                       <Title
                         order={3}
@@ -306,12 +321,23 @@ const HomePage: NextPage = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Card shadow="sm" sx={{ display: "inline-block" }}>
+                <Paper
+                  px="md"
+                  py="xs"
+                  shadow="sm"
+                  sx={(theme) => ({
+                    display: "inline-block",
+                    transition: "0.15s",
+                    "&:hover": {
+                      backgroundColor: theme.colors.gray[2],
+                    },
+                  })}
+                >
                   <Box sx={{ display: "flex", alignItems: "center", gap: 4 }}>
                     <Text>More</Text>
                     <ChevronRightIcon />
                   </Box>
-                </Card>
+                </Paper>
               </Anchor>
             </Box>
           </Section>

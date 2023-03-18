@@ -40,12 +40,12 @@ const EmailButton: React.FC<EmailButtonProps> = memo((props) => {
           px="sm"
           py="xs"
           shadow="sm"
-          sx={{
+          sx={(theme) => ({
             transition: "0.15s",
             "&:hover": {
-              backgroundColor: "ButtonShadow",
+              backgroundColor: theme.colors.gray[1],
             },
-          }}
+          })}
         >
           <Text
             size="md"

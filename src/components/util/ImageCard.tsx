@@ -57,7 +57,7 @@ const ImageCard: React.FC<ImageCard> = memo((props) => {
       shadow="sm"
       px="md"
       py="sm"
-      sx={{
+      sx={(theme) => ({
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -65,11 +65,11 @@ const ImageCard: React.FC<ImageCard> = memo((props) => {
         ...(href && {
           transition: "0.15s",
           "&:hover": {
-            backgroundColor: "ButtonShadow",
+            backgroundColor: theme.colors.gray[1],
           },
         }),
         ...sx,
-      }}
+      })}
     >
       {icon ? (
         <Icon className={classes.icon} icon={icon} />
