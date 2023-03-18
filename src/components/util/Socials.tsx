@@ -1,7 +1,7 @@
 import Icon, { IconName } from "@/components/util/Icon";
 import Link from "@/components/util/Link";
 import { Socials as SocialsModel } from "@/model/social";
-import { Box } from "@mantine/core";
+import { Group } from "@mantine/core";
 import React, { memo, useMemo } from "react";
 
 export type SocialsProps = {
@@ -25,18 +25,13 @@ const Socials: React.FC<SocialsProps> = memo((props) => {
   }, [socials.github.url, socials.twitter.url, socials.zenn.url]);
 
   return (
-    <Box
-      sx={(theme) => ({
-        display: "flex",
-        gap: theme.spacing.lg,
-      })}
-    >
+    <Group position="center">
       {items.map((item) => (
         <Link key={item.icon} href={socials.github.url} external>
           <Icon icon={item.icon} width={40} height={40} />
         </Link>
       ))}
-    </Box>
+    </Group>
   );
 });
 
