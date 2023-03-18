@@ -36,6 +36,7 @@ const buildImageStyle = (
     marginBottom: 8,
     [`@media (max-width: ${theme.breakpoints.sm})`]: {
       height: height[0],
+      maxWidth: "80%",
     },
   };
 };
@@ -89,7 +90,9 @@ const ImageCard: React.FC<ImageCard> = memo((props) => {
           alt=""
         />
       )}
-      <Text>{name}</Text>
+      <Text size="sm" sx={{ whiteSpace: "pre-wrap", textAlign: "center" }}>
+        {name}
+      </Text>
     </Paper>
   );
 
