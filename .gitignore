@@ -38,3 +38,6 @@ next-env.d.ts
 # public
 public/robots.txt
 public/sitemap*.xml
+
+# notes
+/notes.json
