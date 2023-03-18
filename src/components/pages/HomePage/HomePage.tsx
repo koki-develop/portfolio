@@ -3,8 +3,11 @@ import EmailButton from "@/components/util/EmailButton";
 import ImageCard from "@/components/util/ImageCard";
 import Section from "@/components/util/Section";
 import Socials from "@/components/util/Socials";
+import { repositoryUrl } from "@/model/work";
 import {
+  Anchor,
   Box,
+  Card,
   Divider,
   Grid,
   Image,
@@ -74,7 +77,10 @@ const HomePage: NextPage = () => {
 
       {/* tabs */}
       <Tabs value={activeTab} onTabChange={handleChangeTab}>
-        <Tabs.List position="center" sx={{ marginBottom: 8 }}>
+        <Tabs.List
+          position="center"
+          sx={(theme) => ({ marginBottom: theme.spacing.sm })}
+        >
           <Tabs.Tab value="about">About</Tabs.Tab>
           <Tabs.Tab value="works">Works</Tabs.Tab>
           <Tabs.Tab value="notes">Notes</Tabs.Tab>
@@ -83,12 +89,16 @@ const HomePage: NextPage = () => {
         {/* about */}
         <Tabs.Panel value="about">
           {/* skill */}
-          <Section title="Skill">
+          <Section
+            title="Skill"
+            sx={(theme) => ({
+              display: "flex",
+              flexDirection: "column",
+              gap: theme.spacing.sm,
+            })}
+          >
             {config.skillGroups.map((skillGroup) => (
-              <Box
-                key={skillGroup.name}
-                sx={(theme) => ({ marginBottom: theme.spacing.sm })}
-              >
+              <Box key={skillGroup.name}>
                 <Title
                   order={3}
                   sx={(theme) => ({
@@ -163,8 +173,67 @@ const HomePage: NextPage = () => {
         </Tabs.Panel>
 
         <Tabs.Panel value="works">
-          <Section title="Works">
-            <Text sx={{ textAlign: "center" }}>🚧準備中🚧</Text>
+          <Section
+            title="Works"
+            sx={(theme) => ({
+              display: "flex",
+              flexDirection: "column",
+              gap: theme.spacing.sm,
+            })}
+          >
+            {config.workGroups.map((workGroup) => (
+              <Box key={workGroup.name}>
+                <Title
+                  order={3}
+                  sx={(theme) => ({
+                    textAlign: "center",
+                    marginBottom: theme.spacing.sm,
+                  })}
+                >
+                  {workGroup.name}
+                </Title>
+                <Grid>
+                  {workGroup.works.map((work) => (
+                    <Grid.Col key={work.name} span={12} sm={6}>
+                      <Card
+                        shadow="sm"
+                        sx={(theme) => ({
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: theme.spacing.sm,
+                        })}
+                      >
+                        <Box
+                          sx={{
+                            display: "flex",
+                          }}
+                        >
+                          <Anchor
+                            href={work.url ?? repositoryUrl(work)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Title order={4} size="h3">
+                              {work.name}
+                            </Title>
+                          </Anchor>
+                        </Box>
+
+                        <Text>{work.description}</Text>
+
+                        <Anchor
+                          href={repositoryUrl(work)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Text size="sm">View on GitHub</Text>
+                        </Anchor>
+                      </Card>
+                    </Grid.Col>
+                  ))}
+                </Grid>
+              </Box>
+            ))}
           </Section>
         </Tabs.Panel>
 
