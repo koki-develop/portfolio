@@ -5,6 +5,7 @@ import {
   Anchor,
   Box,
   Container,
+  Divider,
   Grid,
   Image,
   Tabs,
@@ -103,49 +104,55 @@ const HomePage: NextPage = () => {
           <Tabs.Tab value="notes">Notes</Tabs.Tab>
         </Tabs.List>
 
-        <Container>
-          {/* about */}
-          <Tabs.Panel value="about">
-            {/* skill groups */}
+        {/* about */}
+        <Tabs.Panel value="about">
+          {/* skill */}
+          <Container>
+            <Title order={2} sx={{ textAlign: "center" }}>
+              Skill
+            </Title>
             {config.skillGroups.map((skillGroup) => (
               <Box key={skillGroup.name}>
-                <Box>
-                  <Title
-                    order={2}
-                    sx={{ textAlign: "center", marginBottom: 16 }}
-                  >
-                    {skillGroup.name}
-                  </Title>
-                </Box>
-                <Box>
-                  <Grid sx={{ marginBottom: 16 }}>
-                    {/* skills */}
-                    {skillGroup.skills.map((skill) => (
-                      <Grid.Col span={6} sm={4} md={3} key={skill.name}>
-                        <Anchor
-                          href={skill.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <IconCard
-                            name={skill.name}
-                            icon={skill.icon}
-                            sx={{
-                              transition: "0.15s",
-                              "&:hover": {
-                                backgroundColor: "ButtonShadow",
-                              },
-                            }}
-                          />
-                        </Anchor>
-                      </Grid.Col>
-                    ))}
-                  </Grid>
-                </Box>
+                <Title order={3} sx={{ textAlign: "center", marginBottom: 16 }}>
+                  {skillGroup.name}
+                </Title>
+                <Grid sx={{ marginBottom: 16 }}>
+                  {skillGroup.skills.map((skill) => (
+                    <Grid.Col span={6} sm={4} md={3} key={skill.name}>
+                      <IconCard
+                        name={skill.name}
+                        icon={skill.icon}
+                        href={skill.url}
+                      />
+                    </Grid.Col>
+                  ))}
+                </Grid>
               </Box>
             ))}
-          </Tabs.Panel>
-        </Container>
+          </Container>
+
+          <Divider />
+
+          {/* certification */}
+          <Container>
+            <Title order={2} sx={{ textAlign: "center" }}>
+              Certification
+            </Title>
+            <Box>
+              <Grid>
+                {config.certifications.map((certification) => (
+                  <Grid.Col span={6} sm={4} md={3} key={certification.name}>
+                    <IconCard
+                      name={certification.name}
+                      src={certification.imageSrc}
+                      href={certification.url}
+                    />
+                  </Grid.Col>
+                ))}
+              </Grid>
+            </Box>
+          </Container>
+        </Tabs.Panel>
       </Tabs>
     </Box>
   );

@@ -1,31 +1,57 @@
 import Icon, { IconName } from "./Icon";
-import { createStyles, Paper, Sx, Text } from "@mantine/core";
+import {
+  Anchor,
+  createStyles,
+  CSSObject,
+  Image,
+  MantineTheme,
+  Paper,
+  Sx,
+  Text,
+} from "@mantine/core";
 import React, { memo } from "react";
 
 export type IconCardProps = {
   name: string;
-  icon: IconName;
-
+  href?: string;
   sx?: Sx;
+} & (
+  | {
+      icon: IconName;
+      src?: string;
+    }
+  | {
+      icon?: undefined;
+      src: string;
+    }
+);
+
+const buildImageStyle = (
+  theme: MantineTheme,
+  height: [number, number]
+): CSSObject => {
+  return {
+    height: height[1],
+    maxWidth: "50%",
+    marginBottom: 8,
+    [`@media (max-width: ${theme.breakpoints.sm})`]: {
+      height: height[0],
+    },
+  };
 };
 
 const useStyles = createStyles((theme) => ({
   icon: {
-    height: 60,
-    maxWidth: "50%",
-    marginBottom: 4,
-    [`@media (max-width: ${theme.breakpoints.sm})`]: {
-      height: 50,
-    },
+    ...buildImageStyle(theme, [50, 60]),
   },
 }));
 
 const IconCard: React.FC<IconCardProps> = memo((props) => {
-  const { name, icon, sx } = props;
+  const { name, href, src, icon, sx } = props;
 
   const { classes } = useStyles();
 
-  return (
+  const component = (
     <Paper
       shadow="sm"
       p="md"
@@ -33,12 +59,48 @@ const IconCard: React.FC<IconCardProps> = memo((props) => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        height: "100%",
+        ...(href && {
+          transition: "0.15s",
+          "&:hover": {
+            backgroundColor: "ButtonShadow",
+          },
+        }),
         ...sx,
       }}
     >
-      <Icon className={classes.icon} icon={icon} />
+      {icon ? (
+        <Icon className={classes.icon} icon={icon} />
+      ) : (
+        <Image
+          styles={(theme) => ({
+            figure: {
+              display: "flex",
+              justifyContent: "center",
+            },
+            imageWrapper: {
+              ...buildImageStyle(theme, [80, 80]),
+              display: "flex",
+              justifyContent: "center",
+            },
+          })}
+          fit="contain"
+          src={src}
+          alt=""
+        />
+      )}
       <Text>{name}</Text>
     </Paper>
+  );
+
+  if (!href) {
+    return component;
+  }
+
+  return (
+    <Anchor href={href} target="_blank" rel="noopener noreferrer">
+      {component}
+    </Anchor>
   );
 });
 
