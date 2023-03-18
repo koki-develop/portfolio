@@ -1,10 +1,10 @@
+import CertificationList from "./CertificationList";
 import EmailButton from "./EmailButton";
 import SkillList from "./SkillList";
 import Socials from "./Socials";
 import User from "./User";
 import { config } from "@/../config";
 import Icon from "@/components/util/Icon";
-import ImageCard from "@/components/util/ImageCard";
 import Link from "@/components/util/Link";
 import Section from "@/components/util/Section";
 import { repositoryUrl } from "@/model/work";
@@ -71,7 +71,6 @@ const HomePage: NextPage = () => {
 
         {/* about */}
         <Tabs.Panel value="about">
-          {/* skill */}
           <Section title="Skill">
             <Stack spacing="sm">
               {config.skillGroups.map((skillGroup) => (
@@ -87,19 +86,8 @@ const HomePage: NextPage = () => {
 
           <Divider />
 
-          {/* certification */}
           <Section title="Certification">
-            <Grid>
-              {config.certifications.map((certification) => (
-                <Grid.Col span={6} sm={4} md={3} key={certification.name}>
-                  <ImageCard
-                    name={certification.name}
-                    src={certification.imageSrc}
-                    href={certification.url}
-                  />
-                </Grid.Col>
-              ))}
-            </Grid>
+            <CertificationList certifications={config.certifications} />
           </Section>
 
           <Divider />
