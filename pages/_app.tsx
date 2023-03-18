@@ -89,8 +89,8 @@ const App = ({ Component, pageProps }: AppProps) => {
           locale: "ja_JP",
           images: [
             {
-              url: `${config.url}/images/profile.jpg`,
-              secureUrl: `${config.url}/images/profile.jpg`,
+              url: `${config.url}/images/ogp.png`,
+              secureUrl: `${config.url}/images/ogp.png`,
               width: 800,
               height: 800,
               alt: config.user.name,
