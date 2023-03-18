@@ -207,6 +207,7 @@ const HomePage: NextPage = () => {
                           display: "flex",
                           flexDirection: "column",
                           gap: theme.spacing.sm,
+                          height: "100%",
                         })}
                       >
                         <Box
@@ -225,7 +226,7 @@ const HomePage: NextPage = () => {
                           </Anchor>
                         </Box>
 
-                        <Text>{work.description}</Text>
+                        <Text sx={{ flexGrow: 1 }}>{work.description}</Text>
 
                         <Anchor
                           href={repositoryUrl(work)}
@@ -240,6 +241,20 @@ const HomePage: NextPage = () => {
                 </Grid>
               </Box>
             ))}
+            <Box sx={{ display: "flex", justifyContent: "center" }}>
+              <Anchor
+                href={`${config.user.socials.github.url}?tab=repositories&type=source`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Card shadow="sm" sx={{ display: "inline-block" }}>
+                  <Box sx={{ display: "flex", alignItems: "center", gap: 4 }}>
+                    <Text>More</Text>
+                    <ChevronRightIcon />
+                  </Box>
+                </Card>
+              </Anchor>
+            </Box>
           </Section>
         </Tabs.Panel>
 
