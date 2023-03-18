@@ -160,22 +160,6 @@ const HomePage: NextPage = () => {
               ))}
             </Timeline>
           </Section>
-
-          <Divider />
-
-          {/* contact */}
-          <Section
-            title="Contact"
-            sx={(theme) => ({
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              gap: theme.spacing.sm,
-            })}
-          >
-            <Socials socials={config.user.socials} />
-            <EmailButton email={config.user.email} />
-          </Section>
         </Tabs.Panel>
 
         <Tabs.Panel value="works">
@@ -190,6 +174,22 @@ const HomePage: NextPage = () => {
           </Section>
         </Tabs.Panel>
       </Tabs>
+
+      <Divider />
+
+      {/* contact */}
+      <Section
+        title="Contact"
+        sx={(theme) => ({
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: theme.spacing.sm,
+        })}
+      >
+        <Socials socials={config.user.socials} />
+        <EmailButton email={config.user.email} />
+      </Section>
     </Box>
   );
 };
