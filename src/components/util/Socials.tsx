@@ -13,7 +13,6 @@ const Socials: React.FC<SocialsProps> = memo((props) => {
     <Box
       sx={(theme) => ({
         display: "flex",
-        justifyContent: "center",
         gap: theme.spacing.lg,
       })}
     >

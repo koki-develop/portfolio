@@ -21,10 +21,6 @@ const HomePage: NextPage = () => {
   const router = useRouter();
 
   const activeTab = useMemo(() => {
-    if (!router.isReady) {
-      return null;
-    }
-
     const tab = router.query.tab;
     switch (tab) {
       case "about":
@@ -34,7 +30,7 @@ const HomePage: NextPage = () => {
       default:
         return "about";
     }
-  }, [router.isReady, router.query.tab]);
+  }, [router.query.tab]);
 
   const handleChangeTab = useCallback(
     (tab: string) => {
@@ -163,8 +159,17 @@ const HomePage: NextPage = () => {
 
           {/* contact */}
           <Section title="Contact">
-            <Socials socials={config.user.socials} />
-            <EmailButton email={config.user.email} />
+            <Box
+              sx={(theme) => ({
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: theme.spacing.sm,
+              })}
+            >
+              <Socials socials={config.user.socials} />
+              <EmailButton email={config.user.email} />
+            </Box>
           </Section>
         </Tabs.Panel>
 
