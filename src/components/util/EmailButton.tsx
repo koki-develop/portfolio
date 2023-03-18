@@ -8,8 +8,10 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import React, { memo } from "react";
-import { AiOutlineCheck as CheckIcon } from "react-icons/ai";
-import { MdOutlineMail as MailIcon } from "react-icons/md";
+import {
+  MdCheck as CheckIcon,
+  MdOutlineMail as MailIcon,
+} from "react-icons/md";
 
 export type EmailButtonProps = {
   email: string;

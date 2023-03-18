@@ -129,47 +129,47 @@ const HomePage: NextPage = () => {
           <Divider />
 
           {/* experience */}
-          <Section title="Experience">
-            <Box sx={{ display: "flex", justifyContent: "center" }}>
-              <Timeline>
-                {config.experiences.map((experience) => (
-                  <Timeline.Item
-                    key={experience.title}
-                    title={experience.title}
-                    active={Boolean(!experience.to)}
-                    sx={(theme) => ({
-                      "& .mantine-Timeline-itemBody": {
-                        background: theme.white,
-                        borderRadius: theme.radius.sm,
-                        boxShadow: theme.shadows.sm,
-                        padding: theme.spacing.md,
-                      },
-                    })}
-                  >
-                    <Text size="sm" color="dimmed">
-                      {experience.from} - {experience.to ?? "now"}
-                    </Text>
-                  </Timeline.Item>
-                ))}
-              </Timeline>
-            </Box>
+          <Section
+            title="Experience"
+            sx={{ display: "flex", justifyContent: "center" }}
+          >
+            <Timeline>
+              {config.experiences.map((experience) => (
+                <Timeline.Item
+                  key={experience.title}
+                  title={experience.title}
+                  active={Boolean(!experience.to)}
+                  sx={(theme) => ({
+                    "& .mantine-Timeline-itemBody": {
+                      background: theme.white,
+                      borderRadius: theme.radius.sm,
+                      boxShadow: theme.shadows.sm,
+                      padding: theme.spacing.md,
+                    },
+                  })}
+                >
+                  <Text size="sm" color="dimmed">
+                    {experience.from} - {experience.to ?? "now"}
+                  </Text>
+                </Timeline.Item>
+              ))}
+            </Timeline>
           </Section>
 
           <Divider />
 
           {/* contact */}
-          <Section title="Contact">
-            <Box
-              sx={(theme) => ({
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                gap: theme.spacing.sm,
-              })}
-            >
-              <Socials socials={config.user.socials} />
-              <EmailButton email={config.user.email} />
-            </Box>
+          <Section
+            title="Contact"
+            sx={(theme) => ({
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: theme.spacing.sm,
+            })}
+          >
+            <Socials socials={config.user.socials} />
+            <EmailButton email={config.user.email} />
           </Section>
         </Tabs.Panel>
 
