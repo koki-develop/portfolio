@@ -11,7 +11,10 @@ export const user: User = {
   email: "kou.pg.0131@gmail.com",
   socials: {
     github: { url: "https://github.com/koki-develop" },
-    twitter: { url: "https://twitter.com/koki_develop" },
+    twitter: {
+      url: "https://twitter.com/koki_develop",
+      username: "@koki_develop",
+    },
     zenn: { url: "https://zenn.dev/kou_pg_0131" },
   },
 };

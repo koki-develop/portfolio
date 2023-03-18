@@ -4,6 +4,7 @@ import { skillGroups } from "./skill";
 import { user } from "./user";
 
 export const config = {
+  url: "https://koki.me",
   user,
   skillGroups,
   certifications,
