@@ -1,6 +1,6 @@
+import Socials from "./Socials";
 import User from "./User";
 import { config } from "@/../config";
-import Socials from "@/components/pages/HomePage/Socials";
 import EmailButton from "@/components/util/EmailButton";
 import Icon from "@/components/util/Icon";
 import ImageCard from "@/components/util/ImageCard";
@@ -74,38 +74,33 @@ const HomePage: NextPage = () => {
         {/* about */}
         <Tabs.Panel value="about">
           {/* skill */}
-          <Section
-            title="Skill"
-            sx={(theme) => ({
-              display: "flex",
-              flexDirection: "column",
-              gap: theme.spacing.sm,
-            })}
-          >
-            {config.skillGroups.map((skillGroup) => (
-              <Box key={skillGroup.name}>
-                <Title
-                  order={3}
-                  sx={(theme) => ({
-                    textAlign: "center",
-                    marginBottom: theme.spacing.sm,
-                  })}
-                >
-                  {skillGroup.name}
-                </Title>
-                <Grid>
-                  {skillGroup.skills.map((skill) => (
-                    <Grid.Col span={6} sm={3} key={skill.name}>
-                      <ImageCard
-                        name={skill.name}
-                        icon={skill.icon}
-                        href={skill.url}
-                      />
-                    </Grid.Col>
-                  ))}
-                </Grid>
-              </Box>
-            ))}
+          <Section title="Skill">
+            <Stack spacing="sm">
+              {config.skillGroups.map((skillGroup) => (
+                <Box key={skillGroup.name}>
+                  <Title
+                    order={3}
+                    mb="sm"
+                    sx={{
+                      textAlign: "center",
+                    }}
+                  >
+                    {skillGroup.name}
+                  </Title>
+                  <Grid>
+                    {skillGroup.skills.map((skill) => (
+                      <Grid.Col span={6} sm={3} key={skill.name}>
+                        <ImageCard
+                          name={skill.name}
+                          icon={skill.icon}
+                          href={skill.url}
+                        />
+                      </Grid.Col>
+                    ))}
+                  </Grid>
+                </Box>
+              ))}
+            </Stack>
           </Section>
 
           <Divider />
