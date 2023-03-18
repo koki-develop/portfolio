@@ -67,8 +67,8 @@ const App = ({ Component, pageProps }: AppProps) => {
             {
               url: `${config.url}/images/ogp.png`,
               secureUrl: `${config.url}/images/ogp.png`,
-              width: 800,
-              height: 800,
+              width: 1200,
+              height: 630,
               alt: config.user.name,
               type: "image/jpeg",
             },
