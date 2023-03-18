@@ -1,4 +1,5 @@
 import EmailButton from "./EmailButton";
+import SkillList from "./SkillList";
 import Socials from "./Socials";
 import User from "./User";
 import { config } from "@/../config";
@@ -75,26 +76,10 @@ const HomePage: NextPage = () => {
             <Stack spacing="sm">
               {config.skillGroups.map((skillGroup) => (
                 <Box key={skillGroup.name}>
-                  <Title
-                    order={3}
-                    mb="sm"
-                    sx={{
-                      textAlign: "center",
-                    }}
-                  >
+                  <Title order={3} mb="sm" sx={{ textAlign: "center" }}>
                     {skillGroup.name}
                   </Title>
-                  <Grid>
-                    {skillGroup.skills.map((skill) => (
-                      <Grid.Col span={6} sm={3} key={skill.name}>
-                        <ImageCard
-                          name={skill.name}
-                          icon={skill.icon}
-                          href={skill.url}
-                        />
-                      </Grid.Col>
-                    ))}
-                  </Grid>
+                  <SkillList skills={skillGroup.skills} />
                 </Box>
               ))}
             </Stack>

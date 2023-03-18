@@ -1,20 +1,18 @@
 import Icon, { IconName } from "./Icon";
 import Link from "@/components/util/Link";
+import Paper from "@/components/util/Paper";
 import {
   createStyles,
   CSSObject,
   Image,
   MantineTheme,
-  Paper,
-  Sx,
   Text,
 } from "@mantine/core";
 import React, { memo } from "react";
 
-export type ImageCard = {
+export type ImageCardProps = {
   name: string;
   href?: string;
-  sx?: Sx;
 } & (
   | {
       icon: IconName;
@@ -26,51 +24,55 @@ export type ImageCard = {
     }
 );
 
-const buildImageStyle = (
-  theme: MantineTheme,
-  height: [number, number],
-  maxWidth: [string, string]
-): CSSObject => {
+const buildImageStyle = (theme: MantineTheme, size: "md" | "lg"): CSSObject => {
+  const smallStyles = (() => {
+    switch (size) {
+      case "md":
+        return { height: 50, maxWidth: "50%" };
+      case "lg":
+        return { height: 80, maxWidth: "50%" };
+    }
+  })();
+
+  const defaultStyles = (() => {
+    switch (size) {
+      case "md":
+        return { height: 60, maxWidth: "60%" };
+      case "lg":
+        return { height: 80, maxWidth: "80%" };
+    }
+  })();
+
   return {
-    height: height[1],
-    maxWidth: maxWidth[1],
+    ...defaultStyles,
     marginBottom: 8,
     [theme.fn.smallerThan("sm")]: {
-      height: height[0],
-      maxWidth: maxWidth[0],
+      ...smallStyles,
     },
   };
 };
 
 const useStyles = createStyles((theme) => ({
   icon: {
-    ...buildImageStyle(theme, [50, 60], ["50%", "60%"]),
+    ...buildImageStyle(theme, "md"),
   },
 }));
 
-const ImageCard: React.FC<ImageCard> = memo((props) => {
-  const { name, href, src, icon, sx } = props;
+const ImageCard: React.FC<ImageCardProps> = memo((props) => {
+  const { name, href, src, icon } = props;
 
   const { classes } = useStyles();
 
   const component = (
     <Paper
-      shadow="sm"
+      clickable
       px="md"
       py="sm"
-      sx={(theme) => ({
+      sx={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        height: "100%",
-        ...(href && {
-          transition: "0.15s",
-          "&:hover": {
-            backgroundColor: theme.colors.gray[1],
-          },
-        }),
-        ...sx,
-      })}
+      }}
     >
       {icon ? (
         <Icon className={classes.icon} icon={icon} />
@@ -82,7 +84,7 @@ const ImageCard: React.FC<ImageCard> = memo((props) => {
               justifyContent: "center",
             },
             imageWrapper: {
-              ...buildImageStyle(theme, [80, 80], ["50%", "80%"]),
+              ...buildImageStyle(theme, "lg"),
               display: "flex",
               justifyContent: "center",
             },
