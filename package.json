@@ -6,8 +6,9 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "postbuild": "next-sitemap",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint",
     "fmt": "prettier --write ."
