@@ -34,7 +34,7 @@ const buildImageStyle = (
     height: height[1],
     maxWidth: "50%",
     marginBottom: 8,
-    [`@media (max-width: ${theme.breakpoints.sm})`]: {
+    [theme.fn.smallerThan("sm")]: {
       height: height[0],
       maxWidth: "80%",
     },
