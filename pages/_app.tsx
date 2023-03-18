@@ -1,3 +1,4 @@
+import Layout from "@/components/Layout";
 import "@fontsource/open-sans";
 import { AnchorProps, MantineProvider } from "@mantine/core";
 import type { AppProps } from "next/app";
@@ -24,7 +25,9 @@ const App = ({ Component, pageProps }: AppProps) => {
         },
       }}
     >
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </MantineProvider>
   );
 };
