@@ -1,9 +1,8 @@
 import { config } from "@/../config";
-import Icon from "@/components/util/Icon";
 import ImageCard from "@/components/util/ImageCard";
 import Section from "@/components/util/Section";
+import Socials from "@/components/util/Socials";
 import {
-  Anchor,
   Box,
   Divider,
   Grid,
@@ -69,32 +68,7 @@ const HomePage: NextPage = () => {
           </Text>
         </Box>
         {/* socials */}
-        <Box sx={{ display: "flex", gap: 24 }}>
-          {/* github */}
-          <Anchor
-            href={config.user.socials.github.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icon icon="github" width={40} height={40} />
-          </Anchor>
-          {/* twitter */}
-          <Anchor
-            href={config.user.socials.twitter.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icon icon="twitter" width={40} height={40} />
-          </Anchor>
-          {/* zenn */}
-          <Anchor
-            href={config.user.socials.zenn.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icon icon="zenn" width={40} height={40} />
-          </Anchor>
-        </Box>
+        <Socials socials={config.user.socials} />
       </Box>
 
       {/* tabs */}
@@ -182,6 +156,13 @@ const HomePage: NextPage = () => {
                 ))}
               </Timeline>
             </Box>
+          </Section>
+
+          <Divider />
+
+          {/* contact */}
+          <Section title="Contact">
+            <Socials socials={config.user.socials} />
           </Section>
         </Tabs.Panel>
 
