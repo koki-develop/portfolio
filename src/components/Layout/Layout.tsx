@@ -52,14 +52,14 @@ const Layout: React.FC<LayoutProps> = memo((props) => {
         >
           <Text size="sm">&copy; 2023</Text>
           <Link href="/privacy" passHref>
-            <Text size="md">プライバシーポリシー</Text>
+            <Text size="sm">プライバシーポリシー</Text>
           </Link>
           <Anchor
             href="https://github.com/koki-develop/koki-develop.github.io"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Text size="md">View on GitHub</Text>
+            <Text size="sm">View on GitHub</Text>
           </Anchor>
         </Section>
       </Box>

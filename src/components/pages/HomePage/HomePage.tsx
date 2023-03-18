@@ -54,8 +54,12 @@ const HomePage: NextPage = () => {
         <Box>
           <Image src="/images/profile.png" width={150} height={150} alt="" />
           <Box sx={{ textAlign: "center" }}>
-            <Title order={2}>{config.user.name}</Title>
-            <Text>{config.user.tag}</Text>
+            <Title order={2} weight="normal">
+              {config.user.name}
+            </Title>
+            <Text size="lg" color="gray">
+              {config.user.tag}
+            </Text>
           </Box>
         </Box>
         {/* description */}
