@@ -7,7 +7,7 @@ export const skillGroups: SkillGroup[] = [
     skills: [skills.go, skills.javascript, skills.typescript],
   },
   {
-    name: "Framework/Library",
+    name: "Framework / Library",
     skills: [skills.gin, skills.express, skills.react, skills.nextjs],
   },
   {
@@ -15,7 +15,7 @@ export const skillGroups: SkillGroup[] = [
     skills: [skills.aws, skills.googleCloud],
   },
   {
-    name: "CI/CD",
+    name: "CI / CD",
     skills: [skills.githubActions, skills.circleci],
   },
   {
