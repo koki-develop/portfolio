@@ -1,11 +1,11 @@
 import User from "./User";
 import { config } from "@/../config";
+import Socials from "@/components/pages/HomePage/Socials";
 import EmailButton from "@/components/util/EmailButton";
 import Icon from "@/components/util/Icon";
 import ImageCard from "@/components/util/ImageCard";
 import Link from "@/components/util/Link";
 import Section from "@/components/util/Section";
-import Socials from "@/components/util/Socials";
 import { repositoryUrl } from "@/model/work";
 import {
   Box,
