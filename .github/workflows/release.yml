@@ -1,0 +1,31 @@
+name: release
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 15 * * *' # 毎日 0 時
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: package.json
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+
+      - run: yarn run build
+        env:
+          NEXT_PUBLIC_GA_MEASUREMENT_ID: ${{ vars.GA_MEASUREMENT_ID }}
+
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          cname: koki.me
+          force_orphan: true
