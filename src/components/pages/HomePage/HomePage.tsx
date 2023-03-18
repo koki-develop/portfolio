@@ -1,10 +1,10 @@
 import { config } from "@/../config";
 import Icon from "@/components/util/Icon";
 import ImageCard from "@/components/util/ImageCard";
+import Section from "@/components/util/Section";
 import {
   Anchor,
   Box,
-  Container,
   Divider,
   Grid,
   Image,
@@ -108,16 +108,22 @@ const HomePage: NextPage = () => {
         {/* about */}
         <Tabs.Panel value="about">
           {/* skill */}
-          <Container>
-            <Title order={2} sx={{ textAlign: "center" }}>
-              Skill
-            </Title>
+          <Section title="Skill">
             {config.skillGroups.map((skillGroup) => (
-              <Box key={skillGroup.name}>
-                <Title order={3} sx={{ textAlign: "center", marginBottom: 16 }}>
+              <Box
+                key={skillGroup.name}
+                sx={(theme) => ({ marginBottom: theme.spacing.sm })}
+              >
+                <Title
+                  order={3}
+                  sx={(theme) => ({
+                    textAlign: "center",
+                    marginBottom: theme.spacing.sm,
+                  })}
+                >
                   {skillGroup.name}
                 </Title>
-                <Grid sx={{ marginBottom: 16 }}>
+                <Grid>
                   {skillGroup.skills.map((skill) => (
                     <Grid.Col span={6} sm={4} md={3} key={skill.name}>
                       <ImageCard
@@ -130,13 +136,12 @@ const HomePage: NextPage = () => {
                 </Grid>
               </Box>
             ))}
-          </Container>
+          </Section>
+
           <Divider />
+
           {/* certification */}
-          <Container>
-            <Title order={2} sx={{ textAlign: "center" }}>
-              Certification
-            </Title>
+          <Section title="Certification">
             <Grid>
               {config.certifications.map((certification) => (
                 <Grid.Col span={6} sm={4} md={3} key={certification.name}>
@@ -148,13 +153,12 @@ const HomePage: NextPage = () => {
                 </Grid.Col>
               ))}
             </Grid>
-          </Container>
+          </Section>
+
           <Divider />
+
           {/* experience */}
-          <Container>
-            <Title order={2} sx={{ textAlign: "center" }}>
-              Experience
-            </Title>
+          <Section title="Experience">
             <Box sx={{ display: "flex", justifyContent: "center" }}>
               <Timeline>
                 {config.experiences.map((experience) => (
@@ -178,7 +182,7 @@ const HomePage: NextPage = () => {
                 ))}
               </Timeline>
             </Box>
-          </Container>
+          </Section>
         </Tabs.Panel>
       </Tabs>
     </Box>
