@@ -1,8 +1,8 @@
 import Link from "@/components/util/Link";
+import Paper from "@/components/util/Paper";
 import {
-  Box,
   CopyButton,
-  Paper,
+  Stack,
   Text,
   UnstyledButton,
   useMantineTheme,
@@ -23,28 +23,10 @@ const EmailButton: React.FC<EmailButtonProps> = memo((props) => {
   const theme = useMantineTheme();
 
   return (
-    <Box
-      sx={(theme) => ({
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: theme.spacing.sm,
-      })}
-    >
+    <Stack sx={{ alignItems: "center" }}>
       <Link href={`mailto:${email}`} external>
-        <Paper
-          px="sm"
-          py="xs"
-          shadow="sm"
-          sx={(theme) => ({
-            transition: "0.15s",
-            "&:hover": {
-              backgroundColor: theme.colors.gray[1],
-            },
-          })}
-        >
+        <Paper px="sm" py="xs" clickable>
           <Text
-            size="md"
             sx={{
               display: "flex",
               alignItems: "center",
@@ -62,11 +44,11 @@ const EmailButton: React.FC<EmailButtonProps> = memo((props) => {
           <UnstyledButton
             variant="subtle"
             onClick={copy}
-            sx={{
+            sx={(theme) => ({
               display: "flex",
               alignItems: "center",
               fontSize: theme.fontSizes.sm,
-            }}
+            })}
           >
             {copied ? (
               <>
@@ -79,7 +61,7 @@ const EmailButton: React.FC<EmailButtonProps> = memo((props) => {
           </UnstyledButton>
         )}
       </CopyButton>
-    </Box>
+    </Stack>
   );
 });
 

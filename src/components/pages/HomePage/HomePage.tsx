@@ -53,10 +53,7 @@ const HomePage: NextPage = () => {
   return (
     <Box>
       <Stack spacing="lg" mb="md">
-        {/* user */}
         <User user={config.user} />
-
-        {/* socials */}
         <Socials socials={config.user.socials} />
       </Stack>
 
@@ -303,17 +300,11 @@ const HomePage: NextPage = () => {
       <Divider />
 
       {/* contact */}
-      <Section
-        title="Contact"
-        sx={(theme) => ({
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: theme.spacing.sm,
-        })}
-      >
-        <Socials socials={config.user.socials} />
-        <EmailButton email={config.user.email} />
+      <Section title="Contact">
+        <Stack spacing="md">
+          <Socials socials={config.user.socials} />
+          <EmailButton email={config.user.email} />
+        </Stack>
       </Section>
     </Box>
   );
