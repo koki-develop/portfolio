@@ -117,7 +117,7 @@ const HomePage: NextPage = () => {
                 </Title>
                 <Grid>
                   {skillGroup.skills.map((skill) => (
-                    <Grid.Col span={6} sm={4} md={3} key={skill.name}>
+                    <Grid.Col span={6} sm={3} key={skill.name}>
                       <ImageCard
                         name={skill.name}
                         icon={skill.icon}

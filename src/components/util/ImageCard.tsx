@@ -28,22 +28,23 @@ export type ImageCard = {
 
 const buildImageStyle = (
   theme: MantineTheme,
-  height: [number, number]
+  height: [number, number],
+  maxWidth: [string, string]
 ): CSSObject => {
   return {
     height: height[1],
-    maxWidth: "50%",
+    maxWidth: maxWidth[1],
     marginBottom: 8,
     [theme.fn.smallerThan("sm")]: {
       height: height[0],
-      maxWidth: "80%",
+      maxWidth: maxWidth[0],
     },
   };
 };
 
 const useStyles = createStyles((theme) => ({
   icon: {
-    ...buildImageStyle(theme, [50, 60]),
+    ...buildImageStyle(theme, [50, 60], ["50%", "60%"]),
   },
 }));
 
@@ -81,7 +82,7 @@ const ImageCard: React.FC<ImageCard> = memo((props) => {
               justifyContent: "center",
             },
             imageWrapper: {
-              ...buildImageStyle(theme, [80, 80]),
+              ...buildImageStyle(theme, [80, 80], ["50%", "80%"]),
               display: "flex",
               justifyContent: "center",
             },
