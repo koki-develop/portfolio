@@ -1,5 +1,6 @@
 import { config } from "@/../config";
 import EmailButton from "@/components/util/EmailButton";
+import Icon from "@/components/util/Icon";
 import ImageCard from "@/components/util/ImageCard";
 import Section from "@/components/util/Section";
 import Socials from "@/components/util/Socials";
@@ -16,9 +17,14 @@ import {
   Timeline,
   Title,
 } from "@mantine/core";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useCallback, useMemo } from "react";
+import { IoChevronForward as ChevronRightIcon } from "react-icons/io5";
+
+dayjs.extend(relativeTime);
 
 const HomePage: NextPage = () => {
   const router = useRouter();
@@ -37,7 +43,7 @@ const HomePage: NextPage = () => {
 
   const handleChangeTab = useCallback(
     (tab: string) => {
-      router.replace({ query: { tab } });
+      router.replace({ query: { tab } }, undefined, { scroll: false });
     },
     [router]
   );
@@ -239,7 +245,60 @@ const HomePage: NextPage = () => {
 
         <Tabs.Panel value="notes">
           <Section title="Notes">
-            <Text sx={{ textAlign: "center" }}>🚧準備中🚧</Text>
+            <Grid sx={(theme) => ({ marginBottom: theme.spacing.sm })}>
+              {config.notes.map((note) => (
+                <Grid.Col key={note.url} span={12} sm={6}>
+                  <Anchor
+                    href={note.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Card
+                      shadow="sm"
+                      sx={{
+                        height: "100%",
+                        display: "flex",
+                        flexDirection: "column",
+                      }}
+                    >
+                      <Title
+                        order={3}
+                        size="h4"
+                        weight="normal"
+                        sx={(theme) => ({
+                          flexGrow: 1,
+                          marginBottom: theme.spacing.sm,
+                        })}
+                      >
+                        {note.title}
+                      </Title>
+                      <Text
+                        size="sm"
+                        sx={{ display: "flex", alignItems: "center", gap: 4 }}
+                      >
+                        <Icon icon="zenn" width={16} />
+                        {dayjs(note.publishedAt).fromNow()}
+                      </Text>
+                    </Card>
+                  </Anchor>
+                </Grid.Col>
+              ))}
+            </Grid>
+
+            <Box sx={{ display: "flex", justifyContent: "center" }}>
+              <Anchor
+                href={config.user.socials.zenn.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Card shadow="sm" sx={{ display: "inline-block" }}>
+                  <Box sx={{ display: "flex", alignItems: "center", gap: 4 }}>
+                    <Text>More</Text>
+                    <ChevronRightIcon />
+                  </Box>
+                </Card>
+              </Anchor>
+            </Box>
           </Section>
         </Tabs.Panel>
       </Tabs>
