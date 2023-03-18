@@ -1,4 +1,4 @@
-import { User } from "@/components/model/user";
+import { User } from "@/model/user";
 import dayjs from "dayjs";
 
 const birth = dayjs("1998-01-31");

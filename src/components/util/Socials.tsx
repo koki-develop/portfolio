@@ -1,5 +1,5 @@
 import Icon from "./Icon";
-import { Socials as SocialsModel } from "@/components/model/social";
+import { Socials as SocialsModel } from "@/model/social";
 import { Anchor, Box } from "@mantine/core";
 import React, { memo } from "react";
 

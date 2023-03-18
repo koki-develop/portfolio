@@ -1,4 +1,5 @@
 import { config } from "@/../config";
+import EmailButton from "@/components/util/EmailButton";
 import ImageCard from "@/components/util/ImageCard";
 import Section from "@/components/util/Section";
 import Socials from "@/components/util/Socials";
@@ -163,6 +164,7 @@ const HomePage: NextPage = () => {
           {/* contact */}
           <Section title="Contact">
             <Socials socials={config.user.socials} />
+            <EmailButton email={config.user.email} />
           </Section>
         </Tabs.Panel>
 

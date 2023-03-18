@@ -1,5 +1,5 @@
-import { SkillGroup } from "@/components/model/skill";
-import * as skills from "@/components/model/skill";
+import { SkillGroup } from "@/model/skill";
+import * as skills from "@/model/skill";
 
 export const skillGroups: SkillGroup[] = [
   {
