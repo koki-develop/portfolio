@@ -1,5 +1,14 @@
 import Section from "@/components/util/Section";
-import { Anchor, Box, Divider, Text } from "@mantine/core";
+import {
+  Anchor,
+  Box,
+  Container,
+  Divider,
+  Image,
+  Paper,
+  Text,
+  Title,
+} from "@mantine/core";
 import Link from "next/link";
 import React, { memo } from "react";
 
@@ -12,6 +21,20 @@ const Layout: React.FC<LayoutProps> = memo((props) => {
 
   return (
     <Box>
+      {/* header */}
+      <Paper p="sm" shadow="xs" radius={0} component="header">
+        <Container sx={{ display: "flex" }}>
+          <Link href="/">
+            <Box sx={{ display: "flex", alignItems: "center", gap: 4 }}>
+              <Image src="/images/profile.png" width={40} alt="" />
+              <Title weight="normal" size="h3">
+                Koki Sato
+              </Title>
+            </Box>
+          </Link>
+        </Container>
+      </Paper>
+
       {/* main */}
       <Box component="main">{children}</Box>
 
