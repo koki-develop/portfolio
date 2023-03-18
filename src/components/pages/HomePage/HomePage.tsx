@@ -1,7 +1,7 @@
+import EmailButton from "./EmailButton";
 import Socials from "./Socials";
 import User from "./User";
 import { config } from "@/../config";
-import EmailButton from "@/components/util/EmailButton";
 import Icon from "@/components/util/Icon";
 import ImageCard from "@/components/util/ImageCard";
 import Link from "@/components/util/Link";
