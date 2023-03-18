@@ -149,6 +149,7 @@ const HomePage: NextPage = () => {
                       borderRadius: theme.radius.sm,
                       boxShadow: theme.shadows.sm,
                       padding: theme.spacing.md,
+                      paddingBottom: theme.spacing.sm,
                     },
                   })}
                 >
