@@ -8,7 +8,9 @@ on:
     - cron: '0 15 * * *' # 毎日 0 時
 
 jobs:
-  build:
+  release:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
