@@ -10,6 +10,7 @@ import {
   Image,
   Tabs,
   Text,
+  Timeline,
   Title,
 } from "@mantine/core";
 import { NextPage } from "next";
@@ -130,26 +131,52 @@ const HomePage: NextPage = () => {
               </Box>
             ))}
           </Container>
-
           <Divider />
-
           {/* certification */}
           <Container>
             <Title order={2} sx={{ textAlign: "center" }}>
               Certification
             </Title>
-            <Box>
-              <Grid>
-                {config.certifications.map((certification) => (
-                  <Grid.Col span={6} sm={4} md={3} key={certification.name}>
-                    <ImageCard
-                      name={certification.name}
-                      src={certification.imageSrc}
-                      href={certification.url}
-                    />
-                  </Grid.Col>
+            <Grid>
+              {config.certifications.map((certification) => (
+                <Grid.Col span={6} sm={4} md={3} key={certification.name}>
+                  <ImageCard
+                    name={certification.name}
+                    src={certification.imageSrc}
+                    href={certification.url}
+                  />
+                </Grid.Col>
+              ))}
+            </Grid>
+          </Container>
+          <Divider />
+          {/* experience */}
+          <Container>
+            <Title order={2} sx={{ textAlign: "center" }}>
+              Experience
+            </Title>
+            <Box sx={{ display: "flex", justifyContent: "center" }}>
+              <Timeline>
+                {config.experiences.map((experience) => (
+                  <Timeline.Item
+                    key={experience.title}
+                    title={experience.title}
+                    active={Boolean(!experience.to)}
+                    sx={(theme) => ({
+                      "& .mantine-Timeline-itemBody": {
+                        background: theme.white,
+                        borderRadius: theme.radius.sm,
+                        boxShadow: theme.shadows.sm,
+                        padding: theme.spacing.md,
+                      },
+                    })}
+                  >
+                    <Text size="sm" color="dimmed">
+                      {experience.from} - {experience.to ?? "now"}
+                    </Text>
+                  </Timeline.Item>
                 ))}
-              </Grid>
+              </Timeline>
             </Box>
           </Container>
         </Tabs.Panel>

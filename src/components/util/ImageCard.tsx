@@ -55,7 +55,8 @@ const ImageCard: React.FC<ImageCard> = memo((props) => {
   const component = (
     <Paper
       shadow="sm"
-      p="md"
+      px="md"
+      py="sm"
       sx={{
         display: "flex",
         flexDirection: "column",
