@@ -11,7 +11,7 @@ import {
 } from "@mantine/core";
 import React, { memo } from "react";
 
-export type IconCardProps = {
+export type ImageCard = {
   name: string;
   href?: string;
   sx?: Sx;
@@ -46,7 +46,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const IconCard: React.FC<IconCardProps> = memo((props) => {
+const ImageCard: React.FC<ImageCard> = memo((props) => {
   const { name, href, src, icon, sx } = props;
 
   const { classes } = useStyles();
@@ -104,6 +104,6 @@ const IconCard: React.FC<IconCardProps> = memo((props) => {
   );
 });
 
-IconCard.displayName = "IconCard";
+ImageCard.displayName = "ImageCard";
 
-export default IconCard;
+export default ImageCard;

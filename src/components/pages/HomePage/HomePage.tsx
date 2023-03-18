@@ -1,6 +1,6 @@
 import { config } from "@/../config";
 import Icon from "@/components/util/Icon";
-import IconCard from "@/components/util/IconCard";
+import ImageCard from "@/components/util/ImageCard";
 import {
   Anchor,
   Box,
@@ -119,7 +119,7 @@ const HomePage: NextPage = () => {
                 <Grid sx={{ marginBottom: 16 }}>
                   {skillGroup.skills.map((skill) => (
                     <Grid.Col span={6} sm={4} md={3} key={skill.name}>
-                      <IconCard
+                      <ImageCard
                         name={skill.name}
                         icon={skill.icon}
                         href={skill.url}
@@ -142,7 +142,7 @@ const HomePage: NextPage = () => {
               <Grid>
                 {config.certifications.map((certification) => (
                   <Grid.Col span={6} sm={4} md={3} key={certification.name}>
-                    <IconCard
+                    <ImageCard
                       name={certification.name}
                       src={certification.imageSrc}
                       href={certification.url}
