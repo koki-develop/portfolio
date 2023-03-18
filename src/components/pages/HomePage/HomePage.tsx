@@ -184,6 +184,18 @@ const HomePage: NextPage = () => {
             </Box>
           </Section>
         </Tabs.Panel>
+
+        <Tabs.Panel value="works">
+          <Section title="Works">
+            <Text sx={{ textAlign: "center" }}>🚧準備中🚧</Text>
+          </Section>
+        </Tabs.Panel>
+
+        <Tabs.Panel value="notes">
+          <Section title="Notes">
+            <Text sx={{ textAlign: "center" }}>🚧準備中🚧</Text>
+          </Section>
+        </Tabs.Panel>
       </Tabs>
     </Box>
   );
