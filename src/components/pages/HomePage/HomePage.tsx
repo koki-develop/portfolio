@@ -1,3 +1,4 @@
+import User from "./User";
 import { config } from "@/../config";
 import EmailButton from "@/components/util/EmailButton";
 import Icon from "@/components/util/Icon";
@@ -11,8 +12,8 @@ import {
   Card,
   Divider,
   Grid,
-  Image,
   Paper,
+  Stack,
   Tabs,
   Text,
   Timeline,
@@ -51,36 +52,13 @@ const HomePage: NextPage = () => {
 
   return (
     <Box>
-      {/* user */}
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: 12,
-        }}
-      >
-        {/* avatar and name */}
-        <Box>
-          <Image src="/images/profile.png" width={150} height={150} alt="" />
-          <Box sx={{ textAlign: "center" }}>
-            <Title order={2} weight="normal">
-              {config.user.name}
-            </Title>
-            <Text size="lg" color="gray">
-              {config.user.tag}
-            </Text>
-          </Box>
-        </Box>
-        {/* description */}
-        <Box>
-          <Text sx={{ textAlign: "center", whiteSpace: "pre" }}>
-            {config.user.description}
-          </Text>
-        </Box>
+      <Stack spacing="lg" mb="md">
+        {/* user */}
+        <User user={config.user} />
+
         {/* socials */}
         <Socials socials={config.user.socials} />
-      </Box>
+      </Stack>
 
       {/* tabs */}
       <Tabs value={activeTab} onTabChange={handleChangeTab}>
