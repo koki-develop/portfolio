@@ -154,11 +154,7 @@ const HomePage: NextPage = () => {
                           height: "100%",
                         })}
                       >
-                        <Box
-                          sx={{
-                            display: "flex",
-                          }}
-                        >
+                        <Box sx={{ display: "flex" }}>
                           <Link href={work.url ?? repositoryUrl(work)} external>
                             <Title order={4} size="h3">
                               {work.name}
@@ -168,9 +164,11 @@ const HomePage: NextPage = () => {
 
                         <Text sx={{ flexGrow: 1 }}>{work.description}</Text>
 
-                        <Link href={repositoryUrl(work)} external>
-                          <Text size="sm">View on GitHub</Text>
-                        </Link>
+                        <Box sx={{ display: "flex" }}>
+                          <Link href={repositoryUrl(work)} external>
+                            <Text size="sm">View on GitHub</Text>
+                          </Link>
+                        </Box>
                       </Card>
                     </Grid.Col>
                   ))}
