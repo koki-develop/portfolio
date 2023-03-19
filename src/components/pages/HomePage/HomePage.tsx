@@ -4,11 +4,11 @@ import ExperienceTimeline from "./ExperienceTimeline";
 import SkillList from "./SkillList";
 import Socials from "./Socials";
 import User from "./User";
+import WorkList from "./WorkList";
 import { config } from "@/../config";
 import Icon from "@/components/util/Icon";
 import Link from "@/components/util/Link";
 import Section from "@/components/util/Section";
-import { repositoryUrl } from "@/model/work";
 import {
   Box,
   Card,
@@ -18,7 +18,6 @@ import {
   Stack,
   Tabs,
   Text,
-  Timeline,
   Title,
 } from "@mantine/core";
 import dayjs from "dayjs";
@@ -121,37 +120,7 @@ const HomePage: NextPage = () => {
                 >
                   {workGroup.name}
                 </Title>
-                <Grid>
-                  {workGroup.works.map((work) => (
-                    <Grid.Col key={work.name} span={12} sm={6}>
-                      <Card
-                        shadow="sm"
-                        sx={(theme) => ({
-                          display: "flex",
-                          flexDirection: "column",
-                          gap: theme.spacing.sm,
-                          height: "100%",
-                        })}
-                      >
-                        <Box sx={{ display: "flex" }}>
-                          <Link href={work.url ?? repositoryUrl(work)} external>
-                            <Title order={4} size="h3">
-                              {work.name}
-                            </Title>
-                          </Link>
-                        </Box>
-
-                        <Text sx={{ flexGrow: 1 }}>{work.description}</Text>
-
-                        <Box sx={{ display: "flex" }}>
-                          <Link href={repositoryUrl(work)} external>
-                            <Text size="sm">View on GitHub</Text>
-                          </Link>
-                        </Box>
-                      </Card>
-                    </Grid.Col>
-                  ))}
-                </Grid>
+                <WorkList works={workGroup.works} />
               </Box>
             ))}
             <Box sx={{ display: "flex", justifyContent: "center" }}>

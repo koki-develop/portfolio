@@ -52,7 +52,7 @@ export const workGroups: WorkGroup[] = [
       },
       {
         name: "gat",
-        description: "cat コマンドを代替する Go 製コマンドラインツール。",
+        description: "cat コマンド代替の Go 製コマンドラインツール。",
         repository: "gat",
       },
       {
