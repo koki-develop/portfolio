@@ -73,6 +73,12 @@ export const tailwindcss: Skill = {
   icon: "tailwindcss",
 };
 
+export const vecty: Skill = {
+  name: "Vecty",
+  url: "https://github.com/hexops/vecty",
+  icon: "vecty",
+};
+
 /*
  * cloud
  */
@@ -111,6 +117,12 @@ export const circleci: Skill = {
   icon: "circleci",
 };
 
+export const dagger: Skill = {
+  name: "Dagger",
+  url: "https://dagger.io/",
+  icon: "dagger",
+};
+
 /*
  * other
  */
@@ -118,6 +130,12 @@ export const circleci: Skill = {
 export const terraform: Skill = {
   name: "Terraform",
   url: "https://www.terraform.io/",
+  icon: "terraform",
+};
+
+export const cdktf: Skill = {
+  name: "CDK for Terraform",
+  url: "https://developer.hashicorp.com/terraform/cdktf",
   icon: "terraform",
 };
 

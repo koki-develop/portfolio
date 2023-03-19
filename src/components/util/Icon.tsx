@@ -2,6 +2,7 @@ import DefsIcon from "@/../public/icons/defs.svg";
 import AWSIcon from "@/../public/icons/skill/aws.svg";
 import CircleCIIcon from "@/../public/icons/skill/circleci.svg";
 import CypressIcon from "@/../public/icons/skill/cypress.svg";
+import DaggerIcon from "@/../public/icons/skill/dagger.svg";
 import DockerIcon from "@/../public/icons/skill/docker.svg";
 import ExpressIcon from "@/../public/icons/skill/express.svg";
 import GinIcon from "@/../public/icons/skill/gin.svg";
@@ -16,6 +17,7 @@ import ServerlessIcon from "@/../public/icons/skill/serverless.svg";
 import TailwindCSSIcon from "@/../public/icons/skill/tailwindcss.svg";
 import TerraformIcon from "@/../public/icons/skill/terraform.svg";
 import TypeScriptIcon from "@/../public/icons/skill/typescript.svg";
+import VectyIcon from "@/../public/icons/skill/vecty.svg";
 import VercelIcon from "@/../public/icons/skill/vercel.svg";
 import GitHubIcon from "@/../public/icons/social/github.svg";
 import TwitterIcon from "@/../public/icons/social/twitter.svg";
@@ -40,6 +42,7 @@ const Icons = {
   nextjs: NextJSIcon,
   mantine: MantineIcon,
   tailwindcss: TailwindCSSIcon,
+  vecty: VectyIcon,
   // cloud
   aws: AWSIcon,
   googlecloud: GoogleCloudIcon,
@@ -47,6 +50,7 @@ const Icons = {
   // ci/cd
   githubactions: GitHubActionsIcon,
   circleci: CircleCIIcon,
+  dagger: DaggerIcon,
   // other
   terraform: TerraformIcon,
   docker: DockerIcon,
