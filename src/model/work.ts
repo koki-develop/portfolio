@@ -1,3 +1,4 @@
+import { Skill } from "./skill";
 import { config } from "@/../config";
 
 export type Work = {
@@ -5,6 +6,7 @@ export type Work = {
   description: string;
   url?: string;
   repository: string;
+  skills: Skill[];
 };
 
 export type WorkGroup = {
