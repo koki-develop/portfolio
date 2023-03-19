@@ -27,7 +27,7 @@ const Socials: React.FC<SocialsProps> = memo((props) => {
   return (
     <Group position="center">
       {items.map((item) => (
-        <Link key={item.icon} href={socials.github.url} external>
+        <Link key={item.icon} href={item.url} external>
           <Icon icon={item.icon} width={40} height={40} />
         </Link>
       ))}
