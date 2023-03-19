@@ -36,7 +36,7 @@ const WorkList: React.FC<WorkListProps> = memo((props) => {
 
             <Text sx={{ flexGrow: 1 }}>{work.description}</Text>
 
-            <Box>
+            <Box sx={{ display: "flex" }}>
               <Link external href={repositoryUrl(work)}>
                 <Text size="sm">View on GitHub</Text>
               </Link>
