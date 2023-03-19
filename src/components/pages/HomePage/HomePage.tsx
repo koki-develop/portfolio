@@ -1,19 +1,18 @@
 import CertificationList from "./CertificationList";
 import EmailButton from "./EmailButton";
 import ExperienceTimeline from "./ExperienceTimeline";
+import MoreLink from "./MoreLink";
 import NoteList from "./NoteList";
 import SkillList from "./SkillList";
 import Socials from "./Socials";
 import User from "./User";
 import WorkList from "./WorkList";
 import { config } from "@/../config";
-import Link from "@/components/util/Link";
 import Section from "@/components/util/Section";
-import { Box, Divider, Paper, Stack, Tabs, Text, Title } from "@mantine/core";
+import { Box, Divider, Stack, Tabs, Title } from "@mantine/core";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useCallback, useMemo } from "react";
-import { IoChevronForward as ChevronRightIcon } from "react-icons/io5";
 
 const HomePage: NextPage = () => {
   const router = useRouter();
@@ -109,56 +108,28 @@ const HomePage: NextPage = () => {
                 <WorkList works={workGroup.works} />
               </Box>
             ))}
+
             <Box sx={{ display: "flex", justifyContent: "center" }}>
-              <Link
+              <MoreLink
                 href={`${config.user.socials.github.url}?tab=repositories&type=source`}
-                external
-              >
-                <Paper
-                  px="md"
-                  py="xs"
-                  shadow="sm"
-                  sx={(theme) => ({
-                    transition: "0.15s",
-                    "&:hover": {
-                      backgroundColor: theme.colors.gray[2],
-                    },
-                  })}
-                >
-                  <Box sx={{ display: "flex", alignItems: "center", gap: 4 }}>
-                    <Text>More</Text>
-                    <ChevronRightIcon />
-                  </Box>
-                </Paper>
-              </Link>
+              />
             </Box>
           </Section>
         </Tabs.Panel>
 
         <Tabs.Panel value="notes">
-          <Section title="Notes">
+          <Section
+            title="Notes"
+            sx={(theme) => ({
+              display: "flex",
+              flexDirection: "column",
+              gap: theme.spacing.sm,
+            })}
+          >
             <NoteList notes={config.notes} />
 
             <Box sx={{ display: "flex", justifyContent: "center" }}>
-              <Link href={config.user.socials.zenn.url} external>
-                <Paper
-                  px="md"
-                  py="xs"
-                  shadow="sm"
-                  sx={(theme) => ({
-                    display: "inline-block",
-                    transition: "0.15s",
-                    "&:hover": {
-                      backgroundColor: theme.colors.gray[2],
-                    },
-                  })}
-                >
-                  <Box sx={{ display: "flex", alignItems: "center", gap: 4 }}>
-                    <Text>More</Text>
-                    <ChevronRightIcon />
-                  </Box>
-                </Paper>
-              </Link>
+              <MoreLink href={config.user.socials.zenn.url} />
             </Box>
           </Section>
         </Tabs.Panel>
