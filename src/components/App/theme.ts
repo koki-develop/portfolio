@@ -1,5 +1,4 @@
-import { PaperProps } from "../util/Paper";
-import { AnchorProps, MantineThemeOverride } from "@mantine/core";
+import { AnchorProps, MantineThemeOverride, PaperProps } from "@mantine/core";
 
 export const theme: MantineThemeOverride = {
   colorScheme: "light",
@@ -24,6 +23,7 @@ export const theme: MantineThemeOverride = {
     Paper: {
       defaultProps: {
         shadow: "sm",
+        withBorder: true,
       } as PaperProps,
     },
   },
