@@ -2,7 +2,7 @@ import Icon from "@/components/util/Icon";
 import Link from "@/components/util/Link";
 import Paper from "@/components/util/Paper";
 import { Note } from "@/model/note";
-import { Grid, Text, Title, useMantineTheme } from "@mantine/core";
+import { Grid, Group, Stack, Text, Title } from "@mantine/core";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import React, { memo } from "react";
@@ -16,38 +16,24 @@ export type NoteListProps = {
 const NoteList: React.FC<NoteListProps> = memo((props) => {
   const { notes } = props;
 
-  const theme = useMantineTheme();
-
   return (
     <Grid>
       {notes.map((note) => (
         <Grid.Col key={note.url} span={12} sm={6}>
           <Link external href={note.url}>
-            <Paper
-              clickable
-              p="md"
-              sx={{
-                height: "100%",
-                display: "flex",
-                flexDirection: "column",
-                gap: theme.spacing.sm,
-              }}
-            >
-              <Title order={3} size="h4" weight="normal" sx={{ flexGrow: 1 }}>
-                {note.title}
-              </Title>
+            <Paper clickable p="md" sx={{ height: "100%" }}>
+              <Stack spacing="sm" sx={{ height: "100%" }}>
+                <Title order={3} size="h4" weight="normal" sx={{ flexGrow: 1 }}>
+                  {note.title}
+                </Title>
 
-              <Text
-                size="sm"
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 8,
-                }}
-              >
-                <Icon icon="zenn" width={16} />
-                {dayjs(note.publishedAt).fromNow()}
-              </Text>
+                <Text size="sm">
+                  <Group spacing="xs">
+                    <Icon icon="zenn" width={16} />
+                    {dayjs(note.publishedAt).fromNow()}
+                  </Group>
+                </Text>
+              </Stack>
             </Paper>
           </Link>
         </Grid.Col>

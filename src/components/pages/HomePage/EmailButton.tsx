@@ -2,6 +2,7 @@ import Link from "@/components/util/Link";
 import Paper from "@/components/util/Paper";
 import {
   CopyButton,
+  Group,
   Stack,
   Text,
   UnstyledButton,
@@ -26,15 +27,11 @@ const EmailButton: React.FC<EmailButtonProps> = memo((props) => {
     <Stack sx={{ alignItems: "center" }}>
       <Link href={`mailto:${email}`} external>
         <Paper px="sm" py="xs" clickable>
-          <Text
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              gap: 4,
-            }}
-          >
-            <MailIcon />
-            {email}
+          <Text>
+            <Group spacing="xs">
+              <MailIcon />
+              {email}
+            </Group>
           </Text>
         </Paper>
       </Link>

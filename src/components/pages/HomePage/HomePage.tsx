@@ -57,7 +57,7 @@ const HomePage: NextPage = () => {
         {/* about */}
         <Tabs.Panel value="about">
           <Section title="Skill">
-            <Stack spacing="sm">
+            <Stack>
               {config.skillGroups.map((skillGroup) => (
                 <Box key={skillGroup.name}>
                   <Title order={3} mb="sm" sx={{ textAlign: "center" }}>
@@ -86,51 +86,41 @@ const HomePage: NextPage = () => {
         </Tabs.Panel>
 
         <Tabs.Panel value="works">
-          <Section
-            title="Works"
-            sx={(theme) => ({
-              display: "flex",
-              flexDirection: "column",
-              gap: theme.spacing.sm,
-            })}
-          >
-            {config.workGroups.map((workGroup) => (
-              <Box key={workGroup.name}>
-                <Title
-                  order={3}
-                  sx={(theme) => ({
-                    textAlign: "center",
-                    marginBottom: theme.spacing.sm,
-                  })}
-                >
-                  {workGroup.name}
-                </Title>
-                <WorkList works={workGroup.works} />
-              </Box>
-            ))}
+          <Section title="Works">
+            <Stack>
+              {config.workGroups.map((workGroup) => (
+                <Box key={workGroup.name}>
+                  <Title
+                    order={3}
+                    sx={(theme) => ({
+                      textAlign: "center",
+                      marginBottom: theme.spacing.sm,
+                    })}
+                  >
+                    {workGroup.name}
+                  </Title>
+                  <WorkList works={workGroup.works} />
+                </Box>
+              ))}
 
-            <Box sx={{ display: "flex", justifyContent: "center" }}>
-              <MoreLink
-                href={`${config.user.socials.github.url}?tab=repositories&type=source`}
-              />
-            </Box>
+              <Box sx={{ display: "flex", justifyContent: "center" }}>
+                <MoreLink
+                  href={`${config.user.socials.github.url}?tab=repositories&type=source`}
+                />
+              </Box>
+            </Stack>
           </Section>
         </Tabs.Panel>
 
         <Tabs.Panel value="notes">
-          <Section
-            title="Notes"
-            sx={(theme) => ({
-              display: "flex",
-              flexDirection: "column",
-              gap: theme.spacing.sm,
-            })}
-          >
-            <NoteList notes={config.notes} />
+          <Section title="Notes">
+            <Stack>
+              <NoteList notes={config.notes} />
 
-            <Box sx={{ display: "flex", justifyContent: "center" }}>
-              <MoreLink href={config.user.socials.zenn.url} />
-            </Box>
+              <Box sx={{ display: "flex", justifyContent: "center" }}>
+                <MoreLink href={config.user.socials.zenn.url} />
+              </Box>
+            </Stack>
           </Section>
         </Tabs.Panel>
       </Tabs>
@@ -139,7 +129,7 @@ const HomePage: NextPage = () => {
 
       {/* contact */}
       <Section title="Contact">
-        <Stack spacing="md">
+        <Stack>
           <Socials socials={config.user.socials} />
           <EmailButton email={config.user.email} />
         </Stack>

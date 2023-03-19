@@ -4,8 +4,10 @@ import {
   Box,
   Container,
   Divider,
+  Group,
   Image,
   Paper,
+  Stack,
   Text,
   Title,
 } from "@mantine/core";
@@ -24,12 +26,12 @@ const Layout: React.FC<LayoutProps> = memo((props) => {
       <Paper p="sm" shadow="xs" radius={0} component="header">
         <Container sx={{ display: "flex" }}>
           <Link href="/">
-            <Box sx={{ display: "flex", alignItems: "center", gap: 4 }}>
+            <Group spacing="xs">
               <Image src="/images/profile.png" width={40} alt="" />
               <Title weight="normal" size="h3">
                 Koki Sato
               </Title>
-            </Box>
+            </Group>
           </Link>
         </Container>
       </Paper>
@@ -41,24 +43,19 @@ const Layout: React.FC<LayoutProps> = memo((props) => {
 
       {/* footer */}
       <Box component="footer" py="lg">
-        <Section
-          sx={(theme) => ({
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: theme.spacing.xs,
-          })}
-        >
-          <Text size="sm">&copy; 2023</Text>
-          <Link href="/privacy">
-            <Text size="sm">プライバシーポリシー</Text>
-          </Link>
-          <Link
-            href="https://github.com/koki-develop/koki-develop.github.io"
-            external
-          >
-            <Text size="sm">View on GitHub</Text>
-          </Link>
+        <Section>
+          <Stack spacing="sm" align="center">
+            <Text size="sm">&copy; 2023</Text>
+            <Link href="/privacy">
+              <Text size="sm">プライバシーポリシー</Text>
+            </Link>
+            <Link
+              href="https://github.com/koki-develop/koki-develop.github.io"
+              external
+            >
+              <Text size="sm">View on GitHub</Text>
+            </Link>
+          </Stack>
         </Section>
       </Box>
     </Box>
