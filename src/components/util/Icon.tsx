@@ -1,3 +1,4 @@
+import DefsIcon from "@/../public/icons/defs.svg";
 import AWSIcon from "@/../public/icons/skill/aws.svg";
 import CircleCIIcon from "@/../public/icons/skill/circleci.svg";
 import DockerIcon from "@/../public/icons/skill/docker.svg";
@@ -17,6 +18,8 @@ import ZennIcon from "@/../public/icons/social/zenn.svg";
 import React from "react";
 
 const Icons = {
+  // defs
+  defs: DefsIcon,
   // social
   github: GitHubIcon,
   twitter: TwitterIcon,
