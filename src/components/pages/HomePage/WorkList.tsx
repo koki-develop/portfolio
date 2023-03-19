@@ -2,7 +2,7 @@ import Icon from "@/components/util/Icon";
 import Link from "@/components/util/Link";
 import Paper from "@/components/util/Paper";
 import { repositoryUrl, Work } from "@/model/work";
-import { Box, Grid, Group, Stack, Text, Title, Tooltip } from "@mantine/core";
+import { Box, Grid, Stack, Text, Title, Tooltip } from "@mantine/core";
 import React, { memo } from "react";
 
 export type WorkListProps = {
