@@ -1,5 +1,6 @@
 import CertificationList from "./CertificationList";
 import EmailButton from "./EmailButton";
+import ExperienceTimeline from "./ExperienceTimeline";
 import SkillList from "./SkillList";
 import Socials from "./Socials";
 import User from "./User";
@@ -92,33 +93,11 @@ const HomePage: NextPage = () => {
 
           <Divider />
 
-          {/* experience */}
           <Section
             title="Experience"
             sx={{ display: "flex", justifyContent: "center" }}
           >
-            <Timeline>
-              {config.experiences.map((experience) => (
-                <Timeline.Item
-                  key={experience.title}
-                  title={experience.title}
-                  active={Boolean(!experience.to)}
-                  sx={(theme) => ({
-                    "& .mantine-Timeline-itemBody": {
-                      background: theme.white,
-                      borderRadius: theme.radius.sm,
-                      boxShadow: theme.shadows.sm,
-                      padding: theme.spacing.md,
-                      paddingBottom: theme.spacing.sm,
-                    },
-                  })}
-                >
-                  <Text size="sm" color="dimmed">
-                    {experience.from} - {experience.to ?? "now"}
-                  </Text>
-                </Timeline.Item>
-              ))}
-            </Timeline>
+            <ExperienceTimeline experiences={config.experiences} />
           </Section>
         </Tabs.Panel>
 
