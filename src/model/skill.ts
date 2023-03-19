@@ -73,10 +73,28 @@ export const tailwindcss: Skill = {
   icon: "tailwindcss",
 };
 
+export const materialui: Skill = {
+  name: "Material UI",
+  url: "http://material-ui.com/",
+  icon: "materialui",
+};
+
 export const vecty: Skill = {
   name: "Vecty",
   url: "https://github.com/hexops/vecty",
   icon: "vecty",
+};
+
+export const cobra: Skill = {
+  name: "Cobra",
+  url: "https://cobra.dev/",
+  icon: "cobra",
+};
+
+export const bubbletea: Skill = {
+  name: "Bubble Tea",
+  url: "https://github.com/charmbracelet/bubbletea",
+  icon: "bubbletea",
 };
 
 /*

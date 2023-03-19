@@ -1,6 +1,8 @@
 import DefsIcon from "@/../public/icons/defs.svg";
 import AWSIcon from "@/../public/icons/skill/aws.svg";
+import BubbleTeaIcon from "@/../public/icons/skill/bubbletea.svg";
 import CircleCIIcon from "@/../public/icons/skill/circleci.svg";
+import CobraIcon from "@/../public/icons/skill/cobra.svg";
 import CypressIcon from "@/../public/icons/skill/cypress.svg";
 import DaggerIcon from "@/../public/icons/skill/dagger.svg";
 import DockerIcon from "@/../public/icons/skill/docker.svg";
@@ -11,6 +13,7 @@ import GoIcon from "@/../public/icons/skill/go.svg";
 import GoogleCloudIcon from "@/../public/icons/skill/googlecloud.svg";
 import JavaScriptIcon from "@/../public/icons/skill/javascript.svg";
 import MantineIcon from "@/../public/icons/skill/mantine.svg";
+import MaterialUIIcon from "@/../public/icons/skill/materialui.svg";
 import NextJSIcon from "@/../public/icons/skill/nextjs.svg";
 import ReactIcon from "@/../public/icons/skill/react.svg";
 import ServerlessIcon from "@/../public/icons/skill/serverless.svg";
@@ -42,7 +45,10 @@ const Icons = {
   nextjs: NextJSIcon,
   mantine: MantineIcon,
   tailwindcss: TailwindCSSIcon,
+  materialui: MaterialUIIcon,
   vecty: VectyIcon,
+  cobra: CobraIcon,
+  bubbletea: BubbleTeaIcon,
   // cloud
   aws: AWSIcon,
   googlecloud: GoogleCloudIcon,
