@@ -11,6 +11,10 @@ export type SkillGroup = {
   skills: Skill[];
 };
 
+/*
+ * language
+ */
+
 export const go: Skill = {
   name: "Go",
   url: "https://golang.org/",
@@ -28,6 +32,10 @@ export const javascript: Skill = {
   url: "https://developer.mozilla.org/docs/Web/JavaScript",
   icon: "javascript",
 };
+
+/*
+ * framework/library
+ */
 
 export const gin: Skill = {
   name: "Gin",
@@ -53,6 +61,22 @@ export const nextjs: Skill = {
   icon: "nextjs",
 };
 
+export const mantine: Skill = {
+  name: "Mantine",
+  url: "https://mantine.dev/",
+  icon: "mantine",
+};
+
+export const tailwindcss: Skill = {
+  name: "Tailwind CSS",
+  url: "https://tailwindcss.com/",
+  icon: "tailwindcss",
+};
+
+/*
+ * cloud
+ */
+
 export const aws: Skill = {
   name: "AWS",
   url: "https://aws.amazon.com/",
@@ -64,6 +88,16 @@ export const googleCloud: Skill = {
   url: "https://console.cloud.google.com/",
   icon: "googlecloud",
 };
+
+export const vercel: Skill = {
+  name: "Vercel",
+  url: "https://vercel.com/",
+  icon: "vercel",
+};
+
+/*
+ * ci/cd
+ */
 
 export const githubActions: Skill = {
   name: "GitHub Actions",
@@ -77,6 +111,10 @@ export const circleci: Skill = {
   icon: "circleci",
 };
 
+/*
+ * other
+ */
+
 export const terraform: Skill = {
   name: "Terraform",
   url: "https://www.terraform.io/",
@@ -87,4 +125,16 @@ export const docker: Skill = {
   name: "Docker",
   url: "https://www.docker.com/",
   icon: "docker",
+};
+
+export const serverless: Skill = {
+  name: "Serverless",
+  url: "https://serverless.com/",
+  icon: "serverless",
+};
+
+export const cypress: Skill = {
+  name: "Cypress",
+  url: "https://www.cypress.io/",
+  icon: "cypress",
 };

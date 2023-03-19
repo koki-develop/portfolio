@@ -1,6 +1,7 @@
 import DefsIcon from "@/../public/icons/defs.svg";
 import AWSIcon from "@/../public/icons/skill/aws.svg";
 import CircleCIIcon from "@/../public/icons/skill/circleci.svg";
+import CypressIcon from "@/../public/icons/skill/cypress.svg";
 import DockerIcon from "@/../public/icons/skill/docker.svg";
 import ExpressIcon from "@/../public/icons/skill/express.svg";
 import GinIcon from "@/../public/icons/skill/gin.svg";
@@ -8,10 +9,14 @@ import GitHubActionsIcon from "@/../public/icons/skill/githubactions.svg";
 import GoIcon from "@/../public/icons/skill/go.svg";
 import GoogleCloudIcon from "@/../public/icons/skill/googlecloud.svg";
 import JavaScriptIcon from "@/../public/icons/skill/javascript.svg";
+import MantineIcon from "@/../public/icons/skill/mantine.svg";
 import NextJSIcon from "@/../public/icons/skill/nextjs.svg";
 import ReactIcon from "@/../public/icons/skill/react.svg";
+import ServerlessIcon from "@/../public/icons/skill/serverless.svg";
+import TailwindCSSIcon from "@/../public/icons/skill/tailwindcss.svg";
 import TerraformIcon from "@/../public/icons/skill/terraform.svg";
 import TypeScriptIcon from "@/../public/icons/skill/typescript.svg";
+import VercelIcon from "@/../public/icons/skill/vercel.svg";
 import GitHubIcon from "@/../public/icons/social/github.svg";
 import TwitterIcon from "@/../public/icons/social/twitter.svg";
 import ZennIcon from "@/../public/icons/social/zenn.svg";
@@ -33,15 +38,20 @@ const Icons = {
   express: ExpressIcon,
   react: ReactIcon,
   nextjs: NextJSIcon,
+  mantine: MantineIcon,
+  tailwindcss: TailwindCSSIcon,
   // cloud
   aws: AWSIcon,
   googlecloud: GoogleCloudIcon,
+  vercel: VercelIcon,
   // ci/cd
   githubactions: GitHubActionsIcon,
   circleci: CircleCIIcon,
   // other
   terraform: TerraformIcon,
   docker: DockerIcon,
+  serverless: ServerlessIcon,
+  cypress: CypressIcon,
 } as const;
 
 export type IconName = keyof typeof Icons;

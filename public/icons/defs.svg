@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
     <defs>
+        <!-- nextjs -->
         <linearGradient x1="55.6325605%" y1="56.3850422%" x2="83.2279093%" y2="96.0801119%" id="nextjs-liner-gradient-1">
             <stop stop-color="#FFFFFF" offset="0%"></stop>
             <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
@@ -8,6 +9,31 @@
         <linearGradient x1="50%" y1="0%" x2="49.9534722%" y2="73.4375%" id="nextjs-liner-gradient-2">
             <stop stop-color="#FFFFFF" offset="0%"></stop>
             <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+
+        <!-- cypress -->
+        <linearGradient x1="6.31990833%" y1="44.0284953%" x2="87.5200593%" y2="58.4063838%" id="cypress-gradient-1">
+            <stop stop-color="#315C55" offset="0%"></stop>
+            <stop stop-color="#09293F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="54.2975471%" y1="27.2620916%" x2="50%" y2="100%" id="cypress-gradient-2">
+            <stop stop-color="#4FB38D" offset="0%"></stop>
+            <stop stop-color="#315C55" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="13.9089831%" y1="50%" x2="70.8193808%" y2="54.9595072%" id="cypress-gradient-3">
+            <stop stop-color="#4FB38D" offset="0%"></stop>
+            <stop stop-color="#97DEC0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="53.8595989%" y1="30.892265%" x2="38.3884555%" y2="95.7936297%" id="cypress-gradient-4">
+            <stop stop-color="#97DEC0" offset="0%"></stop>
+            <stop stop-color="#FFFFF0" stop-opacity="0" offset="100%"></stop>
+            <stop stop-color="#FFFFF0" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+
+        <!-- tailwindcss -->
+        <linearGradient x1="-2.77777778%" y1="32%" x2="100%" y2="67.5555556%" id="tailwindcss-gradient-1">
+            <stop stop-color="#2298BD" offset="0%"></stop>
+            <stop stop-color="#0ED7B5" offset="100%"></stop>
         </linearGradient>
     </defs>
 </svg>
