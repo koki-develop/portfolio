@@ -1,33 +1,19 @@
 import CertificationList from "./CertificationList";
 import EmailButton from "./EmailButton";
 import ExperienceTimeline from "./ExperienceTimeline";
+import NoteList from "./NoteList";
 import SkillList from "./SkillList";
 import Socials from "./Socials";
 import User from "./User";
 import WorkList from "./WorkList";
 import { config } from "@/../config";
-import Icon from "@/components/util/Icon";
 import Link from "@/components/util/Link";
 import Section from "@/components/util/Section";
-import {
-  Box,
-  Card,
-  Divider,
-  Grid,
-  Paper,
-  Stack,
-  Tabs,
-  Text,
-  Title,
-} from "@mantine/core";
-import dayjs from "dayjs";
-import relativeTime from "dayjs/plugin/relativeTime";
+import { Box, Divider, Paper, Stack, Tabs, Text, Title } from "@mantine/core";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useCallback, useMemo } from "react";
 import { IoChevronForward as ChevronRightIcon } from "react-icons/io5";
-
-dayjs.extend(relativeTime);
 
 const HomePage: NextPage = () => {
   const router = useRouter();
@@ -151,45 +137,7 @@ const HomePage: NextPage = () => {
 
         <Tabs.Panel value="notes">
           <Section title="Notes">
-            <Grid sx={(theme) => ({ marginBottom: theme.spacing.sm })}>
-              {config.notes.map((note) => (
-                <Grid.Col key={note.url} span={12} sm={6}>
-                  <Link href={note.url} external>
-                    <Card
-                      shadow="sm"
-                      sx={(theme) => ({
-                        height: "100%",
-                        display: "flex",
-                        flexDirection: "column",
-                        transition: "0.15s",
-                        "&:hover": {
-                          backgroundColor: theme.colors.gray[2],
-                        },
-                      })}
-                    >
-                      <Title
-                        order={3}
-                        size="h4"
-                        weight="normal"
-                        sx={(theme) => ({
-                          flexGrow: 1,
-                          marginBottom: theme.spacing.sm,
-                        })}
-                      >
-                        {note.title}
-                      </Title>
-                      <Text
-                        size="sm"
-                        sx={{ display: "flex", alignItems: "center", gap: 4 }}
-                      >
-                        <Icon icon="zenn" width={16} />
-                        {dayjs(note.publishedAt).fromNow()}
-                      </Text>
-                    </Card>
-                  </Link>
-                </Grid.Col>
-              ))}
-            </Grid>
+            <NoteList notes={config.notes} />
 
             <Box sx={{ display: "flex", justifyContent: "center" }}>
               <Link href={config.user.socials.zenn.url} external>
