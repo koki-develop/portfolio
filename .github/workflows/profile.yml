@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+        with:
+          repository: koki-develop/koki-develop
+          path: ./koki-develop
+          ssh-key: ${{ secrets.PROFILE_SSH_KEY }}
 
       - uses: actions/setup-node@v3
         with:
@@ -18,12 +23,6 @@ jobs:
       - run: yarn install --frozen-lockfile
 
       - run: yarn run build:profile
-
-      - uses: actions/checkout@v3
-        with:
-          repository: koki-develop/koki-develop
-          path: ./koki-develop
-          ssh-key: ${{ secrets.PROFILE_SSH_KEY }}
 
       - name: configure git
         working-directory: koki-develop
