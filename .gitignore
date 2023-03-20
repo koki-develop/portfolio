@@ -41,3 +41,6 @@ public/sitemap*.xml
 
 # notes
 /notes.json
+
+# profile
+/profile.md
