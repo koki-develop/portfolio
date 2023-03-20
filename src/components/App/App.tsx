@@ -58,7 +58,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         description={config.user.description}
         twitter={{
           cardType: "summary_large_image",
-          handle: config.user.socials.twitter.username,
+          handle: config.socials.twitter.username,
         }}
         openGraph={{
           type: "website",

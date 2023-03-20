@@ -15,5 +15,5 @@ export type WorkGroup = {
 };
 
 export const repositoryUrl = (work: Work): string => {
-  return `${config.user.socials.github.url}/${work.repository}`;
+  return `${config.socials.github.url}/${work.repository}`;
 };

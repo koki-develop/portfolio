@@ -40,7 +40,7 @@ const HomePage: NextPage = () => {
     <Box>
       <Stack spacing="lg" mb="md">
         <User user={config.user} />
-        <Socials socials={config.user.socials} />
+        <Socials socials={config.socials} />
       </Stack>
 
       {/* tabs */}
@@ -105,7 +105,7 @@ const HomePage: NextPage = () => {
 
               <Box sx={{ display: "flex", justifyContent: "center" }}>
                 <MoreLink
-                  href={`${config.user.socials.github.url}?tab=repositories&type=source`}
+                  href={`${config.socials.github.url}?tab=repositories&type=source`}
                 />
               </Box>
             </Stack>
@@ -118,7 +118,7 @@ const HomePage: NextPage = () => {
               <NoteList notes={config.notes} />
 
               <Box sx={{ display: "flex", justifyContent: "center" }}>
-                <MoreLink href={config.user.socials.zenn.url} />
+                <MoreLink href={config.socials.zenn.url} />
               </Box>
             </Stack>
           </Section>
@@ -130,7 +130,7 @@ const HomePage: NextPage = () => {
       {/* contact */}
       <Section title="Contact">
         <Stack>
-          <Socials socials={config.user.socials} />
+          <Socials socials={config.socials} />
           <EmailButton email={config.user.email} />
         </Stack>
       </Section>
