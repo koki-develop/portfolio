@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
     <title>Cypress</title>
+    <defs>
+        <linearGradient x1="6.31990833%" y1="44.0284953%" x2="87.5200593%" y2="58.4063838%" id="cypress-gradient-1">
+            <stop stop-color="#315C55" offset="0%"></stop>
+            <stop stop-color="#09293F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="54.2975471%" y1="27.2620916%" x2="50%" y2="100%" id="cypress-gradient-2">
+            <stop stop-color="#4FB38D" offset="0%"></stop>
+            <stop stop-color="#315C55" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="13.9089831%" y1="50%" x2="70.8193808%" y2="54.9595072%" id="cypress-gradient-3">
+            <stop stop-color="#4FB38D" offset="0%"></stop>
+            <stop stop-color="#97DEC0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="53.8595989%" y1="30.892265%" x2="38.3884555%" y2="95.7936297%" id="cypress-gradient-4">
+            <stop stop-color="#97DEC0" offset="0%"></stop>
+            <stop stop-color="#FFFFF0" stop-opacity="0" offset="100%"></stop>
+            <stop stop-color="#FFFFF0" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
     <g>
         <path d="M141.651196,223.943467 L137.316065,234.469333 C136.45478,236.552533 134.485522,237.963733 132.269576,238.059733 C130.806455,238.114667 129.329512,238.155733 127.838746,238.155733 C76.8145529,238.128533 31.6703279,202.042667 20.4835188,152.32 L3.11509558,156.253333 C9.39230154,184.143467 25.1469488,209.457067 47.4796295,227.548267 C70.0720779,245.844267 98.5316811,255.945067 127.647349,256 C127.688287,256 127.907329,256 127.907329,256 C129.616607,256 131.312593,255.958933 133.008047,255.890667 C142.143511,255.506667 150.308169,249.764267 153.795839,241.253333 L159.457455,227.493333 L141.651196,223.943467 Z" fill="url(#cypress-gradient-1)"></path>
         <path d="M4.54047351,161.9136 C1.53178891,150.922133 0,139.5056 0,128.006933 C0,75.5157333 32.8631006,27.52 81.781825,8.59312 L88.1957359,25.24496 C46.0875918,41.54048 17.8059874,82.8341333 17.8059874,128.006933 C17.8059874,137.915733 19.1188082,147.728533 21.7035654,157.185067 L4.54047351,161.9136 Z" fill="url(#cypress-gradient-2)"></path>
