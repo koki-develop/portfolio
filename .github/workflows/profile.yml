@@ -1,0 +1,44 @@
+name: update profile
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-profile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: package.json
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+
+      - run: yarn run build:profile
+
+      - uses: actions/checkout@v3
+        with:
+          repository: koki-develop/koki-develop
+          path: ./koki-develop
+          ssh-key: ${{ secrets.PROFILE_SSH_KEY }}
+
+      - name: configure git
+        working-directory: koki-develop
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+
+      - name: update profile
+        working-directory: koki-develop
+        run: |
+          git switch --orphan tmp
+          cp ../profile.md ./README.md
+          mkdir public
+          cp -r ../public/icons ./public
+          git add .
+          git commit -m 'update'
+          git push origin tmp:main --force
+
