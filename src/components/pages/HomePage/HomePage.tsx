@@ -8,6 +8,7 @@ import Socials from "./Socials";
 import User from "./User";
 import WorkList from "./WorkList";
 import { config } from "@/../config";
+import notes from "@/../notes.json";
 import Section from "@/components/util/Section";
 import { Box, Divider, Stack, Tabs, Title } from "@mantine/core";
 import { NextPage } from "next";
@@ -115,7 +116,7 @@ const HomePage: NextPage = () => {
         <Tabs.Panel value="notes">
           <Section title="Notes">
             <Stack>
-              <NoteList notes={config.notes} />
+              <NoteList notes={notes} />
 
               <Box sx={{ display: "flex", justifyContent: "center" }}>
                 <MoreLink href={config.socials.zenn.url} />
