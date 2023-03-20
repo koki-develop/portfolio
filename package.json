@@ -6,7 +6,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build:notes": "ts-node ./src/builder/notes.ts",
+    "build:notes": "ts-node -r tsconfig-paths/register ./src/builder/notes.ts",
     "prebuild": "yarn run build:notes",
     "build": "next build",
     "postbuild": "next-sitemap",
