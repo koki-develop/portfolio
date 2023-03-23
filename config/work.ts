@@ -150,10 +150,9 @@ export const workGroups: WorkGroup[] = [
         ],
       },
       {
-        name: "docker-tags",
-        description:
-          "Docker イメージのタグ一覧を取得するコマンドラインツール。",
-        repository: "docker-tags",
+        name: "gat",
+        description: "cat コマンド代替の Go 製コマンドラインツール。",
+        repository: "gat",
         skills: [
           // language
           go,
@@ -166,9 +165,26 @@ export const workGroups: WorkGroup[] = [
         ],
       },
       {
-        name: "gat",
-        description: "cat コマンド代替の Go 製コマンドラインツール。",
-        repository: "gat",
+        name: "gotrash",
+        description: "rm コマンド代替の Go 製コマンドラインツール。",
+        repository: "gotrash",
+        skills: [
+          // language
+          go,
+          // framework/library
+          cobra,
+          bubbletea,
+          // cloud
+          // ci/cd
+          githubActions,
+          // other
+        ],
+      },
+      {
+        name: "docker-tags",
+        description:
+          "Docker イメージのタグ一覧を取得するコマンドラインツール。",
+        repository: "docker-tags",
         skills: [
           // language
           go,
