@@ -181,6 +181,22 @@ export const workGroups: WorkGroup[] = [
         ],
       },
       {
+        name: "go-fzf",
+        description: "Fuzzy Finder CLI & ライブラリ。",
+        repository: "go-fzf",
+        skills: [
+          // language
+          go,
+          // framework/library
+          cobra,
+          bubbletea,
+          // cloud
+          // ci/cd
+          githubActions,
+          // other
+        ],
+      },
+      {
         name: "docker-tags",
         description:
           "Docker イメージのタグ一覧を取得するコマンドラインツール。",
