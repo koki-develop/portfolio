@@ -1,28 +1,14 @@
-import Icon, { IconName } from "./Icon";
 import Link from "@/components/util/Link";
 import Paper from "@/components/util/Paper";
-import {
-  createStyles,
-  CSSObject,
-  Image,
-  MantineTheme,
-  Text,
-} from "@mantine/core";
+import { CSSObject, Image, MantineTheme, Text } from "@mantine/core";
 import React, { memo } from "react";
 
 export type ImageCardProps = {
   name: string;
   href?: string;
-} & (
-  | {
-      icon: IconName;
-      src?: string;
-    }
-  | {
-      icon?: undefined;
-      src: string;
-    }
-);
+  src?: string;
+  size: "lg" | "md";
+};
 
 const buildImageStyle = (theme: MantineTheme, size: "md" | "lg"): CSSObject => {
   const smallStyles = (() => {
@@ -52,16 +38,8 @@ const buildImageStyle = (theme: MantineTheme, size: "md" | "lg"): CSSObject => {
   };
 };
 
-const useStyles = createStyles((theme) => ({
-  icon: {
-    ...buildImageStyle(theme, "md"),
-  },
-}));
-
 const ImageCard: React.FC<ImageCardProps> = memo((props) => {
-  const { name, href, src, icon } = props;
-
-  const { classes } = useStyles();
+  const { name, href, src, size = "md" } = props;
 
   const component = (
     <Paper
@@ -74,26 +52,22 @@ const ImageCard: React.FC<ImageCardProps> = memo((props) => {
         alignItems: "center",
       }}
     >
-      {icon ? (
-        <Icon className={classes.icon} icon={icon} />
-      ) : (
-        <Image
-          styles={(theme) => ({
-            figure: {
-              display: "flex",
-              justifyContent: "center",
-            },
-            imageWrapper: {
-              ...buildImageStyle(theme, "lg"),
-              display: "flex",
-              justifyContent: "center",
-            },
-          })}
-          fit="contain"
-          src={src}
-          alt=""
-        />
-      )}
+      <Image
+        styles={(theme) => ({
+          figure: {
+            display: "flex",
+            justifyContent: "center",
+          },
+          imageWrapper: {
+            ...buildImageStyle(theme, size),
+            display: "flex",
+            justifyContent: "center",
+          },
+        })}
+        fit="contain"
+        src={src}
+        alt=""
+      />
       <Text size="sm" sx={{ whiteSpace: "pre-wrap", textAlign: "center" }}>
         {name}
       </Text>

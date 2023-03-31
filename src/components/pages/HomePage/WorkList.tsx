@@ -1,8 +1,7 @@
-import Icon from "@/components/util/Icon";
 import Link from "@/components/util/Link";
 import Paper from "@/components/util/Paper";
 import { repositoryUrl, Work } from "@/model/work";
-import { Box, Grid, Stack, Text, Title, Tooltip } from "@mantine/core";
+import { Box, Grid, Image, Stack, Text, Title, Tooltip } from "@mantine/core";
 import React, { memo } from "react";
 
 export type WorkListProps = {
@@ -34,13 +33,17 @@ const WorkList: React.FC<WorkListProps> = memo((props) => {
                         sx={{
                           zIndex: work.skills.length - index,
                           borderRadius: "50%",
-                          height: 28,
-                          width: 28,
                           overflow: "hidden",
                           marginLeft: index !== 0 ? -8 : undefined,
                         }}
                       >
-                        <Icon icon={skill.icon} height="100%" width="100%" />
+                        <Image
+                          fit="contain"
+                          src={skill.imageSrc}
+                          height={26}
+                          width={26}
+                          alt={skill.name}
+                        />
                       </Paper>
                     </Tooltip>
                   ))}

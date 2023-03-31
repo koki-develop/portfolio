@@ -1,5 +1,6 @@
-import { ImageCardProps } from "@/components/util/ImageCard";
-import ImageCardList from "@/components/util/ImageCardList";
+import ImageCardList, {
+  ImageCardListProps,
+} from "@/components/util/ImageCardList";
 import { Skill } from "@/model/skill";
 import React, { memo, useMemo } from "react";
 
@@ -10,10 +11,10 @@ export type SkillListProps = {
 const SkillList: React.FC<SkillListProps> = memo((props) => {
   const { skills } = props;
 
-  const items = useMemo((): ImageCardProps[] => {
+  const items = useMemo((): ImageCardListProps["items"] => {
     return skills.map((skill) => ({
       name: skill.name,
-      icon: skill.icon,
+      src: skill.imageSrc,
       href: skill.url,
     }));
   }, [skills]);

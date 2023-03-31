@@ -1,4 +1,3 @@
-import Icon from "@/components/util/Icon";
 import Link from "@/components/util/Link";
 import Section from "@/components/util/Section";
 import {
@@ -23,16 +22,6 @@ const Layout: React.FC<LayoutProps> = memo((props) => {
 
   return (
     <Box>
-      <Icon
-        style={{
-          visibility: "hidden",
-          height: 0,
-          width: 0,
-          position: "absolute",
-        }}
-        icon="defs"
-      />
-
       {/* header */}
       <Paper p="sm" shadow="xs" radius={0} component="header">
         <Container sx={{ display: "flex" }}>

@@ -1,8 +1,7 @@
-import Icon from "@/components/util/Icon";
 import Link from "@/components/util/Link";
 import Paper from "@/components/util/Paper";
 import { Note } from "@/model/note";
-import { Grid, Group, Stack, Text, Title } from "@mantine/core";
+import { Grid, Group, Image, Stack, Text, Title } from "@mantine/core";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import React, { memo } from "react";
@@ -29,7 +28,7 @@ const NoteList: React.FC<NoteListProps> = memo((props) => {
 
                 <Text size="sm">
                   <Group spacing="xs">
-                    <Icon icon="zenn" width={16} />
+                    <Image src="/icons/social/zenn.svg" width={16} alt="Zenn" />
                     {dayjs(note.publishedAt).fromNow()}
                   </Group>
                 </Text>

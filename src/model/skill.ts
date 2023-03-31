@@ -1,9 +1,7 @@
-import { IconName } from "@/components/util/Icon";
-
 export type Skill = {
   name: string;
   url: string;
-  icon: IconName;
+  imageSrc: string;
 };
 
 export type SkillGroup = {
@@ -18,19 +16,19 @@ export type SkillGroup = {
 export const go: Skill = {
   name: "Go",
   url: "https://golang.org/",
-  icon: "go",
+  imageSrc: "/icons/skill/go.svg",
 };
 
 export const typescript: Skill = {
   name: "TypeScript",
   url: "https://www.typescriptlang.org/",
-  icon: "typescript",
+  imageSrc: "/icons/skill/typescript.svg",
 };
 
 export const javascript: Skill = {
   name: "JavaScript",
   url: "https://developer.mozilla.org/docs/Web/JavaScript",
-  icon: "javascript",
+  imageSrc: "/icons/skill/javascript.svg",
 };
 
 /*
@@ -40,61 +38,61 @@ export const javascript: Skill = {
 export const gin: Skill = {
   name: "Gin",
   url: "https://gin-gonic.com/",
-  icon: "gin",
+  imageSrc: "/icons/skill/gin.svg",
 };
 
 export const express: Skill = {
   name: "Express",
   url: "https://expressjs.com/",
-  icon: "express",
+  imageSrc: "/icons/skill/express.svg",
 };
 
 export const react: Skill = {
   name: "React",
   url: "https://reactjs.org/",
-  icon: "react",
+  imageSrc: "/icons/skill/react.svg",
 };
 
 export const nextjs: Skill = {
   name: "Next.js",
   url: "https://nextjs.org/",
-  icon: "nextjs",
+  imageSrc: "/icons/skill/nextjs.svg",
 };
 
 export const mantine: Skill = {
   name: "Mantine",
   url: "https://mantine.dev/",
-  icon: "mantine",
+  imageSrc: "/icons/skill/mantine.svg",
 };
 
 export const tailwindcss: Skill = {
   name: "Tailwind CSS",
   url: "https://tailwindcss.com/",
-  icon: "tailwindcss",
+  imageSrc: "/icons/skill/tailwindcss.svg",
 };
 
 export const materialui: Skill = {
   name: "Material UI",
   url: "http://material-ui.com/",
-  icon: "materialui",
+  imageSrc: "/icons/skill/materialui.svg",
 };
 
 export const vecty: Skill = {
   name: "Vecty",
   url: "https://github.com/hexops/vecty",
-  icon: "vecty",
+  imageSrc: "/icons/skill/vecty.svg",
 };
 
 export const cobra: Skill = {
   name: "Cobra",
   url: "https://cobra.dev/",
-  icon: "cobra",
+  imageSrc: "/icons/skill/cobra.svg",
 };
 
 export const bubbletea: Skill = {
   name: "Bubble Tea",
   url: "https://github.com/charmbracelet/bubbletea",
-  icon: "bubbletea",
+  imageSrc: "/icons/skill/bubbletea.svg",
 };
 
 /*
@@ -104,19 +102,19 @@ export const bubbletea: Skill = {
 export const aws: Skill = {
   name: "AWS",
   url: "https://aws.amazon.com/",
-  icon: "aws",
+  imageSrc: "/icons/skill/aws.svg",
 };
 
 export const googleCloud: Skill = {
   name: "Google Cloud",
   url: "https://console.cloud.google.com/",
-  icon: "googlecloud",
+  imageSrc: "/icons/skill/googlecloud.svg",
 };
 
 export const vercel: Skill = {
   name: "Vercel",
   url: "https://vercel.com/",
-  icon: "vercel",
+  imageSrc: "/icons/skill/vercel.svg",
 };
 
 /*
@@ -126,19 +124,19 @@ export const vercel: Skill = {
 export const githubActions: Skill = {
   name: "GitHub Actions",
   url: "https://github.co.jp/features/actions",
-  icon: "githubactions",
+  imageSrc: "/icons/skill/githubactions.svg",
 };
 
 export const circleci: Skill = {
   name: "CircleCI",
   url: "https://circleci.com/",
-  icon: "circleci",
+  imageSrc: "/icons/skill/circleci.svg",
 };
 
 export const dagger: Skill = {
   name: "Dagger",
   url: "https://dagger.io/",
-  icon: "dagger",
+  imageSrc: "/icons/skill/dagger.svg",
 };
 
 /*
@@ -148,29 +146,29 @@ export const dagger: Skill = {
 export const terraform: Skill = {
   name: "Terraform",
   url: "https://www.terraform.io/",
-  icon: "terraform",
+  imageSrc: "/icons/skill/terraform.svg",
 };
 
 export const cdktf: Skill = {
   name: "CDK for Terraform",
   url: "https://developer.hashicorp.com/terraform/cdktf",
-  icon: "terraform",
+  imageSrc: "/icons/skill/terraform.svg",
 };
 
 export const docker: Skill = {
   name: "Docker",
   url: "https://www.docker.com/",
-  icon: "docker",
+  imageSrc: "/icons/skill/docker.svg",
 };
 
 export const serverless: Skill = {
   name: "Serverless",
   url: "https://serverless.com/",
-  icon: "serverless",
+  imageSrc: "/icons/skill/serverless.svg",
 };
 
 export const cypress: Skill = {
   name: "Cypress",
   url: "https://www.cypress.io/",
-  icon: "cypress",
+  imageSrc: "/icons/skill/cypress.svg",
 };
