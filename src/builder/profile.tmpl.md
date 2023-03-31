@@ -10,14 +10,14 @@
 ## Socials
 
 <% Object.values(config.socials).forEach(function (social) { -%>
-[<img src="./public/icons/<%= social.iconPath %>" width="40" height="40" />](<%= social.url %>)
+[<img src="./public<%= social.imageSrc %>" width="40" height="40" />](<%= social.url %>)
 <% }) -%>
 
 ## Skills
 
 <% config.skillGroups.forEach(function (skillGroup) { -%>
 <% skillGroup.skills.forEach(function (skill) { -%>
-[<img src="./public/icons/<%= skill.iconPath %>" width="40" height="40" />](<%= skill.url %>)
+[<img src="./public<%= skill.imageSrc %>" width="40" height="40" />](<%= skill.url %>)
 <% }) -%>
 <% }) -%>
 
@@ -36,7 +36,7 @@
 ## Contact
 
 <% Object.values(config.socials).forEach(function (social) { -%>
-[<img src="./public/icons/<%= social.iconPath %>" width="40" height="40" />](<%= social.url %>)
+[<img src="./public<%= social.imageSrc %>" width="40" height="40" />](<%= social.url %>)
 <% }) -%>
 
 [<%= config.user.email %>](mailto:<%= config.user.email %>)
