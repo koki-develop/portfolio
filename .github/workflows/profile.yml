@@ -36,7 +36,7 @@ jobs:
           git switch --orphan tmp
           cp ../profile.md ./README.md
           mkdir public
-          cp -r ../public/icons ./public
+          cp -r ../public/images ./public
           git add .
           git commit -m 'update'
           git push origin tmp:main --force
