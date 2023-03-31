@@ -9,9 +9,9 @@ const iconPath = (icon: IconName): string =>
     {
       // skill
       aws: "skill/aws.svg",
-      bubbletea: "skill/bubbletea.svg",
+      bubbletea: "skill/bubbletea.png",
       circleci: "skill/circleci.svg",
-      cobra: "skill/cobra.svg",
+      cobra: "skill/cobra.png",
       cypress: "skill/cypress.svg",
       dagger: "skill/dagger.svg",
       docker: "skill/docker.svg",

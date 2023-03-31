@@ -28,7 +28,11 @@ const NoteList: React.FC<NoteListProps> = memo((props) => {
 
                 <Text size="sm">
                   <Group spacing="xs">
-                    <Image src="/icons/social/zenn.svg" width={16} alt="Zenn" />
+                    <Image
+                      src="/images/social/zenn.svg"
+                      width={16}
+                      alt="Zenn"
+                    />
                     {dayjs(note.publishedAt).fromNow()}
                   </Group>
                 </Text>
