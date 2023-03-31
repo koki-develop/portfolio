@@ -1,3 +1,4 @@
+import { config } from "@/../config";
 import Link from "@/components/util/Link";
 import Paper from "@/components/util/Paper";
 import { Note } from "@/model/note";
@@ -29,7 +30,7 @@ const NoteList: React.FC<NoteListProps> = memo((props) => {
                 <Text size="sm">
                   <Group spacing="xs">
                     <Image
-                      src="/images/social/zenn.svg"
+                      src={config.socials.zenn.imageSrc}
                       width={16}
                       alt="Zenn"
                     />
