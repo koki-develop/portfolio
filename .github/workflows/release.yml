@@ -7,16 +7,14 @@ on:
   schedule:
     - cron: "0 15 * * *" # 毎日 0 時
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
-  build:
+  release:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - uses: actions/cache@v3
         with:
           path: ${{ github.workspace }}/.next/cache
@@ -34,18 +32,9 @@ jobs:
           NEXT_PUBLIC_GA_MEASUREMENT_ID: ${{ vars.GA_MEASUREMENT_ID }}
       - run: yarn run export
 
-      - uses: actions/upload-pages-artifact@v1
+      - uses: peaceiris/actions-gh-pages@v3
         with:
-          path: ./out
-
-  deploy:
-    needs:
-      - build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          cname: koki.me
+          force_orphan: true
