@@ -1,5 +1,6 @@
 import Link from "@/components/util/Link";
 import Paper from "@/components/util/Paper";
+import { Skill } from "@/model/skill";
 import { repositoryUrl, Work } from "@/model/work";
 import { Box, Grid, Image, Stack, Text, Title, Tooltip } from "@mantine/core";
 import React, { memo } from "react";
@@ -26,28 +27,7 @@ const WorkList: React.FC<WorkListProps> = memo((props) => {
                   </Link>
                 </Box>
 
-                <Box sx={{ display: "flex" }}>
-                  {work.skills.map((skill, index) => (
-                    <Tooltip key={skill.name} label={skill.name} withArrow>
-                      <Paper
-                        sx={{
-                          zIndex: work.skills.length - index,
-                          borderRadius: "50%",
-                          overflow: "hidden",
-                          marginLeft: index !== 0 ? -8 : undefined,
-                        }}
-                      >
-                        <Image
-                          fit="contain"
-                          src={skill.imageSrc}
-                          height={26}
-                          width={26}
-                          alt={skill.name}
-                        />
-                      </Paper>
-                    </Tooltip>
-                  ))}
-                </Box>
+                <SkillGroup skills={work.skills} />
               </Box>
 
               <Text sx={{ flexGrow: 1 }}>{work.description}</Text>
@@ -68,3 +48,38 @@ const WorkList: React.FC<WorkListProps> = memo((props) => {
 WorkList.displayName = "WorkList";
 
 export default WorkList;
+
+type SkillGroupProps = {
+  skills: Skill[];
+};
+
+const SkillGroup: React.FC<SkillGroupProps> = memo((props) => {
+  const { skills } = props;
+
+  return (
+    <Box sx={{ display: "flex" }}>
+      {skills.map((skill, index) => (
+        <Tooltip key={skill.name} label={skill.name} withArrow>
+          <Paper
+            sx={{
+              zIndex: skills.length - index,
+              borderRadius: "50%",
+              overflow: "hidden",
+              marginLeft: index !== 0 ? -8 : undefined,
+            }}
+          >
+            <Image
+              fit="contain"
+              src={skill.imageSrc}
+              height={26}
+              width={26}
+              alt={skill.name}
+            />
+          </Paper>
+        </Tooltip>
+      ))}
+    </Box>
+  );
+});
+
+SkillGroup.displayName = "SkillGroup";
