@@ -165,9 +165,40 @@ export const workGroups: WorkGroup[] = [
         ],
       },
       {
+        name: "gh-grass",
+        description: "GitHub の草を出力する GitHub CLI 拡張機能。",
+        repository: "gh-grass",
+        skills: [
+          // language
+          go,
+          // framework/library
+          cobra,
+          // cloud
+          // ci/cd
+          githubActions,
+          // other
+        ],
+      },
+      {
         name: "slp",
         description: "リッチなプログレスバーつきの sleep コマンド。",
         repository: "slp",
+        skills: [
+          // language
+          go,
+          // framework/library
+          cobra,
+          bubbletea,
+          // cloud
+          // ci/cd
+          githubActions,
+          // other
+        ],
+      },
+      {
+        name: "gotrash",
+        description: "rm コマンド代替の Go 製コマンドラインツール。",
+        repository: "gotrash",
         skills: [
           // language
           go,
@@ -189,22 +220,6 @@ export const workGroups: WorkGroup[] = [
           go,
           // framework/library
           cobra,
-          // cloud
-          // ci/cd
-          githubActions,
-          // other
-        ],
-      },
-      {
-        name: "gotrash",
-        description: "rm コマンド代替の Go 製コマンドラインツール。",
-        repository: "gotrash",
-        skills: [
-          // language
-          go,
-          // framework/library
-          cobra,
-          bubbletea,
           // cloud
           // ci/cd
           githubActions,
