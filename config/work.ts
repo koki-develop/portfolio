@@ -134,22 +134,6 @@ export const workGroups: WorkGroup[] = [
         ],
       },
       {
-        name: "Typingo",
-        description: "Go 製のタイピングゲーム。",
-        repository: "typingo",
-        skills: [
-          // language
-          go,
-          // framework/library
-          cobra,
-          bubbletea,
-          // cloud
-          // ci/cd
-          githubActions,
-          // other
-        ],
-      },
-      {
         name: "gat",
         description: "cat コマンド代替の Go 製コマンドラインツール。",
         repository: "gat",
@@ -215,6 +199,22 @@ export const workGroups: WorkGroup[] = [
         name: "gotrash",
         description: "rm コマンド代替の Go 製コマンドラインツール。",
         repository: "gotrash",
+        skills: [
+          // language
+          go,
+          // framework/library
+          cobra,
+          bubbletea,
+          // cloud
+          // ci/cd
+          githubActions,
+          // other
+        ],
+      },
+      {
+        name: "Typingo",
+        description: "Go 製のタイピングゲーム。",
+        repository: "typingo",
         skills: [
           // language
           go,
