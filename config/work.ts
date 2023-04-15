@@ -165,9 +165,9 @@ export const workGroups: WorkGroup[] = [
         ],
       },
       {
-        name: "gotrash",
-        description: "rm コマンド代替の Go 製コマンドラインツール。",
-        repository: "gotrash",
+        name: "go-fzf",
+        description: "Fuzzy Finder CLI & ライブラリ。",
+        repository: "go-fzf",
         skills: [
           // language
           go,
@@ -181,9 +181,40 @@ export const workGroups: WorkGroup[] = [
         ],
       },
       {
-        name: "go-fzf",
-        description: "Fuzzy Finder CLI & ライブラリ。",
-        repository: "go-fzf",
+        name: "slp",
+        description: "リッチなプログレスバーつきの sleep コマンド。",
+        repository: "slp",
+        skills: [
+          // language
+          go,
+          // framework/library
+          cobra,
+          bubbletea,
+          // cloud
+          // ci/cd
+          githubActions,
+          // other
+        ],
+      },
+      {
+        name: "ego",
+        description: "echo コマンド代替の Go 製コマンドラインツール。",
+        repository: "ego",
+        skills: [
+          // language
+          go,
+          // framework/library
+          cobra,
+          // cloud
+          // ci/cd
+          githubActions,
+          // other
+        ],
+      },
+      {
+        name: "gotrash",
+        description: "rm コマンド代替の Go 製コマンドラインツール。",
+        repository: "gotrash",
         skills: [
           // language
           go,
