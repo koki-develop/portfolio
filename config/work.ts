@@ -259,21 +259,19 @@ export const workGroups: WorkGroup[] = [
         ],
       },
       {
-        name: "Qiita LGTM Ranking",
-        description: "Qiita のいいねランキングを自動更新するシステム。",
+        name: "Qiita Ranking",
+        description: "Qiita のランキング記事を自動更新するシステム。",
         url: "https://qiita.com/items/b6cfc81906990b3a3e72",
-        repository: "qiita-lgtm-ranking",
+        repository: "qiita-ranking",
         skills: [
           // language
           go,
           // framework/library
+          cobra,
           // cloud
-          aws,
           // ci/cd
           githubActions,
           // other
-          terraform,
-          serverless,
         ],
       },
       {
