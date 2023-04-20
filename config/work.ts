@@ -180,6 +180,22 @@ export const workGroups: WorkGroup[] = [
         ],
       },
       {
+        name: "sheep",
+        description: "羊を眠らせる sleep コマンド。",
+        repository: "sheep",
+        skills: [
+          // language
+          go,
+          // framework/library
+          cobra,
+          bubbletea,
+          // cloud
+          // ci/cd
+          githubActions,
+          // other
+        ],
+      },
+      {
         name: "slp",
         description: "リッチなプログレスバーつきの sleep コマンド。",
         repository: "slp",
