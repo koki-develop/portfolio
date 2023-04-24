@@ -243,6 +243,21 @@ export const workGroups: WorkGroup[] = [
         ],
       },
       {
+        name: "Qiita CLI",
+        description: "Qiita 用の CLI 。",
+        repository: "qiita-cli",
+        skills: [
+          // language
+          go,
+          // framework/library
+          cobra,
+          // cloud
+          // ci/cd
+          githubActions,
+          // other
+        ],
+      },
+      {
         name: "Typingo",
         description: "Go 製のタイピングゲーム。",
         repository: "typingo",
