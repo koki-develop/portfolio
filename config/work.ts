@@ -15,6 +15,7 @@ import {
   materialui,
   nextjs,
   react,
+  ruby,
   serverless,
   tailwindcss,
   terraform,
@@ -236,6 +237,22 @@ export const workGroups: WorkGroup[] = [
           go,
           // framework/library
           cobra,
+          // cloud
+          // ci/cd
+          githubActions,
+          // other
+        ],
+      },
+      {
+        name: "Xvert",
+        description:
+          "様々なフォーマットを相互変換する Ruby 製コマンドラインツール。",
+        url: "https://rubygems.org/gems/xvert",
+        repository: "xvert",
+        skills: [
+          // language
+          ruby,
+          // framework/library
           // cloud
           // ci/cd
           githubActions,

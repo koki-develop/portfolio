@@ -31,6 +31,12 @@ export const javascript: Skill = {
   imageSrc: "/images/skill/javascript.svg",
 };
 
+export const ruby: Skill = {
+  name: "Ruby",
+  url: "https://www.ruby-lang.org",
+  imageSrc: "/images/skill/ruby.svg",
+};
+
 /*
  * framework/library
  */
