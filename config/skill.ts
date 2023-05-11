@@ -4,7 +4,7 @@ import * as skills from "@/model/skill";
 export const skillGroups: SkillGroup[] = [
   {
     name: "Language",
-    skills: [skills.go, skills.typescript, skills.javascript],
+    skills: [skills.go, skills.typescript, skills.javascript, skills.ruby],
   },
   {
     name: "Framework / Library",
