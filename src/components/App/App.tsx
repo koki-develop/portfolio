@@ -1,5 +1,5 @@
 import { theme } from "./theme";
-import { config } from "@/../config";
+import seo from "@/../next-seo.config";
 import Layout from "@/components/Layout";
 import "@fontsource/open-sans";
 import { MantineProvider } from "@mantine/core";
@@ -52,29 +52,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         </>
       )}
       {/* seo */}
-      <DefaultSeo
-        defaultTitle={config.user.name}
-        titleTemplate={`%s | ${config.user.name}`}
-        description={config.user.description}
-        twitter={{
-          cardType: "summary_large_image",
-          handle: config.socials.twitter.username,
-        }}
-        openGraph={{
-          type: "website",
-          locale: "ja_JP",
-          images: [
-            {
-              url: `${config.url}/images/ogp.png`,
-              secureUrl: `${config.url}/images/ogp.png`,
-              width: 1200,
-              height: 630,
-              alt: config.user.name,
-              type: "image/jpeg",
-            },
-          ],
-        }}
-      />
+      <DefaultSeo {...seo} />
       {/* component */}
       <Layout>
         <Component {...pageProps} />
