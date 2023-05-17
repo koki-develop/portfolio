@@ -2,7 +2,7 @@ import { Certification } from "@/model/certification";
 
 export const certifications: Certification[] = [
   {
-    name: "AWS\nSolutions Architect Associate",
+    name: "AWS Certified\nSolutions Architect Associate",
     url: "https://www.credly.com/badges/a6b750f7-2601-4582-8131-3974e08eee5f/public_url",
     imageSrc: "/images/certification/aws-saa.png",
   },
