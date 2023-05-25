@@ -7,6 +7,11 @@ export const certifications: Certification[] = [
     imageSrc: "/images/certification/aws-saa.png",
   },
   {
+    name: "AWS Certified\nSysOps Administrator Associate",
+    url: "https://www.credly.com/badges/385e90d5-3f8e-470a-bf87-51353ce88677/public_url",
+    imageSrc: "/images/certification/aws-soa.png",
+  },
+  {
     name: "Google Cloud\nAssociate Cloud Engineer",
     url: "https://www.credential.net/2316bc23-49ca-4aa1-8892-acee13740c99",
     imageSrc: "/images/certification/googlecloud-ace.png",
