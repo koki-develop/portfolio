@@ -174,6 +174,7 @@ export const workGroups: WorkGroup[] = [
           go,
           // framework/library
           cobra,
+          bubbletea,
           // cloud
           // ci/cd
           githubActions,
