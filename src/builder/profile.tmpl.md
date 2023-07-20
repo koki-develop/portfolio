@@ -21,22 +21,6 @@
 <% }) -%>
 <% }) -%>
 
-## Works
-
-<% config.workGroups.forEach(function (workGroup) { -%>
-### <%= workGroup.name %>
-
-| Name | Repository |
-| --- | --- |
-<% workGroup.works.forEach(function (work) { -%>
-| <% if (work.url) { -%><a href="<%= work.url %>"><%= work.name -%></a><% } else { -%><%= work.name -%><% } -%> | <a href="https://github.com/koki-develop/<%= work.repository %>">koki-develop/<%= work.repository -%></a> |
-<% }) -%>
-<% }) -%>
-
 ## Contact
-
-<% Object.values(config.socials).forEach(function (social) { -%>
-[<img src="./public<%= social.imageSrc %>" width="40" height="40" />](<%= social.url %>)
-<% }) -%>
 
 [<%= config.user.email %>](mailto:<%= config.user.email %>)
