@@ -17,4 +17,9 @@ export const socials: Socials = {
     url: "https://zenn.dev/kou_pg_0131",
     imageSrc: "/images/social/zenn.svg",
   },
+  threads: {
+    name: "Threads",
+    url: "https://www.threads.net/@koki_develop",
+    imageSrc: "/images/social/threads.svg",
+  },
 };

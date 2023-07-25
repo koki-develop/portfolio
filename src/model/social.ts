@@ -8,4 +8,5 @@ export type Socials = {
   github: Social;
   twitter: Social & { username: string };
   zenn: Social;
+  threads: Social;
 };
