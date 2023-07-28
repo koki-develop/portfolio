@@ -170,6 +170,7 @@ export const workGroups: WorkGroup[] = [
       {
         name: "gh-grass",
         description: "GitHub の草を出力する GitHub CLI 拡張機能。",
+        imageSrc: "/images/work/gh-grass.svg",
         repository: "gh-grass",
         skills: [
           // language
