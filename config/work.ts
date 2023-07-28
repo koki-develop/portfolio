@@ -137,6 +137,7 @@ export const workGroups: WorkGroup[] = [
       {
         name: "gat",
         description: "cat コマンド代替の Go 製コマンドラインツール。",
+        imageSrc: "/images/work/gat.svg",
         repository: "gat",
         skills: [
           // language
