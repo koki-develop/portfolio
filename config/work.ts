@@ -121,6 +121,7 @@ export const workGroups: WorkGroup[] = [
       {
         name: "cLive",
         description: "ターミナル操作を自動化するコマンドラインツール。",
+        imageSrc: "/images/work/clive.svg",
         repository: "clive",
         skills: [
           // language
