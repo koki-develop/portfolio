@@ -4,6 +4,7 @@ import { config } from "@/../config";
 export type Work = {
   name: string;
   description: string;
+  imageSrc?: string;
   url?: string;
   repository: string;
   skills: Skill[];

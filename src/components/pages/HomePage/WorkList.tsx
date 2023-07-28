@@ -2,7 +2,16 @@ import Link from "@/components/util/Link";
 import Paper from "@/components/util/Paper";
 import { Skill } from "@/model/skill";
 import { repositoryUrl, Work } from "@/model/work";
-import { Box, Grid, Image, Stack, Text, Title, Tooltip } from "@mantine/core";
+import {
+  Box,
+  Card,
+  Grid,
+  Image,
+  Stack,
+  Text,
+  Title,
+  Tooltip,
+} from "@mantine/core";
 import React, { memo } from "react";
 
 export type WorkListProps = {
@@ -16,7 +25,14 @@ const WorkList: React.FC<WorkListProps> = memo((props) => {
     <Grid>
       {works.map((work) => (
         <Grid.Col key={work.name} span={12} sm={6}>
-          <Paper p="md" sx={{ height: "100%" }}>
+          <Card p="md">
+            {work.imageSrc && (
+              <Card.Section mb="xs">
+                <Link external href={work.url ?? repositoryUrl(work)}>
+                  <Image src={work.imageSrc} height={160} fit="cover" />
+                </Link>
+              </Card.Section>
+            )}
             <Stack spacing="sm" sx={{ height: "100%" }}>
               <Box>
                 <Box sx={{ display: "flex", marginBottom: 4 }}>
@@ -38,7 +54,7 @@ const WorkList: React.FC<WorkListProps> = memo((props) => {
                 </Link>
               </Box>
             </Stack>
-          </Paper>
+          </Card>
         </Grid.Col>
       ))}
     </Grid>
