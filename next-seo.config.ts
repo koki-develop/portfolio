@@ -7,7 +7,7 @@ const seo: DefaultSeoProps = {
   description: config.user.description,
   twitter: {
     cardType: "summary_large_image",
-    handle: config.socials.twitter.username,
+    handle: config.socials.x.username,
   },
   openGraph: {
     type: "website",

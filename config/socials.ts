@@ -6,10 +6,10 @@ export const socials: Socials = {
     url: "https://github.com/koki-develop",
     imageSrc: "/images/social/github.svg",
   },
-  twitter: {
-    name: "Twitter",
+  x: {
+    name: "X",
     url: "https://twitter.com/koki_develop",
-    imageSrc: "/images/social/twitter.svg",
+    imageSrc: "/images/social/x.svg",
     username: "@koki_develop",
   },
   zenn: {

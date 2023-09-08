@@ -6,7 +6,7 @@ export type Social = {
 
 export type Socials = {
   github: Social;
-  twitter: Social & { username: string };
+  x: Social & { username: string };
   zenn: Social;
   threads: Social;
 };
