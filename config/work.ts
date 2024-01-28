@@ -302,22 +302,6 @@ export const workGroups: WorkGroup[] = [
           // other
         ],
       },
-      {
-        name: "CheckIP",
-        description: "クライアントの IP アドレスを返す API 。",
-        repository: "checkip",
-        url: "https://checkip.dev",
-        skills: [
-          // language
-          // framework/library
-          // cloud
-          aws,
-          // ci/cd
-          githubActions,
-          // other
-          terraform,
-        ],
-      },
     ],
   },
 ];
