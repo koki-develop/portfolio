@@ -1,10 +1,8 @@
 import {
   aws,
   bubbletea,
-  cdktf,
   cobra,
   cypress,
-  dagger,
   docker,
   gin,
   githubActions,
@@ -20,7 +18,6 @@ import {
   tailwindcss,
   terraform,
   typescript,
-  vecty,
   vercel,
 } from "@/model/skill";
 import { WorkGroup } from "@/model/work";
@@ -90,27 +87,6 @@ export const workGroups: WorkGroup[] = [
           githubActions,
           // other
           terraform,
-        ],
-      },
-      {
-        name: "GoGoGo",
-        description:
-          "バックエンド・フロントエンド・インフラ・ CI/CD を Go で書いた Web アプリケーション。",
-        url: "https://go55.dev",
-        repository: "gogogo",
-        skills: [
-          // language
-          go,
-          // framework/library
-          gin,
-          vecty,
-          // cloud
-          aws,
-          // ci/cd
-          githubActions,
-          dagger,
-          // other
-          cdktf,
         ],
       },
     ],

@@ -83,12 +83,6 @@ export const materialui: Skill = {
   imageSrc: "/images/skill/materialui.svg",
 };
 
-export const vecty: Skill = {
-  name: "Vecty",
-  url: "https://github.com/hexops/vecty",
-  imageSrc: "/images/skill/vecty.svg",
-};
-
 export const cobra: Skill = {
   name: "Cobra",
   url: "https://cobra.dev/",
@@ -139,12 +133,6 @@ export const circleci: Skill = {
   imageSrc: "/images/skill/circleci.svg",
 };
 
-export const dagger: Skill = {
-  name: "Dagger",
-  url: "https://dagger.io/",
-  imageSrc: "/images/skill/dagger.svg",
-};
-
 /*
  * other
  */
@@ -152,12 +140,6 @@ export const dagger: Skill = {
 export const terraform: Skill = {
   name: "Terraform",
   url: "https://www.terraform.io/",
-  imageSrc: "/images/skill/terraform.svg",
-};
-
-export const cdktf: Skill = {
-  name: "CDK for Terraform",
-  url: "https://developer.hashicorp.com/terraform/cdktf",
   imageSrc: "/images/skill/terraform.svg",
 };
 
