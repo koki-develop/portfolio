@@ -8,5 +8,5 @@ export type Socials = {
   github: Social;
   x: Social & { username: string };
   zenn: Social;
-  threads: Social;
+  bluesky: Social;
 };
