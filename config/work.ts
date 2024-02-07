@@ -47,7 +47,7 @@ export const workGroups: WorkGroup[] = [
       },
       {
         name: "Thredot",
-        description: "シンプルなメモサービス",
+        description: "スレッド形式のメモサービス。",
         url: "https://thredot.org",
         skills: [
           // language
