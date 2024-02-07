@@ -111,6 +111,12 @@ export const googleCloud: Skill = {
   imageSrc: "/images/skill/googlecloud.svg",
 };
 
+export const firebase: Skill = {
+  name: "Firebase",
+  url: "https://firebase.google.com/",
+  imageSrc: "/images/skill/firebase.svg",
+};
+
 export const vercel: Skill = {
   name: "Vercel",
   url: "https://vercel.com/",
