@@ -4,6 +4,7 @@ import {
   cobra,
   cypress,
   docker,
+  firebase,
   gin,
   githubActions,
   go,
@@ -39,6 +40,25 @@ export const workGroups: WorkGroup[] = [
           react,
           mantine,
           // cloud
+          // ci/cd
+          githubActions,
+          // other
+        ],
+      },
+      {
+        name: "Thredot",
+        description: "シンプルなメモサービス",
+        url: "https://thredot.org",
+        skills: [
+          // language
+          typescript,
+          // framework/library
+          nextjs,
+          react,
+          mantine,
+          // cloud
+          googleCloud,
+          firebase,
           // ci/cd
           githubActions,
           // other
