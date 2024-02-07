@@ -13,6 +13,7 @@ import {
   Tooltip,
 } from "@mantine/core";
 import React, { memo } from "react";
+import { HiExternalLink } from "react-icons/hi";
 
 export type WorkListProps = {
   works: Work[];
@@ -36,10 +37,15 @@ const WorkList: React.FC<WorkListProps> = memo((props) => {
             <Stack spacing="sm" sx={{ height: "100%" }}>
               <Box>
                 <Box sx={{ display: "flex", marginBottom: 4 }}>
-                  <Link external href={work.url ?? repositoryUrl(work)}>
+                  <Link
+                    sx={{ display: "flex", gap: 4, alignItems: "center" }}
+                    external
+                    href={work.url ?? repositoryUrl(work)}
+                  >
                     <Title order={4} size="h3">
                       {work.name}
                     </Title>
+                    <HiExternalLink size={18} />
                   </Link>
                 </Box>
 
