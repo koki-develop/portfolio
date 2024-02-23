@@ -9,12 +9,10 @@ import {
   githubActions,
   go,
   googleCloud,
-  javascript,
   mantine,
   materialui,
   nextjs,
   react,
-  ruby,
   serverless,
   tailwindcss,
   terraform,
@@ -59,6 +57,23 @@ export const workGroups: WorkGroup[] = [
           // cloud
           googleCloud,
           firebase,
+          // ci/cd
+          githubActions,
+          // other
+        ],
+      },
+      {
+        name: "BBalloon",
+        description: "Bluesky のフォロー/フォロワー管理サービス。",
+        url: "https://bballoon.social",
+        skills: [
+          // language
+          typescript,
+          // framework/library
+          react,
+          mantine,
+          // cloud
+          aws,
           // ci/cd
           githubActions,
           // other
@@ -148,9 +163,26 @@ export const workGroups: WorkGroup[] = [
         ],
       },
       {
-        name: "go-fzf",
-        description: "Fuzzy Finder CLI & ライブラリ。",
-        repository: "go-fzf",
+        name: "kansAI",
+        description: "AI による関西弁翻訳コマンドラインツール。",
+        imageSrc: "/images/work/kansai.svg",
+        repository: "kansai",
+        skills: [
+          // language
+          go,
+          // framework/library
+          cobra,
+          // cloud
+          // ci/cd
+          githubActions,
+          // other
+        ],
+      },
+      {
+        name: "gh-grass",
+        description: "GitHub の草を出力する GitHub CLI 拡張機能。",
+        imageSrc: "/images/work/gh-grass.svg",
+        repository: "gh-grass",
         skills: [
           // language
           go,
@@ -164,10 +196,9 @@ export const workGroups: WorkGroup[] = [
         ],
       },
       {
-        name: "gh-grass",
-        description: "GitHub の草を出力する GitHub CLI 拡張機能。",
-        imageSrc: "/images/work/gh-grass.svg",
-        repository: "gh-grass",
+        name: "go-fzf",
+        description: "Fuzzy Finder CLI & ライブラリ。",
+        repository: "go-fzf",
         skills: [
           // language
           go,
@@ -197,69 +228,6 @@ export const workGroups: WorkGroup[] = [
         ],
       },
       {
-        name: "slp",
-        description: "リッチなプログレスバーつきの sleep コマンド。",
-        repository: "slp",
-        skills: [
-          // language
-          go,
-          // framework/library
-          cobra,
-          bubbletea,
-          // cloud
-          // ci/cd
-          githubActions,
-          // other
-        ],
-      },
-      {
-        name: "gotrash",
-        description: "rm コマンド代替の Go 製コマンドラインツール。",
-        repository: "gotrash",
-        skills: [
-          // language
-          go,
-          // framework/library
-          cobra,
-          bubbletea,
-          // cloud
-          // ci/cd
-          githubActions,
-          // other
-        ],
-      },
-      {
-        name: "ego",
-        description: "echo コマンド代替の Go 製コマンドラインツール。",
-        repository: "ego",
-        skills: [
-          // language
-          go,
-          // framework/library
-          cobra,
-          // cloud
-          // ci/cd
-          githubActions,
-          // other
-        ],
-      },
-      {
-        name: "Xvert",
-        description:
-          "様々なフォーマットを相互変換する Ruby 製コマンドラインツール。",
-        url: "https://rubygems.org/gems/xvert",
-        repository: "xvert",
-        skills: [
-          // language
-          ruby,
-          // framework/library
-          // cloud
-          // ci/cd
-          githubActions,
-          // other
-        ],
-      },
-      {
         name: "Typingo",
         description: "Go 製のタイピングゲーム。",
         repository: "typingo",
@@ -269,53 +237,6 @@ export const workGroups: WorkGroup[] = [
           // framework/library
           cobra,
           bubbletea,
-          // cloud
-          // ci/cd
-          githubActions,
-          // other
-        ],
-      },
-      {
-        name: "docker-tags",
-        description:
-          "Docker イメージのタグ一覧を取得するコマンドラインツール。",
-        repository: "docker-tags",
-        skills: [
-          // language
-          go,
-          // framework/library
-          cobra,
-          // cloud
-          // ci/cd
-          githubActions,
-          // other
-        ],
-      },
-      {
-        name: "Qiita Ranking",
-        description: "Qiita のランキング記事を自動更新するシステム。",
-        url: "https://qiita.com/items/b6cfc81906990b3a3e72",
-        repository: "qiita-ranking",
-        skills: [
-          // language
-          go,
-          // framework/library
-          cobra,
-          // cloud
-          // ci/cd
-          githubActions,
-          // other
-        ],
-      },
-      {
-        name: "Hub Purge Action",
-        description: "GitHub の画像キャッシュをクリアする GitHub Action 。",
-        url: "https://github.com/marketplace/actions/hub-purge",
-        repository: "hub-purge-action",
-        skills: [
-          // language
-          javascript,
-          // framework/library
           // cloud
           // ci/cd
           githubActions,
