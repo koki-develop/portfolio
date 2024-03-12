@@ -2,18 +2,13 @@ import {
   aws,
   bubbletea,
   cobra,
-  cypress,
-  docker,
   firebase,
-  gin,
   githubActions,
   go,
   googleCloud,
   mantine,
-  materialui,
   nextjs,
   react,
-  serverless,
   tailwindcss,
   terraform,
   typescript,
@@ -57,6 +52,7 @@ export const workGroups: WorkGroup[] = [
           // cloud
           googleCloud,
           firebase,
+          vercel,
           // ci/cd
           githubActions,
           // other
@@ -77,32 +73,6 @@ export const workGroups: WorkGroup[] = [
           // ci/cd
           githubActions,
           // other
-        ],
-      },
-      {
-        name: "LGTM Generator",
-        description: "LGTM 画像生成サービス。",
-        url: "https://lgtmgen.org",
-        repository: "lgtm-generator",
-        skills: [
-          // language
-          go,
-          typescript,
-          // framework/library
-          gin,
-          react,
-          nextjs,
-          materialui,
-          // cloud
-          aws,
-          vercel,
-          // ci/cd
-          githubActions,
-          // other
-          docker,
-          terraform,
-          serverless,
-          cypress,
         ],
       },
       {
