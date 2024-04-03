@@ -12,10 +12,7 @@ const LayoutFooter: React.FC = memo(() => {
           <Link href="/privacy">
             <Text size="sm">プライバシーポリシー</Text>
           </Link>
-          <Link
-            href="https://github.com/koki-develop/koki-develop.github.io"
-            external
-          >
+          <Link href="https://github.com/koki-develop/portfolio" external>
             <Text size="sm">View on GitHub</Text>
           </Link>
         </Stack>

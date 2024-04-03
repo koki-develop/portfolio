@@ -24,7 +24,7 @@ export const workGroups: WorkGroup[] = [
         name: "Koki Sato",
         description: "個人用のポートフォリオサイト。",
         url: "https://koki.me",
-        repository: "koki-develop.github.io",
+        repository: "portfolio",
         skills: [
           // language
           typescript,
