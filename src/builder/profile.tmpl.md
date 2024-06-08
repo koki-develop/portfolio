@@ -15,10 +15,8 @@
 
 ## Skills
 
-<% config.skillGroups.forEach(function (skillGroup) { -%>
-<% skillGroup.skills.forEach(function (skill) { -%>
+<% config.skills.forEach(function (skill) { -%>
 [<img src="./public<%= skill.imageSrc %>" width="40" height="40" />](<%= skill.url %>)
-<% }) -%>
 <% }) -%>
 
 ## Contact

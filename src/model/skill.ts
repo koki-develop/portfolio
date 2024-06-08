@@ -4,11 +4,6 @@ export type Skill = {
   imageSrc: string;
 };
 
-export type SkillGroup = {
-  name: string;
-  skills: Skill[];
-};
-
 /*
  * language
  */

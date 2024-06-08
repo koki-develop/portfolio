@@ -58,16 +58,7 @@ const HomePage: NextPage = () => {
         {/* about */}
         <Tabs.Panel value="about">
           <Section title="Skill">
-            <Stack>
-              {config.skillGroups.map((skillGroup) => (
-                <Box key={skillGroup.name}>
-                  <Title order={3} mb="sm" sx={{ textAlign: "center" }}>
-                    {skillGroup.name}
-                  </Title>
-                  <SkillList skills={skillGroup.skills} />
-                </Box>
-              ))}
-            </Stack>
+            <SkillList skills={config.skills} />
           </Section>
 
           <Divider />
