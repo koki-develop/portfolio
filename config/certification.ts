@@ -12,6 +12,11 @@ export const certifications: Certification[] = [
     imageSrc: "/images/certification/aws-soa.png",
   },
   {
+    name: "AWS Certified\nDeveloper Associate",
+    url: "https://www.credly.com/badges/f88839f5-1909-4869-8cc5-432a2b987871/public_url",
+    imageSrc: "/images/certification/aws-dva.png",
+  },
+  {
     name: "Google Cloud\nAssociate Cloud Engineer",
     url: "https://www.credential.net/2316bc23-49ca-4aa1-8892-acee13740c99",
     imageSrc: "/images/certification/googlecloud-ace.png",
