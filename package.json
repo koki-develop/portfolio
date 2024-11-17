@@ -7,23 +7,24 @@
     "format": "biome check --write ."
   },
   "dependencies": {
+    "@vite-plugin-vercel/vike": "^9.0.2",
     "@vitejs/plugin-react": "^4.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "vike-react": "^0.5.7",
-    "vite-plugin-vercel": "^9.0.3",
-    "@vite-plugin-vercel/vike": "^9.0.2"
+    "vite-plugin-vercel": "^9.0.3"
   },
   "devDependencies": {
-    "typescript": "^5.6.3",
-    "vike": "^0.4.201",
-    "vite": "^5.4.10",
     "@biomejs/biome": "1.9.4",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "tailwindcss": "^3.4.14",
+    "autoprefixer": "^10.4.20",
     "postcss": "^8.4.48",
-    "autoprefixer": "^10.4.20"
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3",
+    "vike": "^0.4.201",
+    "vite": "^5.4.10",
+    "vite-plugin-svgr": "^4.3.0"
   },
   "type": "module"
 }
