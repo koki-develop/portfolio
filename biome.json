@@ -9,6 +9,9 @@
       "recommended": true
     }
   },
+  "formatter": {
+    "indentStyle": "space"
+  },
   "files": {
     "ignore": ["dist/**", "*.js", "*.cjs", "*.mjs", "*.spec.ts"]
   }
