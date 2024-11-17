@@ -13,6 +13,6 @@
     "indentStyle": "space"
   },
   "files": {
-    "ignore": ["dist/**", "*.js", "*.cjs", "*.mjs", "*.spec.ts"]
+    "ignore": ["package.json", "dist/**", "*.js", "*.cjs", "*.mjs", "*.spec.ts"]
   }
 }
