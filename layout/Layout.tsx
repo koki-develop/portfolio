@@ -1,3 +1,4 @@
+import "./style.css";
 import "./tailwind.css";
 import type { FC, ReactNode } from "react";
 
