@@ -9,7 +9,7 @@ export type LayoutProps = {
 const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <>
-      <main className="container mx-auto">{children}</main>
+      <main className="container mx-auto py-16 px-4">{children}</main>
     </>
   );
 };
