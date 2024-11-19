@@ -5,7 +5,7 @@ import XIcon from "../../assets/x.svg?react";
 import ZennIcon from "../../assets/zenn.svg?react";
 
 const socialIconProps = {
-  className: "text-gray-100 transition hover:opacity-80",
+  className: "text-gray-100",
   width: 32,
 };
 
