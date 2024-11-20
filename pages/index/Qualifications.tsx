@@ -26,7 +26,7 @@ const qualifications: Qualification[] = [
 
 const Qualifications: FC = () => {
   return (
-    <ul className="list-disc list-inside flex flex-col gap-2">
+    <ul className="list-disc flex flex-col pl-4 gap-2">
       {qualifications.map((qualification) => (
         <li key={qualification.name}>
           <a
