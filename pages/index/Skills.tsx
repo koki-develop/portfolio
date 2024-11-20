@@ -81,7 +81,7 @@ const Skills: FC = () => {
       {skills.map((skill) => (
         <li key={skill.name}>
           <a
-            className="rounded-full text-gray-100 bg-gray-700 px-2 py-1 flex items-center gap-1.5"
+            className="rounded-full text-gray-100 bg-gray-800 border border-gray-700 px-2 py-1 flex items-center gap-1.5"
             href={skill.href}
             target="_blank"
             rel="noopener noreferrer"
