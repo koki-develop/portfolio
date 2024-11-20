@@ -1,5 +1,4 @@
 import type { FC, ReactNode } from "react";
-import { twMerge } from "tailwind-merge";
 
 export type CardProps = {
   children: ReactNode;
@@ -8,12 +7,7 @@ export type CardProps = {
 
 const Card: FC<CardProps> = ({ children, className }) => {
   return (
-    <div
-      className={twMerge(
-        "bg-gray-800 rounded-lg p-6 border border-gray-700",
-        className,
-      )}
-    >
+    <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
       {children}
     </div>
   );
