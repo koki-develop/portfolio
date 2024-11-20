@@ -1,16 +1,23 @@
-import { Counter } from "./Counter.js";
+import Profile from "./Profile";
+import Qualifications from "./Qualifications";
+import Skills from "./Skills";
 
 export default function Page() {
   return (
-    <>
-      <h1 className="font-bold text-3xl pb-4">My Vike app</h1>
-      This page is:
-      <ul>
-        <li>Rendered to HTML.</li>
-        <li>
-          Interactive. <Counter />
-        </li>
-      </ul>
-    </>
+    <div className="flex flex-col gap-8">
+      <Profile />
+
+      <div className="flex gap-8 flex-col md:flex-row">
+        <div className="w-full md:w-1/2">
+          <h2 className="text-3xl font-bold mb-4">Skills</h2>
+          <Skills />
+        </div>
+
+        <div className="w-full md:w-1/2">
+          <h2 className="text-3xl font-bold mb-4">Qualifications</h2>
+          <Qualifications />
+        </div>
+      </div>
+    </div>
   );
 }

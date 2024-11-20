@@ -5,8 +5,7 @@ import XIcon from "../../assets/x.svg?react";
 import ZennIcon from "../../assets/zenn.svg?react";
 
 const socialIconProps = {
-  className: "text-gray-100",
-  width: 32,
+  className: "text-gray-100 w-8",
 };
 
 const socials = [
@@ -34,7 +33,7 @@ const socials = [
 
 const Socials: FC = () => {
   return (
-    <ul className="flex gap-4">
+    <ul className="flex gap-2 sm:gap-4">
       {socials.map((social) => (
         <li key={social.href}>
           <a href={social.href} target="_blank" rel="noreferrer noopener">
