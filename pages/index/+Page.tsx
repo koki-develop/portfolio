@@ -1,3 +1,4 @@
+import type { FC } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import Card from "./Card";
 import Certifications from "./Certifications";
@@ -17,7 +18,7 @@ const links = [
   },
 ];
 
-export default function Page() {
+const Page: FC = () => {
   return (
     <div className="flex flex-col gap-8">
       <Profile />
@@ -51,4 +52,6 @@ export default function Page() {
       </div>
     </div>
   );
-}
+};
+
+export default Page;
