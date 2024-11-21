@@ -22,27 +22,27 @@ export default function Page() {
     <div className="flex flex-col gap-8">
       <Profile />
 
-      <div className="flex gap-8 flex-col md:flex-row">
+      <div className="flex flex-col gap-8 md:flex-row">
         <div className="w-full md:w-1/2">
-          <h2 className="text-2xl font-bold mb-4">Skills</h2>
+          <h2 className="mb-4 font-bold text-2xl">Skills</h2>
           <Skills />
         </div>
 
         <div className="w-full md:w-1/2">
-          <h2 className="text-2xl font-bold mb-4">Certifications</h2>
+          <h2 className="mb-4 font-bold text-2xl">Certifications</h2>
           <Certifications />
         </div>
       </div>
 
-      <div className="flex gap-8 flex-col md:flex-row">
+      <div className="flex flex-col gap-8 md:flex-row">
         {links.map((link) => (
           <a key={link.href} className="group flex-grow" href={link.href}>
             <Card>
-              <h2 className="text-2xl font-bold mb-2 flex items-center gap-2">
+              <h2 className="mb-2 flex items-center gap-2 font-bold text-2xl">
                 {link.title}
                 <FaArrowRight
                   size={20}
-                  className="text-gray-400 group-hover:translate-x-1 transition-transform"
+                  className="text-gray-400 transition-transform group-hover:translate-x-1"
                 />
               </h2>
               <p className="text-gray-300">{link.description}</p>

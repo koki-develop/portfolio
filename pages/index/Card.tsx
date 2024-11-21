@@ -6,7 +6,7 @@ export type CardProps = {
 
 const Card: FC<CardProps> = ({ children }) => {
   return (
-    <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+    <div className="rounded-lg border border-gray-700 bg-gray-800 p-6">
       {children}
     </div>
   );
