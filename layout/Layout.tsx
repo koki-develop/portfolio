@@ -1,6 +1,8 @@
+import "@fontsource/inter";
 import "./style.css";
 import "./tailwind.css";
 import type { FC, ReactNode } from "react";
+import Header from "./Header";
 
 export type LayoutProps = {
   children: ReactNode;
@@ -9,7 +11,8 @@ export type LayoutProps = {
 const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <>
-      <main className="max-w-4xl mx-auto py-8 max-lg:px-4">{children}</main>
+      <Header />
+      <main className="mx-auto max-w-4xl py-4 max-lg:px-4">{children}</main>
     </>
   );
 };
