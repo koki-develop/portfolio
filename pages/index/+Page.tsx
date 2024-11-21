@@ -21,7 +21,6 @@ export default function Page() {
   return (
     <div className="flex flex-col gap-8">
       <Profile />
-
       <div className="flex flex-col gap-8 md:flex-row">
         <div className="w-full md:w-1/2">
           <h2 className="mb-4 font-bold text-2xl">Skills</h2>
@@ -34,7 +33,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-8 md:flex-row">
+      <div className="flex flex-col gap-4 md:flex-row md:gap-8">
         {links.map((link) => (
           <a key={link.href} className="group flex-grow" href={link.href}>
             <Card>
