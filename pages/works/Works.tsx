@@ -137,9 +137,26 @@ const workGroups: WorkGroup[] = [
 const Works: FC = () => {
   return (
     <div className="flex flex-col gap-8">
+      <div className="flex flex-wrap gap-2">
+        {workGroups.map((workGroup) => (
+          <a
+            key={workGroup.name}
+            className="rounded-full border border-gray-700 bg-gray-800 px-3 py-1 text-sm"
+            href={`#${workGroup.name}`}
+          >
+            {workGroup.name}
+          </a>
+        ))}
+      </div>
+
       {workGroups.map((workGroup) => (
         <div key={workGroup.name}>
-          <h2 className="mb-4 font-bold text-2xl">{workGroup.name}</h2>
+          <h2
+            id={workGroup.name}
+            className="mb-4 scroll-mt-20 font-bold text-2xl"
+          >
+            {workGroup.name}
+          </h2>
           <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {workGroup.works.map((work) => (
               <li key={work.name}>
