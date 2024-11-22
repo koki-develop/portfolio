@@ -14,10 +14,10 @@ const Header: FC = () => {
 
   return (
     <header className="sticky top-0 border-gray-700 border-b bg-gray-900 py-4">
-      <div className="mx-auto flex max-w-4xl items-center max-lg:px-4">
-        <h1 className="flex-grow font-bold text-xl sm:text-2xl">
-          <a href="/">Koki Sato</a>
-        </h1>
+      <div className="mx-auto flex max-w-4xl items-center justify-between max-lg:px-4">
+        <a className="font-bold text-xl sm:text-2xl" href="/">
+          Koki Sato
+        </a>
         <ul className="flex gap-4">
           {navItems.map((item) => (
             <li key={item.href}>
