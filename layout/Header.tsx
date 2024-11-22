@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import type { FC } from "react";
 import { usePageContext } from "vike-react/usePageContext";
+import Container from "../components/Container";
 
 const navItems = [
   { href: "/", label: "About" },
@@ -14,7 +15,7 @@ const Header: FC = () => {
 
   return (
     <header className="sticky top-0 border-gray-700 border-b bg-gray-900 py-4">
-      <div className="mx-auto flex max-w-4xl items-center justify-between max-lg:px-4">
+      <Container className="flex items-center justify-between">
         <a className="font-bold text-xl sm:text-2xl" href="/">
           Koki Sato
         </a>
@@ -33,7 +34,7 @@ const Header: FC = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </Container>
     </header>
   );
 };

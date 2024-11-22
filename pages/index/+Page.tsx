@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import Card from "../../components/Card";
+import Container from "../../components/Container";
 import Certifications from "./Certifications";
 import Profile from "./Profile";
 import Skills from "./Skills";
@@ -20,7 +21,7 @@ const links = [
 
 const Page: FC = () => {
   return (
-    <div className="flex flex-col gap-8">
+    <Container className="flex flex-col gap-8">
       <Profile />
       <div className="flex flex-col gap-8 md:flex-row">
         <div className="w-full md:w-1/2">
@@ -50,7 +51,7 @@ const Page: FC = () => {
           </a>
         ))}
       </div>
-    </div>
+    </Container>
   );
 };
 
