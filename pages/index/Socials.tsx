@@ -5,7 +5,7 @@ import XIcon from "../../assets/x.svg?react";
 import ZennIcon from "../../assets/zenn.svg?react";
 
 const socialIconProps = {
-  className: "text-gray-100 w-8",
+  className: "text-white w-8",
 };
 
 const socials = [

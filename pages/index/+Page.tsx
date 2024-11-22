@@ -42,7 +42,7 @@ const Page: FC = () => {
                 {link.title}
                 <FaArrowRight
                   size={20}
-                  className="text-gray-400 transition-transform group-hover:translate-x-1"
+                  className="text-gray-300 transition-transform group-hover:translate-x-1"
                 />
               </h2>
               <p className="text-gray-300">{link.description}</p>

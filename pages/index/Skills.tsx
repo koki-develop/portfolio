@@ -17,7 +17,6 @@ type Skill = {
 };
 
 const skillIconProps = {
-  className: "text-gray-100",
   width: 20,
   height: 20,
 };
@@ -81,7 +80,7 @@ const Skills: FC = () => {
       {skills.map((skill) => (
         <li key={skill.name}>
           <a
-            className="flex items-center gap-1.5 rounded-full border border-gray-700 bg-gray-800 px-2 py-1 text-gray-100"
+            className="flex items-center gap-1.5 rounded-full border border-gray-700 bg-gray-800 px-2 py-1 text-white"
             href={skill.href}
             target="_blank"
             rel="noopener noreferrer"
