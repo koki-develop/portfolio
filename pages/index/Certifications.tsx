@@ -1,8 +1,8 @@
 import type { FC } from "react";
-import AWSDVAPng from "../../assets/aws-dva.png";
-import AWSSAAPng from "../../assets/aws-saa.png";
-import AWSSOAPng from "../../assets/aws-soa.png";
-import GoogleCloudACEPng from "../../assets/googlecloud-ace.png";
+import AWSDVAPng from "../../assets/icons/certifications/aws-dva.png";
+import AWSSAAPng from "../../assets/icons/certifications/aws-saa.png";
+import AWSSOAPng from "../../assets/icons/certifications/aws-soa.png";
+import GoogleCloudACEPng from "../../assets/icons/certifications/googlecloud-ace.png";
 
 type Certification = {
   name: string;

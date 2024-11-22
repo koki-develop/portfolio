@@ -1,8 +1,8 @@
 import type { FC } from "react";
-import BlueSkyIcon from "../../assets/bluesky.svg?react";
-import GitHubIcon from "../../assets/github.svg?react";
-import XIcon from "../../assets/x.svg?react";
-import ZennIcon from "../../assets/zenn.svg?react";
+import BlueSkyIcon from "../../assets/icons/socials/bluesky.svg?react";
+import GitHubIcon from "../../assets/icons/socials/github.svg?react";
+import XIcon from "../../assets/icons/socials/x.svg?react";
+import ZennIcon from "../../assets/icons/socials/zenn.svg?react";
 
 const socialIconProps = {
   className: "text-white w-8",
