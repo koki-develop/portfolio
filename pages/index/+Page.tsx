@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import { FaArrowRight } from "react-icons/fa6";
-import Card from "./Card";
+import Card from "../../components/Card";
 import Certifications from "./Certifications";
 import Profile from "./Profile";
 import Skills from "./Skills";
