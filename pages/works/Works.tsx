@@ -141,7 +141,7 @@ const Works: FC = () => {
         {workGroups.map((workGroup) => (
           <a
             key={workGroup.name}
-            className="rounded-full border border-gray-700 bg-gray-800 px-3 py-1 text-sm"
+            className="rounded-full border border-gray-700 bg-gray-800 px-3 py-1"
             href={`#${workGroup.name}`}
           >
             {workGroup.name}
