@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from "react";
 import { FaChrome, FaGlobe, FaKeyboard, FaTerminal } from "react-icons/fa6";
-import { SiGithubactions } from "react-icons/si";
+import { SiGithubactions, SiTerraform } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import WorkCard from "./WorkCard";
 
@@ -19,7 +19,6 @@ export type Work = {
   | { url: null; githubUrl: string }
 );
 
-// TODO: 追加
 const workGroups: WorkGroup[] = [
   {
     name: "Web Application",
@@ -55,6 +54,19 @@ const workGroups: WorkGroup[] = [
         url: "https://badgen.org",
         githubUrl: "https://github.com/koki-develop/badge-generator",
       },
+      {
+        name: "Gallery",
+        description:
+          "バックエンド・フロントエンド・インフラを Terraform でつくったサンプルアプリ。",
+        url: "https://tftftf.gallery",
+        githubUrl: "https://github.com/koki-develop/gallery",
+      },
+      {
+        name: "Bookmarklet.link",
+        description: "ブックマークレットエディタ。",
+        url: "https://bookmarklet-link",
+        githubUrl: "https://github.com/koki-develop/bookmarklet.link",
+      },
     ],
   },
   {
@@ -85,6 +97,24 @@ const workGroups: WorkGroup[] = [
         url: null,
         githubUrl: "https://github.com/koki-develop/slp",
       },
+      {
+        name: "moview",
+        description: "ターミナルで動画を作成するコマンドラインツール。",
+        url: null,
+        githubUrl: "https://github.com/koki-develop/moview",
+      },
+      {
+        name: "kansai",
+        description: "テキストを関西弁に翻訳するコマンドラインツール。",
+        url: null,
+        githubUrl: "https://github.com/koki-develop/kansai",
+      },
+      {
+        name: "typingo",
+        description: "タイピングゲーム。",
+        url: null,
+        githubUrl: "https://github.com/koki-develop/typingo",
+      },
     ],
   },
   {
@@ -92,10 +122,47 @@ const workGroups: WorkGroup[] = [
     icon: <SiGithubactions />,
     works: [
       {
+        name: "Bun Diff Action",
+        description: "bun.lockb の diff を表示する GitHub Action。",
+        url: "https://github.com/marketplace/actions/bun-diff-action",
+        githubUrl: "https://github.com/koki-develop/bun-diff-action",
+      },
+      {
+        name: "Major Version Sync",
+        description: "メジャーバージョンを同期する GitHub Action。",
+        url: "https://github.com/marketplace/actions/major-version-sync",
+        githubUrl: "https://github.com/koki-develop/major-version-sync",
+      },
+      {
+        name: "CloudFront Invalidate Action",
+        description: "CloudFront のキャッシュを無効化する GitHub Action。",
+        url: "https://github.com/marketplace/actions/cloudfront-invalidate-action",
+        githubUrl:
+          "https://github.com/koki-develop/cloudfront-invalidate-action",
+      },
+      {
         name: "Unmask Secret Action",
         description: "シークレットを表示する GitHub Action。",
-        url: null,
+        url: "https://github.com/marketplace/actions/unmask-secret-action",
         githubUrl: "https://github.com/koki-develop/unmask-secret-action",
+      },
+    ],
+  },
+  {
+    name: "Terraform Provider",
+    icon: <SiTerraform />,
+    works: [
+      {
+        name: "Terraform Provider JS",
+        description: "次世代の AltJS。",
+        url: "https://registry.terraform.io/providers/koki-develop/js/latest/docs",
+        githubUrl: "https://github.com/koki-develop/terraform-provider-js",
+      },
+      {
+        name: "Terraform Provider HTML",
+        description: "次世代の HTML ビルダー。",
+        url: "https://registry.terraform.io/providers/koki-develop/html/latest/docs",
+        githubUrl: "https://github.com/koki-develop/terraform-provider-html",
       },
     ],
   },
