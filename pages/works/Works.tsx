@@ -1,8 +1,12 @@
-import type { FC } from "react";
+import type { FC, ReactNode } from "react";
+import { FaChrome, FaGlobe, FaKeyboard, FaTerminal } from "react-icons/fa6";
+import { SiGithubactions } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 import WorkCard from "./WorkCard";
 
 export type WorkGroup = {
   name: string;
+  icon: ReactNode;
   works: Work[];
 };
 
@@ -19,6 +23,7 @@ export type Work = {
 const workGroups: WorkGroup[] = [
   {
     name: "Web Application",
+    icon: <FaGlobe />,
     works: [
       {
         name: "Koki Sato",
@@ -54,6 +59,7 @@ const workGroups: WorkGroup[] = [
   },
   {
     name: "Command Line Tool",
+    icon: <FaTerminal />,
     works: [
       {
         name: "cLive",
@@ -83,6 +89,7 @@ const workGroups: WorkGroup[] = [
   },
   {
     name: "GitHub Action",
+    icon: <SiGithubactions />,
     works: [
       {
         name: "Unmask Secret Action",
@@ -94,6 +101,7 @@ const workGroups: WorkGroup[] = [
   },
   {
     name: "Chrome Extension",
+    icon: <FaChrome />,
     works: [
       {
         name: "AWS Masking",
@@ -106,6 +114,7 @@ const workGroups: WorkGroup[] = [
   },
   {
     name: "VSCode Extension",
+    icon: <VscVscode />,
     works: [
       {
         name: "VSCode Settings Sync",
@@ -117,6 +126,7 @@ const workGroups: WorkGroup[] = [
   },
   {
     name: "IME",
+    icon: <FaKeyboard />,
     works: [
       {
         name: "Koto",
@@ -153,8 +163,9 @@ const Works: FC = () => {
         <div key={workGroup.name}>
           <h2
             id={workGroup.name}
-            className="mb-4 scroll-mt-20 font-bold text-2xl"
+            className="mb-4 flex scroll-mt-20 items-center gap-2 font-bold text-2xl"
           >
+            {workGroup.icon}
             {workGroup.name}
           </h2>
           <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
