@@ -4,24 +4,32 @@ import GitHubIcon from "../../assets/icons/socials/github.svg?react";
 import Card from "../../components/Card";
 import type { Work } from "./Works";
 
+const extractHostname = (url: string) => {
+  return new URL(url).hostname;
+};
+
 export type WorkCardProps = {
   work: Work;
 };
 
 const WorkCard: FC<WorkCardProps> = ({ work }) => {
+  const url = work.url ?? work.githubUrl;
+  const hostname = extractHostname(url);
+
   return (
     <Card className="flex h-full flex-col gap-2">
-      <h3 className="flex font-bold text-xl">
-        <a
-          className="flex items-center gap-2"
-          href={work.url ?? work.githubUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {work.name}
-          <FaExternalLinkAlt className="text-gray-400" size={16} />
-        </a>
-      </h3>
+      <a
+        className="flex w-fit flex-col"
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <h3 className="font-bold text-xl">{work.name}</h3>
+        <p className="flex items-center gap-1 text-gray-400 text-sm">
+          {hostname}
+          <FaExternalLinkAlt size={12} />
+        </p>
+      </a>
       <p className="flex-grow">{work.description}</p>
 
       {work.githubUrl && (
