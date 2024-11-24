@@ -20,7 +20,7 @@ const socials = [
     href: "https://x.com/koki_develop",
   },
   {
-    name: "BlueSky",
+    name: "Bluesky",
     icon: <BlueSkyIcon {...socialIconProps} />,
     href: "https://bsky.app/profile/koki.me",
   },
@@ -36,7 +36,12 @@ const Socials: FC = () => {
     <ul className="flex gap-2 sm:gap-4">
       {socials.map((social) => (
         <li key={social.href}>
-          <a href={social.href} target="_blank" rel="noreferrer noopener">
+          <a
+            title={social.name}
+            href={social.href}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             {social.icon}
           </a>
         </li>
