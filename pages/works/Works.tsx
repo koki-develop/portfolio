@@ -104,7 +104,7 @@ const workGroups: WorkGroup[] = [
         githubUrl: "https://github.com/koki-develop/moview",
       },
       {
-        name: "kansai",
+        name: "kansAI",
         description: "テキストを関西弁に翻訳するコマンドラインツール。",
         url: null,
         githubUrl: "https://github.com/koki-develop/kansai",
