@@ -25,6 +25,6 @@ jobs:
           VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID }}
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          pnpm exec vercel pull --yes --environment=production
-          pnpm exec vercel build --prod
-          pnpm exec vercel deploy --prebuilt --prod
+          pnpm exec vercel pull --yes --environment=production --token=$VERCEL_TOKEN
+          pnpm exec vercel build --prod --token=$VERCEL_TOKEN
+          pnpm exec vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
