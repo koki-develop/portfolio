@@ -99,7 +99,7 @@ const workGroups: WorkGroup[] = [
       },
       {
         name: "moview",
-        description: "ターミナルで動画を作成するコマンドラインツール。",
+        description: "ターミナルで動画を再生するコマンドラインツール。",
         url: null,
         githubUrl: "https://github.com/koki-develop/moview",
       },
