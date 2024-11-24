@@ -10,5 +10,7 @@ export default {
   description: "のんびり生きています。",
   image: OGImage,
 
+  lang: "ja",
+
   extends: vikeReact,
 } satisfies Config;
