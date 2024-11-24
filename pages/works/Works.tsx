@@ -153,13 +153,13 @@ const workGroups: WorkGroup[] = [
     icon: <SiTerraform />,
     works: [
       {
-        name: "Terraform Provider JS",
+        name: "JS.tf",
         description: "次世代の AltJS。",
         url: "https://registry.terraform.io/providers/koki-develop/js/latest/docs",
         githubUrl: "https://github.com/koki-develop/terraform-provider-js",
       },
       {
-        name: "Terraform Provider HTML",
+        name: "HTML.tf",
         description: "次世代の HTML ビルダー。",
         url: "https://registry.terraform.io/providers/koki-develop/html/latest/docs",
         githubUrl: "https://github.com/koki-develop/terraform-provider-html",
