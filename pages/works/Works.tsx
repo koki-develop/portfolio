@@ -64,7 +64,7 @@ const workGroups: WorkGroup[] = [
       {
         name: "Bookmarklet.link",
         description: "ブックマークレットエディタ。",
-        url: "https://bookmarklet-link",
+        url: "https://bookmarklet.link",
         githubUrl: "https://github.com/koki-develop/bookmarklet.link",
       },
     ],
