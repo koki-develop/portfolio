@@ -4,7 +4,7 @@ import Socials from "./Socials";
 
 const profile = {
   name: "Koki Sato",
-  description: "埼玉県在住の 26 歳。のんびり生きています。",
+  description: "埼玉県在住の 27 歳。のんびり生きています。",
 };
 
 const Profile: FC = () => {
