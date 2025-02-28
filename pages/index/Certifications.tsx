@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import AWSDVAPng from "../../assets/icons/certifications/aws-dva.png";
 import AWSSAAPng from "../../assets/icons/certifications/aws-saa.png";
+import AWSSAPPng from "../../assets/icons/certifications/aws-sap.png";
 import AWSSOAPng from "../../assets/icons/certifications/aws-soa.png";
 import GoogleCloudACEPng from "../../assets/icons/certifications/googlecloud-ace.png";
 
@@ -11,6 +12,11 @@ type Certification = {
 };
 
 const certifications: Certification[] = [
+  {
+    name: "AWS Certified Solutions Architect - Professional",
+    image: AWSSAPPng,
+    href: "https://www.credly.com/badges/77ea1b7d-d676-4b47-a099-a1152e7b0cd7/public_url",
+  },
   {
     name: "AWS Certified Solutions Architect - Associate",
     image: AWSSAAPng,
