@@ -40,7 +40,7 @@ const workGroups: WorkGroup[] = [
         name: "SAMARI",
         description: "技術ニュースの要約サービス。",
         url: "https://samari.news",
-        githubUrl: null,
+        githubUrl: "https://github.com/koki-develop/samari",
       },
       {
         name: "BBalloon",
