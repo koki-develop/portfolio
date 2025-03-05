@@ -86,6 +86,13 @@ const workGroups: WorkGroup[] = [
         githubUrl: "https://github.com/koki-develop/gat",
       },
       {
+        name: "pinpm",
+        description:
+          "package.json の依存関係バージョンを Pin するコマンドラインツール。",
+        url: null,
+        githubUrl: "https://github.com/koki-develop/pinpm",
+      },
+      {
         name: "sheep",
         description: "羊を眠らせる sleep コマンド。",
         url: null,
