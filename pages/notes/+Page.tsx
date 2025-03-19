@@ -25,7 +25,7 @@ const Page: FC = () => {
                 rel="noopener noreferrer"
               >
                 <Card className="flex h-full flex-col gap-1">
-                  <h2 className="flex-grow text-lg">{article.title}</h2>
+                  <h2 className="grow text-lg">{article.title}</h2>
                   <p className="text-gray-400 text-sm">
                     {dayjs(article.published_at).fromNow()}
                   </p>

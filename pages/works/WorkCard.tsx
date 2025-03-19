@@ -30,7 +30,7 @@ const WorkCard: FC<WorkCardProps> = ({ work }) => {
           <FaExternalLinkAlt size={12} />
         </p>
       </a>
-      <p className="flex-grow">{work.description}</p>
+      <p className="grow">{work.description}</p>
 
       {work.githubUrl && (
         <a
