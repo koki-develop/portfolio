@@ -37,7 +37,7 @@ const Page: FC = () => {
 
       <div className="flex flex-col gap-4 md:flex-row md:gap-8">
         {links.map((link) => (
-          <a key={link.href} className="group flex-grow" href={link.href}>
+          <a key={link.href} className="group grow" href={link.href}>
             <Card className="p-6">
               <h2 className="mb-2 flex items-center gap-2 font-bold text-2xl">
                 {link.title}
