@@ -11,6 +11,9 @@ on:
 
 jobs:
   release:
+    environment:
+      name: production
+      url: https://koki.me
     timeout-minutes: 5
     runs-on: ubuntu-latest
     permissions:
