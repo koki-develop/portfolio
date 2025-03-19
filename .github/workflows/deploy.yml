@@ -1,5 +1,7 @@
 name: Deploy
 
+permissions: {}
+
 on:
   push:
     branches:
@@ -9,11 +11,14 @@ on:
 
 jobs:
   release:
-    permissions:
-      contents: write
+    timeout-minutes: 5
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
       - uses: ./.github/actions/setup
 
       - name: Deploy
@@ -22,6 +27,6 @@ jobs:
           VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID }}
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          bunx vercel pull --yes --environment=production --token=$VERCEL_TOKEN
-          bunx vercel build --prod --token=$VERCEL_TOKEN
-          bunx vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
+          bunx vercel pull --yes --environment=production --token="${VERCEL_TOKEN}"
+          bunx vercel build --prod --token="${VERCEL_TOKEN}"
+          bunx vercel deploy --prebuilt --prod --token="${VERCEL_TOKEN}"
