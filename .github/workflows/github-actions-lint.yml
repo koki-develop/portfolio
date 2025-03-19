@@ -2,6 +2,10 @@ name: GitHub Actions Lint
 
 permissions: {}
 
+defaults:
+  run:
+    shell: bash
+
 on:
   pull_request:
     paths:

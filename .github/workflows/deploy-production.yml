@@ -2,6 +2,10 @@ name: Deploy Production
 
 permissions: {}
 
+defaults:
+  run:
+    shell: bash
+
 on:
   push:
     branches:
