@@ -2,6 +2,10 @@ name: Deploy Preview
 
 permissions: {}
 
+defaults:
+  run:
+    shell: bash
+
 on:
   pull_request:
 
