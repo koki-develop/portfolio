@@ -9,7 +9,7 @@
     "format": "biome check --write ."
   },
   "dependencies": {
-    "@fontsource/inter": "5.1.0",
+    "@fontsource/inter": "5.2.5",
     "@vite-plugin-vercel/vike": "9.0.2",
     "@vitejs/plugin-react": "4.3.3",
     "clsx": "2.1.1",
