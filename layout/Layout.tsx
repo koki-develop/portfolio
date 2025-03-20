@@ -2,7 +2,7 @@ import "@fontsource/inter";
 import "./style.css";
 import "./tailwind.css";
 import clsx from "clsx";
-import type { FC, ReactNode } from "react";
+import type { ReactNode } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import { useFontLoaded } from "./hooks";
@@ -11,7 +11,7 @@ export type LayoutProps = {
   children: ReactNode;
 };
 
-const Layout: FC<LayoutProps> = ({ children }) => {
+export default function Layout({ children }: LayoutProps) {
   const show = useFontLoaded("Inter");
 
   return (
@@ -21,6 +21,4 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       <Footer />
     </div>
   );
-};
-
-export default Layout;
+}
