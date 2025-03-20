@@ -12,4 +12,5 @@ export default {
   lang: "ja",
 
   extends: vikeReact,
+  prerender: true,
 } satisfies Config;

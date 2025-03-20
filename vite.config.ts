@@ -7,9 +7,7 @@ import vercel from "vite-plugin-vercel";
 
 export default defineConfig({
   plugins: [
-    vike({
-      prerender: true,
-    }),
+    vike(),
     react({
       babel: {
         plugins: [["babel-plugin-react-compiler", {}]],
