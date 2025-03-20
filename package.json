@@ -33,7 +33,7 @@
     "husky": "9.1.7",
     "lint-staged": "15.5.0",
     "typescript": "5.8.2",
-    "vercel": "41.4.0",
+    "vercel": "41.4.1",
     "vike": "0.4.225",
     "vite": "5.4.14",
     "vite-plugin-svgr": "4.3.0"
