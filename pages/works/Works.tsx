@@ -129,12 +129,6 @@ const workGroups: WorkGroup[] = [
     icon: <SiGithubactions />,
     works: [
       {
-        name: "Bun Diff Action",
-        description: "bun.lockb の diff を表示する GitHub Action。",
-        url: "https://github.com/marketplace/actions/bun-diff-action",
-        githubUrl: "https://github.com/koki-develop/bun-diff-action",
-      },
-      {
         name: "Major Version Sync",
         description: "メジャーバージョンを同期する GitHub Action。",
         url: "https://github.com/marketplace/actions/major-version-sync",
