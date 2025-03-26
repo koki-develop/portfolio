@@ -1,4 +1,5 @@
 import type { FC } from "react";
+import AWSDOPPng from "../../assets/icons/certifications/aws-dop.png";
 import AWSDVAPng from "../../assets/icons/certifications/aws-dva.png";
 import AWSSAAPng from "../../assets/icons/certifications/aws-saa.png";
 import AWSSAPPng from "../../assets/icons/certifications/aws-sap.png";
@@ -16,6 +17,11 @@ const certifications: Certification[] = [
     name: "AWS Certified Solutions Architect - Professional",
     image: AWSSAPPng,
     href: "https://www.credly.com/badges/77ea1b7d-d676-4b47-a099-a1152e7b0cd7/public_url",
+  },
+  {
+    name: "AWS Certified DevOps Engineer - Professional",
+    image: AWSDOPPng,
+    href: "https://www.credly.com/badges/acb69e55-f79c-428c-a706-ba1e741980b4/public_url",
   },
   {
     name: "AWS Certified Solutions Architect - Associate",
