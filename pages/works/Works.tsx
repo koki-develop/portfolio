@@ -61,16 +61,10 @@ const workGroups: WorkGroup[] = [
         url: "https://tftftf.gallery",
         githubUrl: "https://github.com/koki-develop/gallery",
       },
-      {
-        name: "Bookmarklet.link",
-        description: "ブックマークレットエディタ。",
-        url: "https://bookmarklet.link",
-        githubUrl: "https://github.com/koki-develop/bookmarklet.link",
-      },
     ],
   },
   {
-    name: "Command Line Tool",
+    name: "Tools",
     icon: <FaTerminal />,
     works: [
       {
@@ -86,10 +80,17 @@ const workGroups: WorkGroup[] = [
         githubUrl: "https://github.com/koki-develop/gat",
       },
       {
+        name: "ghats",
+        description:
+          "TypeScript で GitHub Actions Workflow 定義を記述するツール。",
+        url: "https://www.npmjs.com/package/ghats",
+        githubUrl: "https://github.com/koki-develop/ghats",
+      },
+      {
         name: "pinpm",
         description:
           "package.json の依存関係バージョンを Pin するコマンドラインツール。",
-        url: null,
+        url: "https://www.npmjs.com/package/pinpm",
         githubUrl: "https://github.com/koki-develop/pinpm",
       },
       {
@@ -99,22 +100,10 @@ const workGroups: WorkGroup[] = [
         githubUrl: "https://github.com/koki-develop/sheep",
       },
       {
-        name: "slp",
-        description: "プログレスバーつきの sleep コマンド。",
-        url: null,
-        githubUrl: "https://github.com/koki-develop/slp",
-      },
-      {
         name: "moview",
         description: "ターミナルで動画を再生するコマンドラインツール。",
         url: null,
         githubUrl: "https://github.com/koki-develop/moview",
-      },
-      {
-        name: "kansAI",
-        description: "テキストを関西弁に翻訳するコマンドラインツール。",
-        url: null,
-        githubUrl: "https://github.com/koki-develop/kansai",
       },
       {
         name: "typingo",
@@ -133,13 +122,6 @@ const workGroups: WorkGroup[] = [
         description: "メジャーバージョンを同期する GitHub Action。",
         url: "https://github.com/marketplace/actions/major-version-sync",
         githubUrl: "https://github.com/koki-develop/major-version-sync",
-      },
-      {
-        name: "CloudFront Invalidate Action",
-        description: "CloudFront のキャッシュを無効化する GitHub Action。",
-        url: "https://github.com/marketplace/actions/cloudfront-invalidate-action",
-        githubUrl:
-          "https://github.com/koki-develop/cloudfront-invalidate-action",
       },
       {
         name: "Unmask Secret Action",
