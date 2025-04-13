@@ -1,10 +1,10 @@
 import type { FC } from "react";
-import AWSDOPPng from "../../assets/icons/certifications/aws-dop.png";
-import AWSDVAPng from "../../assets/icons/certifications/aws-dva.png";
-import AWSSAAPng from "../../assets/icons/certifications/aws-saa.png";
-import AWSSAPPng from "../../assets/icons/certifications/aws-sap.png";
-import AWSSOAPng from "../../assets/icons/certifications/aws-soa.png";
-import GoogleCloudACEPng from "../../assets/icons/certifications/googlecloud-ace.png";
+import AWSDOPPng from "../../public/images/icons/certifications/aws-dop.png";
+import AWSDVAPng from "../../public/images/icons/certifications/aws-dva.png";
+import AWSSAAPng from "../../public/images/icons/certifications/aws-saa.png";
+import AWSSAPPng from "../../public/images/icons/certifications/aws-sap.png";
+import AWSSOAPng from "../../public/images/icons/certifications/aws-soa.png";
+import GoogleCloudACEPng from "../../public/images/icons/certifications/googlecloud-ace.png";
 
 type Certification = {
   name: string;

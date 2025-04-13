@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import ProfilePng from "../../assets/profile.png";
+import ProfilePng from "../../public/images/profile.png";
 import Socials from "./Socials";
 
 const profile = {

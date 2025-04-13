@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import GitHubIcon from "../../assets/icons/socials/github.svg?react";
 import Card from "../../components/Card";
+import GitHubIcon from "../../public/images/icons/socials/github.svg?react";
 import type { Work } from "./Works";
 
 const extractHostname = (url: string) => {
