@@ -12,7 +12,7 @@
     "@fontsource/inter": "5.2.5",
     "@tailwindcss/vite": "4.0.17",
     "@vite-plugin-vercel/vike": "9.0.4",
-    "@vitejs/plugin-react": "4.3.4",
+    "@vitejs/plugin-react": "4.4.1",
     "clsx": "2.1.1",
     "dayjs": "1.11.13",
     "fontfaceobserver": "2.3.0",
