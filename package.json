@@ -34,7 +34,7 @@
     "lint-staged": "15.5.0",
     "typescript": "5.8.2",
     "vercel": "41.4.1",
-    "vike": "0.4.225",
+    "vike": "0.4.229",
     "vite": "6.2.3",
     "vite-plugin-svgr": "4.3.0"
   }
