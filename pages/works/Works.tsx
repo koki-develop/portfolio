@@ -93,24 +93,6 @@ const workGroups: WorkGroup[] = [
         url: "https://www.npmjs.com/package/pinpm",
         githubUrl: "https://github.com/koki-develop/pinpm",
       },
-      {
-        name: "sheep",
-        description: "羊を眠らせる sleep コマンド。",
-        url: null,
-        githubUrl: "https://github.com/koki-develop/sheep",
-      },
-      {
-        name: "moview",
-        description: "ターミナルで動画を再生するコマンドラインツール。",
-        url: null,
-        githubUrl: "https://github.com/koki-develop/moview",
-      },
-      {
-        name: "typingo",
-        description: "タイピングゲーム。",
-        url: null,
-        githubUrl: "https://github.com/koki-develop/typingo",
-      },
     ],
   },
   {
@@ -125,7 +107,7 @@ const workGroups: WorkGroup[] = [
       },
       {
         name: "Unmask Secret Action",
-        description: "シークレットを表示する GitHub Action。",
+        description: "シークレットをログ出力する GitHub Action。",
         url: "https://github.com/marketplace/actions/unmask-secret-action",
         githubUrl: "https://github.com/koki-develop/unmask-secret-action",
       },
