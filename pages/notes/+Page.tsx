@@ -1,6 +1,5 @@
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
-import type { FC } from "react";
 import { useData } from "vike-react/useData";
 import Card from "../../components/Card";
 import Container from "../../components/Container";
@@ -8,7 +7,7 @@ import type { Data } from "./+data";
 
 dayjs.extend(relativeTime);
 
-const Page: FC = () => {
+export default function Page() {
   const { articles } = useData<Data>();
 
   return (
@@ -47,6 +46,4 @@ const Page: FC = () => {
       </div>
     </Container>
   );
-};
-
-export default Page;
+}

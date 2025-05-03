@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import AWSDOPPng from "../../public/images/icons/certifications/aws-dop.png";
 import AWSDVAPng from "../../public/images/icons/certifications/aws-dva.png";
 import AWSSAAPng from "../../public/images/icons/certifications/aws-saa.png";
@@ -45,7 +44,7 @@ const certifications: Certification[] = [
   },
 ];
 
-const Certifications: FC = () => {
+export default function Certifications() {
   return (
     <ul className="flex flex-wrap gap-4">
       {certifications.map((certification) => (
@@ -66,6 +65,4 @@ const Certifications: FC = () => {
       ))}
     </ul>
   );
-};
-
-export default Certifications;
+}

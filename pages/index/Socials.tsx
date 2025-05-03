@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import BlueSkyIcon from "../../public/images/icons/socials/bluesky.svg?react";
 import GitHubIcon from "../../public/images/icons/socials/github.svg?react";
 import XIcon from "../../public/images/icons/socials/x.svg?react";
@@ -31,7 +30,7 @@ const socials = [
   },
 ];
 
-const Socials: FC = () => {
+export default function Socials() {
   return (
     <ul className="flex gap-2 sm:gap-4">
       {socials.map((social) => (
@@ -48,6 +47,4 @@ const Socials: FC = () => {
       ))}
     </ul>
   );
-};
-
-export default Socials;
+}

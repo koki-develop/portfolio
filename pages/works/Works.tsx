@@ -1,4 +1,4 @@
-import type { FC, ReactNode } from "react";
+import type { ReactNode } from "react";
 import { FaChrome, FaGlobe, FaKeyboard, FaTerminal } from "react-icons/fa6";
 import { SiGithubactions, SiTerraform } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
@@ -176,7 +176,7 @@ const workGroups: WorkGroup[] = [
   },
 ];
 
-const Works: FC = () => {
+export default function Works() {
   return (
     <div className="flex flex-col gap-8">
       <div className="flex flex-wrap gap-2">
@@ -211,6 +211,4 @@ const Works: FC = () => {
       ))}
     </div>
   );
-};
-
-export default Works;
+}

@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import ProfilePng from "../../public/images/profile.png";
 import Socials from "./Socials";
 
@@ -7,7 +6,7 @@ const profile = {
   description: "埼玉県在住の 27 歳。のんびり生きています。",
 };
 
-const Profile: FC = () => {
+export default function Profile() {
   return (
     <div className="flex flex-col justify-start gap-4 sm:flex-row sm:items-center md:justify-center">
       <div className="flex justify-center">
@@ -28,6 +27,4 @@ const Profile: FC = () => {
       </div>
     </div>
   );
-};
-
-export default Profile;
+}

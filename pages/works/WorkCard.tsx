@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Card from "../../components/Card";
 import GitHubIcon from "../../public/images/icons/socials/github.svg?react";
@@ -12,7 +11,7 @@ export type WorkCardProps = {
   work: Work;
 };
 
-const WorkCard: FC<WorkCardProps> = ({ work }) => {
+export default function WorkCard({ work }: WorkCardProps) {
   const url = work.url ?? work.githubUrl;
   const hostname = extractHostname(url);
 
@@ -45,6 +44,4 @@ const WorkCard: FC<WorkCardProps> = ({ work }) => {
       )}
     </Card>
   );
-};
-
-export default WorkCard;
+}

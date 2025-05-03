@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import AWSIcon from "../../public/images/icons/skills/aws.svg?react";
 import FirebaseIcon from "../../public/images/icons/skills/firebase.svg?react";
 import GoIcon from "../../public/images/icons/skills/go.svg?react";
@@ -74,7 +73,7 @@ const skills: Skill[] = [
   },
 ];
 
-const Skills: FC = () => {
+export default function Skills() {
   return (
     <ul className="flex flex-wrap gap-2">
       {skills.map((skill) => (
@@ -92,6 +91,4 @@ const Skills: FC = () => {
       ))}
     </ul>
   );
-};
-
-export default Skills;
+}

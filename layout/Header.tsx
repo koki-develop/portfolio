@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import type { FC } from "react";
 import { usePageContext } from "vike-react/usePageContext";
 import Container from "../components/Container";
 
@@ -9,7 +8,7 @@ const navItems = [
   { href: "/notes", label: "Notes" },
 ];
 
-const Header: FC = () => {
+export default function Header() {
   const pageContext = usePageContext();
   const { urlPathname } = pageContext;
 
@@ -37,6 +36,4 @@ const Header: FC = () => {
       </Container>
     </header>
   );
-};
-
-export default Header;
+}

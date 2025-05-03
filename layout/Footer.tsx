@@ -1,6 +1,4 @@
-import type { FC } from "react";
-
-const Footer: FC = () => {
+export default function Footer() {
   return (
     <footer className="flex flex-col items-center justify-center gap-2 pb-24">
       <small>&copy; 2024 Koki Sato</small>
@@ -14,6 +12,4 @@ const Footer: FC = () => {
       </a>
     </footer>
   );
-};
-
-export default Footer;
+}

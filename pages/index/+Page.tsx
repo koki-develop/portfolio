@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import Card from "../../components/Card";
 import Container from "../../components/Container";
@@ -19,7 +18,7 @@ const links = [
   },
 ];
 
-const Page: FC = () => {
+export default function Page() {
   return (
     <Container className="flex flex-col gap-8">
       <Profile />
@@ -53,6 +52,4 @@ const Page: FC = () => {
       </div>
     </Container>
   );
-};
-
-export default Page;
+}

@@ -1,4 +1,4 @@
-import type { FC, ReactNode } from "react";
+import type { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
 export type ContainerProps = {
@@ -6,12 +6,10 @@ export type ContainerProps = {
   className?: string;
 };
 
-const Container: FC<ContainerProps> = ({ children, className }) => {
+export default function Container({ children, className }: ContainerProps) {
   return (
     <div className={twMerge("mx-auto max-w-4xl max-lg:px-4", className)}>
       {children}
     </div>
   );
-};
-
-export default Container;
+}
