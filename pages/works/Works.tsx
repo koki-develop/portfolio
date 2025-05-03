@@ -100,14 +100,20 @@ const workGroups: WorkGroup[] = [
     icon: <SiGithubactions />,
     works: [
       {
+        name: "GitHub Actions Lint",
+        description: "GitHub Actions の Linter を実行する Action。",
+        url: "https://github.com/koki-develop/github-actions-lint",
+        githubUrl: "https://github.com/koki-develop/github-actions-lint",
+      },
+      {
         name: "Major Version Sync",
-        description: "メジャーバージョンを同期する GitHub Action。",
+        description: "メジャーバージョンを同期する Action。",
         url: "https://github.com/marketplace/actions/major-version-sync",
         githubUrl: "https://github.com/koki-develop/major-version-sync",
       },
       {
         name: "Unmask Secret Action",
-        description: "シークレットをログ出力する GitHub Action。",
+        description: "シークレットをログ出力する Action。",
         url: "https://github.com/marketplace/actions/unmask-secret-action",
         githubUrl: "https://github.com/koki-develop/unmask-secret-action",
       },
