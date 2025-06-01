@@ -28,7 +28,7 @@
         "lint-staged": "15.5.2",
         "typescript": "5.8.3",
         "vercel": "41.7.8",
-        "vike": "0.4.229",
+        "vike": "0.4.231",
         "vite": "6.3.5",
         "vite-plugin-svgr": "4.3.0",
       },
@@ -907,7 +907,7 @@
 
     "tinyexec": ["tinyexec@0.3.2", "", {}, "sha512-KQQR9yN7R5+OSwaK0XQoj22pwHoTlgYqmUscPYoknOoWCWfj/5/ABTMRi69FrKU5ffPVh5QcFikpWJI/P1ocHA=="],
 
-    "tinyglobby": ["tinyglobby@0.2.12", "", { "dependencies": { "fdir": "^6.4.3", "picomatch": "^4.0.2" } }, "sha512-qkf4trmKSIiMTs/E63cxH+ojC2unam7rJ0WrauAzpT3ECNTxGRMlaXxVbfxMUC/w0LaYk6jQ4y/nGR9uBO3tww=="],
+    "tinyglobby": ["tinyglobby@0.2.13", "", { "dependencies": { "fdir": "^6.4.4", "picomatch": "^4.0.2" } }, "sha512-mEwzpUgrLySlveBwEVDMKk5B57bhLPYovRfPAXD5gA/98Opn0rCDj3GtLwFvCvH5RK9uPCExUROW5NjDwvqkxw=="],
 
     "to-regex-range": ["to-regex-range@5.0.1", "", { "dependencies": { "is-number": "^7.0.0" } }, "sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ=="],
 
@@ -945,7 +945,7 @@
 
     "vercel": ["vercel@41.7.8", "", { "dependencies": { "@vercel/build-utils": "10.5.1", "@vercel/fun": "1.1.6", "@vercel/go": "3.2.1", "@vercel/hydrogen": "1.2.0", "@vercel/next": "4.7.11", "@vercel/node": "5.1.16", "@vercel/python": "4.7.2", "@vercel/redwood": "2.3.1", "@vercel/remix-builder": "5.4.6", "@vercel/ruby": "2.2.0", "@vercel/static-build": "2.7.7", "chokidar": "4.0.0", "jose": "5.9.6" }, "bin": { "vc": "dist/vc.js", "vercel": "dist/vc.js" } }, "sha512-itUz44eMHFxjE/iSNIlQzyypQ2LfnD/LzTg4ptL+uq7bT3zjGZ+MCEUUy9y4XkRV4zMBKvKzDeXVXajKLn71sA=="],
 
-    "vike": ["vike@0.4.229", "", { "dependencies": { "@brillout/import": "^0.2.6", "@brillout/json-serializer": "^0.5.15", "@brillout/picocolors": "^1.0.26", "@brillout/require-shim": "^0.1.2", "@brillout/vite-plugin-server-entry": "^0.7.8", "acorn": "^8.0.0", "cac": "^6.0.0", "es-module-lexer": "^1.0.0", "esbuild": ">=0.19.0", "json5": "^2.0.0", "magic-string": "^0.30.17", "picomatch": "^4.0.2", "semver": "^7.0.0", "sirv": "^3.0.1", "source-map-support": "^0.5.0", "tinyglobby": "^0.2.10", "vite": ">=5.1.0" }, "peerDependencies": { "react-streaming": ">=0.3.42" }, "optionalPeers": ["react-streaming"], "bin": { "vike": "node/cli/bin.js" } }, "sha512-FLiNUDwj42yRpb/iNKwjoScskyEozCjtz9kne5qvgp9fkxYSEXU/sKb+t5+XUljb4orjFgBBVCNyISqdRnAKkA=="],
+    "vike": ["vike@0.4.231", "", { "dependencies": { "@brillout/import": "^0.2.6", "@brillout/json-serializer": "^0.5.15", "@brillout/picocolors": "^1.0.26", "@brillout/require-shim": "^0.1.2", "@brillout/vite-plugin-server-entry": "^0.7.8", "acorn": "^8.0.0", "cac": "^6.0.0", "es-module-lexer": "^1.0.0", "esbuild": ">=0.19.0", "json5": "^2.0.0", "magic-string": "^0.30.17", "picomatch": "^4.0.2", "semver": "^7.0.0", "sirv": "^3.0.1", "source-map-support": "^0.5.0", "tinyglobby": "^0.2.10", "vite": ">=5.1.0" }, "peerDependencies": { "react-streaming": ">=0.3.42" }, "optionalPeers": ["react-streaming"], "bin": { "vike": "node/cli/bin.js" } }, "sha512-56fKl8Brl3socOXIqfbOoC66+FyZVcfnh9HaDm4NU38u8tHSHBURylb6Jm2FsnH1zW4M7CtEBq79Jp7yZy/HAg=="],
 
     "vike-react": ["vike-react@0.6.1", "", { "dependencies": { "react-streaming": "^0.4.2" }, "peerDependencies": { "react": ">=19", "react-dom": ">=19", "vike": ">=0.4.182" } }, "sha512-ruUsOoz6TcdeIP5ORmb4Y1PKBNvqRDtCGrry6rY9Dj9ZYFJe+f/xnaKD81itua5nVnKfTtLQ2J4szIfYwJ9KrA=="],
 
@@ -1096,12 +1096,6 @@
     "string-width-cjs/strip-ansi": ["strip-ansi@6.0.1", "", { "dependencies": { "ansi-regex": "^5.0.1" } }, "sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A=="],
 
     "strip-ansi-cjs/ansi-regex": ["ansi-regex@5.0.1", "", {}, "sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ=="],
-
-    "tinyglobby/fdir": ["fdir@6.4.3", "", { "peerDependencies": { "picomatch": "^3 || ^4" }, "optionalPeers": ["picomatch"] }, "sha512-PMXmW2y1hDDfTSRc9gaXIuCCRpuoz3Kaz8cUelp3smouvfT632ozg2vrT6lJsHKKOF59YLbOGfAWGUcKEfRMQw=="],
-
-    "vike/vite": ["vite@6.2.3", "", { "dependencies": { "esbuild": "^0.25.0", "postcss": "^8.5.3", "rollup": "^4.30.1" }, "optionalDependencies": { "fsevents": "~2.3.3" }, "peerDependencies": { "@types/node": "^18.0.0 || ^20.0.0 || >=22.0.0", "jiti": ">=1.21.0", "less": "*", "lightningcss": "^1.21.0", "sass": "*", "sass-embedded": "*", "stylus": "*", "sugarss": "*", "terser": "^5.16.0", "tsx": "^4.8.1", "yaml": "^2.4.2" }, "optionalPeers": ["@types/node", "jiti", "less", "lightningcss", "sass", "sass-embedded", "stylus", "sugarss", "terser", "tsx", "yaml"], "bin": { "vite": "bin/vite.js" } }, "sha512-IzwM54g4y9JA/xAeBPNaDXiBF8Jsgl3VBQ2YQ/wOY6fyW3xMdSoltIV3Bo59DErdqdE6RxUfv8W69DvUorE4Eg=="],
-
-    "vite/tinyglobby": ["tinyglobby@0.2.13", "", { "dependencies": { "fdir": "^6.4.4", "picomatch": "^4.0.2" } }, "sha512-mEwzpUgrLySlveBwEVDMKk5B57bhLPYovRfPAXD5gA/98Opn0rCDj3GtLwFvCvH5RK9uPCExUROW5NjDwvqkxw=="],
 
     "vite-plugin-vercel/@vercel/build-utils": ["@vercel/build-utils@8.8.0", "", {}, "sha512-4jkeJ/Xr0epojgfiyQufB8vC0ubE9SCfA9I2BGcOIKcf65C25juSvuYwaLixnjZXHUTO4Y9W7fdgiLUk55MgbA=="],
 
