@@ -1,4 +1,3 @@
-import ProfilePng from "../../public/images/profile.png";
 import Socials from "./Socials";
 
 const profile = {
@@ -11,7 +10,7 @@ export default function Profile() {
     <div className="flex flex-col justify-start gap-4 sm:flex-row sm:items-center md:justify-center">
       <div className="flex justify-center">
         <div className="w-44 rounded-full bg-white">
-          <img className="w-full" src={ProfilePng} alt="" />
+          <img className="w-full" src="/images/profile.png" alt="" />
         </div>
       </div>
 

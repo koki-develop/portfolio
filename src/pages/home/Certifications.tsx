@@ -1,10 +1,3 @@
-import AWSDOPPng from "../../public/images/icons/certifications/aws-dop.png";
-import AWSDVAPng from "../../public/images/icons/certifications/aws-dva.png";
-import AWSSAAPng from "../../public/images/icons/certifications/aws-saa.png";
-import AWSSAPPng from "../../public/images/icons/certifications/aws-sap.png";
-import AWSSOAPng from "../../public/images/icons/certifications/aws-soa.png";
-import GoogleCloudACEPng from "../../public/images/icons/certifications/googlecloud-ace.png";
-
 type Certification = {
   name: string;
   image: string;
@@ -14,32 +7,32 @@ type Certification = {
 const certifications: Certification[] = [
   {
     name: "AWS Certified Solutions Architect - Professional",
-    image: AWSSAPPng,
+    image: "/images/icons/certifications/aws-sap.png",
     href: "https://www.credly.com/badges/77ea1b7d-d676-4b47-a099-a1152e7b0cd7/public_url",
   },
   {
     name: "AWS Certified DevOps Engineer - Professional",
-    image: AWSDOPPng,
+    image: "/images/icons/certifications/aws-dop.png",
     href: "https://www.credly.com/badges/acb69e55-f79c-428c-a706-ba1e741980b4/public_url",
   },
   {
     name: "AWS Certified Solutions Architect - Associate",
-    image: AWSSAAPng,
+    image: "/images/icons/certifications/aws-saa.png",
     href: "https://www.credly.com/badges/a6b750f7-2601-4582-8131-3974e08eee5f/public_url",
   },
   {
     name: "AWS Certified SysOps Administrator - Associate",
-    image: AWSSOAPng,
+    image: "/images/icons/certifications/aws-soa.png",
     href: "https://www.credly.com/badges/385e90d5-3f8e-470a-bf87-51353ce88677/public_url",
   },
   {
     name: "AWS Certified Developer - Associate",
-    image: AWSDVAPng,
+    image: "/images/icons/certifications/aws-dva.png",
     href: "https://www.credly.com/badges/f88839f5-1909-4869-8cc5-432a2b987871/public_url",
   },
   {
     name: "Google Cloud Certified Associate Cloud Engineer",
-    image: GoogleCloudACEPng,
+    image: "/images/icons/certifications/googlecloud-ace.png",
     href: "https://www.credential.net/2316bc23-49ca-4aa1-8892-acee13740c99",
   },
 ];

@@ -1,9 +1,10 @@
 import { FaArrowRight } from "react-icons/fa6";
-import Card from "../../components/Card";
-import Container from "../../components/Container";
-import Certifications from "./Certifications";
-import Profile from "./Profile";
-import Skills from "./Skills";
+import { Link } from "react-router-dom";
+import Card from "../components/Card";
+import Container from "../components/Container";
+import Certifications from "./home/Certifications";
+import Profile from "./home/Profile";
+import Skills from "./home/Skills";
 
 const links = [
   {
@@ -18,9 +19,10 @@ const links = [
   },
 ];
 
-export default function Page() {
+export default function HomePage() {
   return (
     <Container className="flex flex-col gap-8">
+      <title>Koki Sato</title>
       <Profile />
       <div className="flex flex-col gap-8 md:flex-row">
         <div className="w-full md:w-1/2">
@@ -36,7 +38,7 @@ export default function Page() {
 
       <div className="flex flex-col gap-4 md:flex-row md:gap-8">
         {links.map((link) => (
-          <a key={link.href} className="group grow" href={link.href}>
+          <Link key={link.href} className="group grow" to={link.href}>
             <Card className="p-6">
               <h2 className="mb-2 flex items-center gap-2 font-bold text-2xl">
                 {link.title}
@@ -47,7 +49,7 @@ export default function Page() {
               </h2>
               <p className="text-gray-200">{link.description}</p>
             </Card>
-          </a>
+          </Link>
         ))}
       </div>
     </Container>

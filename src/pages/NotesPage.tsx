@@ -1,22 +1,23 @@
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
-import { useData } from "vike-react/useData";
-import Card from "../../components/Card";
-import Container from "../../components/Container";
-import type { Data } from "./+data";
+import Card from "../components/Card";
+import Container from "../components/Container";
+import articlesData from "../data/articles.json";
+import type { ArticlesData } from "../types/article";
 
 dayjs.extend(relativeTime);
 
-export default function Page() {
-  const { articles } = useData<Data>();
+export default function NotesPage() {
+  const data = articlesData as ArticlesData;
 
   return (
     <Container>
+      <title>Notes - Koki Sato</title>
       <h1 className="mb-4 font-bold text-3xl">Notes</h1>
 
       <div className="flex flex-col gap-8">
         <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          {articles.map((article) => (
+          {data.articles.map((article) => (
             <li key={article.slug}>
               <a
                 href={`https://zenn.dev/kou_pg_0131/articles/${article.slug}`}

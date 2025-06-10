@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { usePageContext } from "vike-react/usePageContext";
+import { Link, useLocation } from "react-router-dom";
 import Container from "../components/Container";
 
 const navItems = [
@@ -9,27 +9,27 @@ const navItems = [
 ];
 
 export default function Header() {
-  const pageContext = usePageContext();
-  const { urlPathname } = pageContext;
+  const location = useLocation();
+  const urlPathname = location.pathname;
 
   return (
     <header className="sticky top-0 border-gray-700 border-b bg-gray-900 py-4">
       <Container className="flex items-center justify-between">
-        <a className="font-bold text-xl md:text-2xl" href="/">
+        <Link className="font-bold text-xl md:text-2xl" to="/">
           Koki Sato
-        </a>
+        </Link>
         <ul className="flex gap-4">
           {navItems.map((item) => (
             <li key={item.href}>
-              <a
+              <Link
                 className={clsx("text-lg", {
                   "font-bold text-white": urlPathname === item.href,
                   "text-gray-300": urlPathname !== item.href,
                 })}
-                href={item.href}
+                to={item.href}
               >
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

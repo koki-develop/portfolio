@@ -23,6 +23,16 @@
     "indentStyle": "space"
   },
   "files": {
-    "ignore": ["package.json", "dist/**", "*.js", "*.cjs", "*.mjs", "*.spec.ts"]
+    "ignore": [
+      "package.json",
+      "dist/**",
+      "*.js",
+      "*.cjs",
+      "*.mjs",
+      "*.spec.ts",
+      ".vercel/**",
+      ".claude/**",
+      "scripts/**"
+    ]
   }
 }
