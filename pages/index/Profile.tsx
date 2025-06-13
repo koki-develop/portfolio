@@ -1,4 +1,4 @@
-import ProfilePng from "../../public/images/profile.png";
+import ProfilePng from "/images/profile.png";
 import Socials from "./Socials";
 
 const profile = {

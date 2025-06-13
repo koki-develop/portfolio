@@ -1,9 +1,9 @@
-import AWSDOPPng from "../../public/images/icons/certifications/aws-dop.png";
-import AWSDVAPng from "../../public/images/icons/certifications/aws-dva.png";
-import AWSSAAPng from "../../public/images/icons/certifications/aws-saa.png";
-import AWSSAPPng from "../../public/images/icons/certifications/aws-sap.png";
-import AWSSOAPng from "../../public/images/icons/certifications/aws-soa.png";
-import GoogleCloudACEPng from "../../public/images/icons/certifications/googlecloud-ace.png";
+import AWSDOPPng from "/images/icons/certifications/aws-dop.png";
+import AWSDVAPng from "/images/icons/certifications/aws-dva.png";
+import AWSSAAPng from "/images/icons/certifications/aws-saa.png";
+import AWSSAPPng from "/images/icons/certifications/aws-sap.png";
+import AWSSOAPng from "/images/icons/certifications/aws-soa.png";
+import GoogleCloudACEPng from "/images/icons/certifications/googlecloud-ace.png";
 
 type Certification = {
   name: string;
