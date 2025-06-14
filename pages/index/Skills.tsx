@@ -79,7 +79,7 @@ export default function Skills() {
       {skills.map((skill) => (
         <li key={skill.name}>
           <a
-            className="before:-z-10 relative flex items-center gap-1.5 overflow-hidden rounded-full border border-white/10 bg-white/5 px-2 py-1 text-white shadow-lg backdrop-blur-md before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-white/10 before:to-transparent"
+            className="glass-card flex items-center gap-1.5 rounded-full px-2 py-1 text-white"
             href={skill.href}
             target="_blank"
             rel="noopener noreferrer"

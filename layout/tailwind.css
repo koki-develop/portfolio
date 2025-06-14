@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+/* Glassmorphism utilities */
+@utility glass-card {
+  @apply relative overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md shadow-xl;
+
+  &::before {
+    @apply absolute inset-0 -z-10 bg-gradient-to-br from-white/10 to-transparent;
+    content: "";
+  }
+}

@@ -8,12 +8,7 @@ export type CardProps = {
 
 export default function Card({ children, className }: CardProps) {
   return (
-    <div
-      className={twMerge(
-        "before:-z-10 relative overflow-hidden rounded-lg border border-white/10 bg-white/5 p-4 shadow-xl backdrop-blur-md before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-br before:from-white/10 before:to-transparent",
-        className,
-      )}
-    >
+    <div className={twMerge("glass-card rounded-lg p-4", className)}>
       {children}
     </div>
   );

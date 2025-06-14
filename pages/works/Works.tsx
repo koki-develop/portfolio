@@ -189,7 +189,7 @@ export default function Works() {
         {workGroups.map((workGroup) => (
           <a
             key={workGroup.name}
-            className="before:-z-10 relative overflow-hidden rounded-full border border-white/10 bg-white/5 px-3 py-1 shadow-lg backdrop-blur-md before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-white/10 before:to-transparent"
+            className="glass-card rounded-full px-3 py-1"
             href={`#${workGroup.name}`}
           >
             {workGroup.name}
