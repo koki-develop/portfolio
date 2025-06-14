@@ -46,3 +46,7 @@ Always run `bun run lint` after making changes - Biome has strict rules includin
 - Import sorting and organization
 - No unused variables/imports (treated as errors)
 - CSS class sorting enforcement
+
+## Git Hooks
+
+Pre-commit hooks are configured via Husky to run lint-staged automatically on commit.
