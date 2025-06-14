@@ -13,7 +13,7 @@ export default function Header() {
   const { urlPathname } = pageContext;
 
   return (
-    <header className="sticky top-0 border-gray-700 border-b bg-gray-900 py-4">
+    <header className="sticky top-0 z-50 border-gray-700 border-b bg-gray-900 py-4">
       <Container className="flex items-center justify-between">
         <a className="font-bold text-xl md:text-2xl" href="/">
           Koki Sato
