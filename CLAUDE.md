@@ -20,16 +20,20 @@ bun run format       # Format code with Biome
 This is a modern React portfolio website built with:
 
 - **Vike** (full-stack React framework) for SSR/SSG with prerendering enabled
+- **React 19** with React Compiler enabled for optimal performance
 - **TailwindCSS v4** for utility-first styling 
 - **TypeScript** with strict configuration
 - **Biome** for fast linting/formatting with import organization
 - **Bun** as package manager
+- **Vite** as build tool with SVGR plugin for SVG components
 
 ## Key Structure
 
 - `/pages/` - Vike-based routing with `+config.ts`, `+Page.tsx`, `+data.ts` pattern
-- `/layout/Layout.tsx` - Main layout with header/footer and font loading optimization
-- `/components/` - Reusable UI components (Card, Container)
+- `/src/` - Application source code
+  - `Layout/` - Main layout component with header/footer and font loading optimization
+  - `components/` - Reusable UI components (Card, Container)
+  - `pages/` - Page-specific components (HomePage, WorksPage, NotesPage, ErrorPage)
 - Font loading uses `useFontLoaded` hook for performance optimization
 
 ## Important Notes
@@ -50,3 +54,9 @@ Always run `bun run lint` after making changes - Biome has strict rules includin
 ## Git Hooks
 
 Pre-commit hooks are configured via Husky to run lint-staged automatically on commit.
+
+## Vike Configuration
+
+- Global configuration in `/pages/+config.ts` sets default layout, metadata, and enables prerendering
+- Each page can override configuration with its own `+config.ts`
+- Data fetching pattern uses `+data.ts` files for server-side data loading

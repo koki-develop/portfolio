@@ -2,7 +2,8 @@ import type { ReactNode } from "react";
 import { FaChrome, FaGlobe, FaKeyboard, FaTerminal } from "react-icons/fa6";
 import { SiGithubactions, SiTerraform } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
-import WorkCard from "./WorkCard";
+import Container from "../../components/Container";
+import WorkCard from "./components/WorkCard";
 
 export type WorkGroup = {
   name: string;
@@ -182,39 +183,42 @@ const workGroups: WorkGroup[] = [
   },
 ];
 
-export default function Works() {
+export default function WorksPage() {
   return (
-    <div className="flex flex-col gap-8">
-      <div className="flex flex-wrap gap-2">
+    <Container>
+      <h1 className="mb-4 font-bold text-3xl">Works</h1>
+      <div className="flex flex-col gap-8">
+        <div className="flex flex-wrap gap-2">
+          {workGroups.map((workGroup) => (
+            <a
+              key={workGroup.name}
+              className="glass-card rounded-full px-3 py-1"
+              href={`#${workGroup.name}`}
+            >
+              {workGroup.name}
+            </a>
+          ))}
+        </div>
+
         {workGroups.map((workGroup) => (
-          <a
-            key={workGroup.name}
-            className="glass-card rounded-full px-3 py-1"
-            href={`#${workGroup.name}`}
-          >
-            {workGroup.name}
-          </a>
+          <div key={workGroup.name}>
+            <h2
+              id={workGroup.name}
+              className="mb-4 flex scroll-mt-20 items-center gap-2 font-bold text-2xl"
+            >
+              {workGroup.icon}
+              {workGroup.name}
+            </h2>
+            <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
+              {workGroup.works.map((work) => (
+                <li key={work.name}>
+                  <WorkCard work={work} />
+                </li>
+              ))}
+            </ul>
+          </div>
         ))}
       </div>
-
-      {workGroups.map((workGroup) => (
-        <div key={workGroup.name}>
-          <h2
-            id={workGroup.name}
-            className="mb-4 flex scroll-mt-20 items-center gap-2 font-bold text-2xl"
-          >
-            {workGroup.icon}
-            {workGroup.name}
-          </h2>
-          <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            {workGroup.works.map((work) => (
-              <li key={work.name}>
-                <WorkCard work={work} />
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
+    </Container>
   );
 }

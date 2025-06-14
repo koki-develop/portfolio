@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { usePageContext } from "vike-react/usePageContext";
-import Container from "../components/Container";
+import Container from "../../components/Container";
 
 const navItems = [
   { href: "/", label: "About" },

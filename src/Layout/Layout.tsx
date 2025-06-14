@@ -1,10 +1,12 @@
 import "@fontsource/inter";
-import "./style.css";
-import "./tailwind.css";
+
+import "../styles/global.css";
+import "../styles/tailwind.css";
+
 import clsx from "clsx";
 import type { ReactNode } from "react";
-import Footer from "./Footer";
-import Header from "./Header";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 import { useFontLoaded } from "./hooks";
 
 export type LayoutProps = {

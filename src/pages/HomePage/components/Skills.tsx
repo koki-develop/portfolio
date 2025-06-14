@@ -1,13 +1,13 @@
-import AWSIcon from "../../public/images/icons/skills/aws.svg?react";
-import FirebaseIcon from "../../public/images/icons/skills/firebase.svg?react";
-import GoIcon from "../../public/images/icons/skills/go.svg?react";
-import GoogleCloudIcon from "../../public/images/icons/skills/googlecloud.svg?react";
-import JavaScriptIcon from "../../public/images/icons/skills/javascript.svg?react";
-import NextJSIcon from "../../public/images/icons/skills/nextjs.svg?react";
-import ReactIcon from "../../public/images/icons/skills/react.svg?react";
-import RubyIcon from "../../public/images/icons/skills/ruby.svg?react";
-import TerraformIcon from "../../public/images/icons/skills/terraform.svg?react";
-import TypeScriptIcon from "../../public/images/icons/skills/typescript.svg?react";
+import AWSIcon from "../assets/aws.svg?react";
+import FirebaseIcon from "../assets/firebase.svg?react";
+import GoIcon from "../assets/go.svg?react";
+import GoogleCloudIcon from "../assets/googlecloud.svg?react";
+import JavaScriptIcon from "../assets/javascript.svg?react";
+import NextJSIcon from "../assets/nextjs.svg?react";
+import ReactIcon from "../assets/react.svg?react";
+import RubyIcon from "../assets/ruby.svg?react";
+import TerraformIcon from "../assets/terraform.svg?react";
+import TypeScriptIcon from "../assets/typescript.svg?react";
 
 type Skill = {
   name: string;

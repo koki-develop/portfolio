@@ -1,6 +1,6 @@
 import vikeReact from "vike-react/config";
 import type { Config } from "vike/types";
-import Layout from "../layout/Layout";
+import Layout from "../src/Layout/Layout";
 
 export default {
   Layout,

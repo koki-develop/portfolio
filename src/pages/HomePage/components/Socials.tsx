@@ -1,7 +1,7 @@
-import BlueSkyIcon from "../../public/images/icons/socials/bluesky.svg?react";
-import GitHubIcon from "../../public/images/icons/socials/github.svg?react";
-import XIcon from "../../public/images/icons/socials/x.svg?react";
-import ZennIcon from "../../public/images/icons/socials/zenn.svg?react";
+import BlueSkyIcon from "../assets/bluesky.svg?react";
+import GitHubIcon from "../assets/github.svg?react";
+import XIcon from "../assets/x.svg?react";
+import ZennIcon from "../assets/zenn.svg?react";
 
 const socialIconProps = {
   className: "text-white w-8",
