@@ -1,5 +1,5 @@
 import { usePageContext } from "vike-react/usePageContext";
-import ErrorPage from "../../src/pages/ErrorPage/ErrorPage";
+import ErrorPage from "../../src/pages/ErrorPage";
 
 export default function Page() {
   const { is404 } = usePageContext();
