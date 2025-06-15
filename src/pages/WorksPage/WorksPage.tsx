@@ -3,6 +3,7 @@ import { FaChrome, FaGlobe, FaKeyboard, FaTerminal } from "react-icons/fa6";
 import { SiGithubactions, SiTerraform } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import Container from "../../components/Container";
+import MCPIcon from "./assets/mcp.svg?react";
 import WorkCard from "./components/WorkCard";
 
 export type WorkGroup = {
@@ -65,7 +66,7 @@ const workGroups: WorkGroup[] = [
     ],
   },
   {
-    name: "Tools",
+    name: "Tool",
     icon: <FaTerminal />,
     works: [
       {
@@ -160,6 +161,24 @@ const workGroups: WorkGroup[] = [
         description: "VSCode の設定を同期する VSCode 拡張。",
         url: null,
         githubUrl: "https://github.com/koki-develop/vscode-settings-sync",
+      },
+    ],
+  },
+  {
+    name: "MCP Server",
+    icon: <MCPIcon />,
+    works: [
+      {
+        name: "Todoist MCP Server",
+        description: "Todoist の MCP Server。",
+        url: null,
+        githubUrl: "https://github.com/koki-develop/todoist-mcp-server",
+      },
+      {
+        name: "Hacker News MCP Server",
+        description: "Hacker News の MCP Server。",
+        url: null,
+        githubUrl: "https://github.com/koki-develop/hacker-news-mcp-server",
       },
     ],
   },
