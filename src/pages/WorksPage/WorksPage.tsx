@@ -180,6 +180,12 @@ const workGroups: WorkGroup[] = [
         url: null,
         githubUrl: "https://github.com/koki-develop/hacker-news-mcp-server",
       },
+      {
+        name: "esa MCP Server",
+        description: "esa の MCP Server。",
+        url: null,
+        githubUrl: "https://github.com/koki-develop/esa-mcp-server",
+      },
     ],
   },
   {
