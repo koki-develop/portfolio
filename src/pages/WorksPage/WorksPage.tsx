@@ -82,6 +82,12 @@ const workGroups: WorkGroup[] = [
         githubUrl: "https://github.com/koki-develop/gat",
       },
       {
+        name: "cat-code",
+        description: "猫のコーディングエージェント。",
+        url: "https://www.npmjs.com/package/cat-code",
+        githubUrl: "https://github.com/koki-develop/cat-code",
+      },
+      {
         name: "ghats",
         description:
           "TypeScript で GitHub Actions Workflow 定義を記述するツール。",
