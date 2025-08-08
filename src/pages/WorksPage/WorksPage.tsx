@@ -114,6 +114,13 @@ const workGroups: WorkGroup[] = [
         githubUrl: "https://github.com/koki-develop/github-actions-lint",
       },
       {
+        name: "Claude Renovate Review Action",
+        description:
+          "Claude Code に Renovate の Pull Request をレビューさせる Action。",
+        url: "https://github.com/marketplace/actions/claude-renovate-review-action",
+        githubUrl: "https://github.com/koki-develop/claude-renovate-review",
+      },
+      {
         name: "Major Version Sync",
         description: "メジャーバージョンを同期する Action。",
         url: "https://github.com/marketplace/actions/major-version-sync",
