@@ -14,7 +14,7 @@
     "@vite-plugin-vercel/vike": "9.0.6",
     "@vitejs/plugin-react": "4.4.1",
     "clsx": "2.1.1",
-    "dayjs": "1.11.13",
+    "dayjs": "1.11.15",
     "fontfaceobserver": "2.3.0",
     "react": "19.1.1",
     "react-dom": "19.1.1",
