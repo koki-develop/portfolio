@@ -17,12 +17,7 @@ export default function Layout({ children }: LayoutProps) {
   const show = useFontLoaded("Inter");
 
   return (
-    <div
-      className={clsx(
-        "min-h-screen bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900",
-        { hidden: !show },
-      )}
-    >
+    <div className={clsx("min-h-screen bg-slate-900", { hidden: !show })}>
       <Header />
       <main className="pt-4 pb-16">{children}</main>
       <Footer />
