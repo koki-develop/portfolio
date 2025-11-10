@@ -3,7 +3,6 @@ import AWSDVAPng from "../assets/aws-dva.png";
 import AWSSAAPng from "../assets/aws-saa.png";
 import AWSSAPPng from "../assets/aws-sap.png";
 import AWSSOAPng from "../assets/aws-soa.png";
-import GoogleCloudACEPng from "../assets/googlecloud-ace.png";
 
 type Certification = {
   name: string;
@@ -36,11 +35,6 @@ const certifications: Certification[] = [
     name: "AWS Certified Developer - Associate",
     image: AWSDVAPng,
     href: "https://www.credly.com/badges/f88839f5-1909-4869-8cc5-432a2b987871/public_url",
-  },
-  {
-    name: "Google Cloud Certified Associate Cloud Engineer",
-    image: GoogleCloudACEPng,
-    href: "https://www.credential.net/2316bc23-49ca-4aa1-8892-acee13740c99",
   },
 ];
 
