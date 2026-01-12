@@ -1,5 +1,6 @@
 {
   "lockfileVersion": 1,
+  "configVersion": 0,
   "workspaces": {
     "": {
       "dependencies": {
@@ -15,7 +16,7 @@
         "react-icons": "5.5.0",
         "tailwind-merge": "3.2.0",
         "tailwindcss": "4.1.8",
-        "vike-react": "0.6.4",
+        "vike-react": "0.6.13",
         "vite-plugin-vercel": "9.0.7",
       },
       "devDependencies": {
@@ -947,7 +948,7 @@
 
     "vike": ["vike@0.4.238", "", { "dependencies": { "@brillout/import": "^0.2.6", "@brillout/json-serializer": "^0.5.20", "@brillout/picocolors": "^1.0.26", "@brillout/require-shim": "^0.1.2", "@brillout/vite-plugin-server-entry": "^0.7.13", "acorn": "^8.0.0", "cac": "^6.0.0", "es-module-lexer": "^1.0.0", "esbuild": ">=0.19.0", "json5": "^2.0.0", "magic-string": "^0.30.17", "picomatch": "^4.0.2", "semver": "^7.0.0", "sirv": "^3.0.1", "source-map-support": "^0.5.0", "tinyglobby": "^0.2.10", "vite": ">=6.0.0" }, "peerDependencies": { "react-streaming": ">=0.3.42" }, "optionalPeers": ["react-streaming"], "bin": { "vike": "node/cli/bin.js" } }, "sha512-Baw9UzQfScC7HCz5AFuuxjEG+1Q2tNQdpUZC1QcP7VmYEliLKqCLyqXqDm+7YekcY1jXfZP/DoCiS0GEzwBEoA=="],
 
-    "vike-react": ["vike-react@0.6.4", "", { "dependencies": { "react-streaming": "^0.4.2" }, "peerDependencies": { "react": ">=19", "react-dom": ">=19", "vike": ">=0.4.182" } }, "sha512-T9dsny/193gaikfKvGUT+jvGbguYTDiuYShkQ2C5KngCJZO+pX3bcspqYFvOIc9yroSk3UooP5KgfSQ3sz2pww=="],
+    "vike-react": ["vike-react@0.6.13", "", { "dependencies": { "react-streaming": "^0.4.11" }, "peerDependencies": { "react": ">=19", "react-dom": ">=19", "vike": ">=0.4.242" } }, "sha512-XcIwoUsdsU2ipgxARn2/1y9pYo+JbSb2oZcihoWM1eCiv6uWboK3sB18j4DWLYtOw2rfGFD8/2UhPOeVtYC4uw=="],
 
     "vite": ["vite@6.3.5", "", { "dependencies": { "esbuild": "^0.25.0", "fdir": "^6.4.4", "picomatch": "^4.0.2", "postcss": "^8.5.3", "rollup": "^4.34.9", "tinyglobby": "^0.2.13" }, "optionalDependencies": { "fsevents": "~2.3.3" }, "peerDependencies": { "@types/node": "^18.0.0 || ^20.0.0 || >=22.0.0", "jiti": ">=1.21.0", "less": "*", "lightningcss": "^1.21.0", "sass": "*", "sass-embedded": "*", "stylus": "*", "sugarss": "*", "terser": "^5.16.0", "tsx": "^4.8.1", "yaml": "^2.4.2" }, "optionalPeers": ["@types/node", "jiti", "less", "lightningcss", "sass", "sass-embedded", "stylus", "sugarss", "terser", "tsx", "yaml"], "bin": { "vite": "bin/vite.js" } }, "sha512-cZn6NDFE7wdTpINgs++ZJ4N49W2vRp8LCKrn3Ob1kYNtOo21vfDoaV5GzBfLU4MovSAB8uNRm4jgzVQZ+mBzPQ=="],
 
@@ -1098,6 +1099,8 @@
     "string-width-cjs/strip-ansi": ["strip-ansi@6.0.1", "", { "dependencies": { "ansi-regex": "^5.0.1" } }, "sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A=="],
 
     "strip-ansi-cjs/ansi-regex": ["ansi-regex@5.0.1", "", {}, "sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ=="],
+
+    "vike-react/react-streaming": ["react-streaming@0.4.12", "", { "dependencies": { "@brillout/import": "^0.2.3", "@brillout/json-serializer": "^0.5.1", "@brillout/picocolors": "^1.0.11", "isbot-fast": "1.2.0" }, "peerDependencies": { "react": ">=19", "react-dom": ">=19" } }, "sha512-OvIKK8MooiQ15KdCjmiNxpNP26k3oq5HmI8a0r4pPZAndyfh9MRbebP+0z2x1UCDO4bbjVzgD2A8+I85xJaNhA=="],
 
     "vite-plugin-vercel/@vercel/build-utils": ["@vercel/build-utils@8.8.0", "", {}, "sha512-4jkeJ/Xr0epojgfiyQufB8vC0ubE9SCfA9I2BGcOIKcf65C25juSvuYwaLixnjZXHUTO4Y9W7fdgiLUk55MgbA=="],
 
